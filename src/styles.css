@@ -221,7 +221,7 @@ select {
 
 .games-table {
   width: 100%;
-  min-width: 980px;
+  min-width: 900px;
   border-collapse: collapse;
 }
 
@@ -354,16 +354,21 @@ summary strong {
 }
 
 .library-cell,
-.system-cell,
+.platform-format-cell,
 .variant-cell,
-.metadata-cell {
+.info-cell {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.metadata-cell {
+.info-cell {
   max-width: 360px;
+}
+
+.detail-loading {
+  color: var(--muted);
+  font-size: 0.86rem;
 }
 
 .badge {

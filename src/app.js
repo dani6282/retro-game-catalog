@@ -1,7 +1,7 @@
 const state = {
   catalog: null,
-  wikiLinks: {},
   groups: [],
+  detailCache: new Map(),
   query: "",
   source: "All",
   platform: "All",
@@ -36,140 +36,12 @@ const elements = {
 
 const collator = new Intl.Collator(undefined, { sensitivity: "base", numeric: true });
 
-const POPULAR_TITLE_HINTS = [
-  "bubble bobble",
-  "civilization",
-  "defender of the crown",
-  "doom",
-  "elite",
-  "gauntlet",
-  "giana sisters",
-  "lemmings",
-  "maniac mansion",
-  "monkey island",
-  "pac man",
-  "ports of call",
-  "prince of persia",
-  "rtype",
-  "secret of monkey island",
-  "sensible soccer",
-  "speedball",
-  "stunt car racer",
-  "turrican",
-  "zak mckracken",
-];
-
 function formatNumber(value) {
   return new Intl.NumberFormat().format(value || 0);
 }
 
-function cleanTitle(value) {
-  return (value || "")
-    .replace(/[_]+/g, " ")
-    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function displayBaseTitle(title) {
-  return cleanTitle(title)
-    .replace(/\s+(De|Ger|German|Deutsch|Fr|Fre|French|Francais|It|Ita|Italian|Es|Spa|Spanish)$/i, "")
-    .trim();
-}
-
-function groupKey(title) {
-  return displayBaseTitle(title)
-    .toLowerCase()
-    .replace(/\[[^\]]*\]|\([^)]*\)/g, " ")
-    .replace(/\b(disk|disc|side|part|cd)\s*\d+\b/g, " ")
-    .replace(/\b(ntsc|pal|aga|ocs|ecs|cd32|whdload)\b/g, " ")
-    .replace(/[^a-z0-9]+/g, "");
-}
-
-function hasMetadata(entry) {
-  return Boolean(entry.genre || entry.developer || entry.publisher || entry.rating || entry.description);
-}
-
-function formatLabel(entry) {
-  if (entry.collection === "WHDLoad") return "WHDLoad";
-  if (entry.collection === "Installed") return "Installed";
-  if (entry.platform === "scummvm") return "ScummVM";
-  if (entry.source === "Batocera") return "ROM file";
-  return "File";
-}
-
-function variantLabel(entry) {
-  return [entry.language, entry.category, formatLabel(entry)].filter(Boolean).join(" / ") || formatLabel(entry);
-}
-
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort(collator.compare);
-}
-
-function popularityScore(group) {
-  const title = group.title.toLowerCase();
-  const hintScore = POPULAR_TITLE_HINTS.some((hint) => title.includes(hint)) ? 100 : 0;
-  const bothScore = group.libraries.length > 1 ? 35 : 0;
-  const metadataScore = group.hasMetadata ? 12 : 0;
-  const variantScore = Math.min(group.variants.length, 15) * 2;
-  const ratingValues = group.variants
-    .map((entry) => Number.parseFloat(entry.rating))
-    .filter((value) => Number.isFinite(value));
-  const ratingScore = ratingValues.length
-    ? (ratingValues.reduce((sum, value) => sum + value, 0) / ratingValues.length) * 20
-    : 0;
-  return Math.round(hintScore + bothScore + metadataScore + variantScore + ratingScore);
-}
-
-function buildGroups(entries) {
-  const map = new Map();
-  for (const entry of entries) {
-    const key = groupKey(entry.title) || entry.normalizedTitle || entry.id;
-    if (!map.has(key)) {
-      map.set(key, {
-        key,
-        title: displayBaseTitle(entry.title) || entry.title,
-        variants: [],
-      });
-    }
-    map.get(key).variants.push(entry);
-  }
-
-  const groups = [...map.values()].map((group) => {
-    group.variants.sort((a, b) =>
-      collator.compare(`${a.source} ${variantLabel(a)} ${a.path}`, `${b.source} ${variantLabel(b)} ${b.path}`),
-    );
-    group.libraries = uniqueSorted(group.variants.map((entry) => entry.source));
-    group.systems = uniqueSorted(group.variants.map((entry) => entry.platform));
-    group.formats = uniqueSorted(group.variants.map(formatLabel));
-    group.languages = uniqueSorted(group.variants.map((entry) => entry.language));
-    group.categories = uniqueSorted(group.variants.map((entry) => entry.category));
-    group.hasMetadata = group.variants.some(hasMetadata);
-    group.metadataBits = uniqueSorted(
-      group.variants.flatMap((entry) => [entry.genre, entry.developer, entry.publisher]).filter(Boolean),
-    ).slice(0, 3);
-    group.descriptions = uniqueSorted(group.variants.map((entry) => entry.description).filter(Boolean));
-    group.wiki = state.wikiLinks[group.key] || null;
-    group.popularity = popularityScore(group);
-    group.searchText = [
-      group.title,
-      group.libraries.join(" "),
-      group.systems.join(" "),
-      group.formats.join(" "),
-      group.languages.join(" "),
-      group.categories.join(" "),
-      group.metadataBits.join(" "),
-      group.descriptions.join(" "),
-      group.wiki?.article,
-      ...group.variants.flatMap((entry) => [entry.title, entry.path, entry.genre, entry.developer, entry.publisher]),
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-    return group;
-  });
-
-  return groups.sort((a, b) => b.popularity - a.popularity || collator.compare(a.title, b.title));
 }
 
 function fillSelect(select, values, current, allLabel = "All") {
@@ -184,13 +56,13 @@ function fillSelect(select, values, current, allLabel = "All") {
 }
 
 function renderStats() {
-  const groups = state.groups;
+  const summary = state.catalog.summary;
   const stats = [
-    ["Games", groups.length],
-    ["Variants", state.catalog.summary.total],
-    ["Batocera entries", state.catalog.summary.bySource.Batocera || 0],
-    ["PiMiga entries", state.catalog.summary.bySource.PiMiga || 0],
-    ["In both libraries", groups.filter((group) => group.libraries.length > 1).length],
+    ["Games", summary.games],
+    ["Variants", summary.variants],
+    ["Batocera entries", summary.bySource.Batocera || 0],
+    ["PiMiga entries", summary.bySource.PiMiga || 0],
+    ["With info", summary.withMetadata],
   ];
 
   elements.stats.replaceChildren();
@@ -204,14 +76,14 @@ function renderStats() {
 
 function initControls() {
   fillSelect(elements.source, ["Batocera", "PiMiga", "Both"], state.source);
-  fillSelect(elements.platform, uniqueSorted(state.groups.flatMap((group) => group.systems)), state.platform);
+  fillSelect(elements.platform, uniqueSorted(state.groups.flatMap((group) => group.platforms)), state.platform);
   fillSelect(elements.format, uniqueSorted(state.groups.flatMap((group) => group.formats)), state.format);
 }
 
 function matchesFilters(group) {
   if (state.source === "Both" && group.libraries.length < 2) return false;
   if (state.source !== "All" && state.source !== "Both" && !group.libraries.includes(state.source)) return false;
-  if (state.platform !== "All" && !group.systems.includes(state.platform)) return false;
+  if (state.platform !== "All" && !group.platforms.includes(state.platform)) return false;
   if (state.format !== "All" && !group.formats.includes(state.format)) return false;
   if (state.onlyBoth && group.libraries.length < 2) return false;
   if (state.onlyLanguage && !group.languages.length) return false;
@@ -224,18 +96,12 @@ function filteredGroups() {
   const groups = state.groups.filter(matchesFilters);
   return groups.sort((a, b) => {
     if (state.sort === "popularity") return b.popularity - a.popularity || collator.compare(a.title, b.title);
-    if (state.sort === "libraries") {
-      return b.libraries.length - a.libraries.length || collator.compare(a.title, b.title);
-    }
+    if (state.sort === "libraries") return b.libraries.length - a.libraries.length || collator.compare(a.title, b.title);
     if (state.sort === "platform") {
-      return collator.compare(a.systems[0] || "", b.systems[0] || "") || collator.compare(a.title, b.title);
+      return collator.compare(a.platforms[0] || "", b.platforms[0] || "") || collator.compare(a.title, b.title);
     }
-    if (state.sort === "variants") {
-      return b.variants.length - a.variants.length || collator.compare(a.title, b.title);
-    }
-    if (state.sort === "metadata") {
-      return Number(b.hasMetadata) - Number(a.hasMetadata) || collator.compare(a.title, b.title);
-    }
+    if (state.sort === "variants") return b.variantCount - a.variantCount || collator.compare(a.title, b.title);
+    if (state.sort === "metadata") return Number(b.hasMetadata) - Number(a.hasMetadata) || collator.compare(a.title, b.title);
     return collator.compare(a.title, b.title);
   });
 }
@@ -255,23 +121,11 @@ function sourceClass(source) {
   return source === "Batocera" ? "source-batocera" : "source-pimiga";
 }
 
-function renderVariant(entry) {
-  const row = document.createElement("div");
-  row.className = "variant-row";
-
-  const title = document.createElement("strong");
-  title.textContent = entry.title;
-  row.append(title);
-
-  const meta = document.createElement("span");
-  meta.textContent = [entry.source, entry.platform, variantLabel(entry)].filter(Boolean).join(" · ");
-  row.append(meta);
-
-  const path = document.createElement("code");
-  path.textContent = entry.path;
-  row.append(path);
-
-  return row;
+function renderBadgeList(target, values, classForValue = () => "") {
+  target.replaceChildren();
+  for (const value of values) {
+    target.append(badge(value, classForValue(value)));
+  }
 }
 
 function paragraphsFromDescription(description) {
@@ -295,10 +149,62 @@ function renderDescription(description) {
   return section;
 }
 
-function renderBadgeList(target, values, classForValue = () => "") {
-  target.replaceChildren();
-  for (const value of values) {
-    target.append(badge(value, classForValue(value)));
+function renderVariant(variant) {
+  const row = document.createElement("div");
+  row.className = "variant-row";
+
+  const title = document.createElement("strong");
+  title.textContent = variant.title;
+  row.append(title);
+
+  const meta = document.createElement("span");
+  meta.textContent = [variant.library, variant.platform, variant.format, variant.language, variant.category]
+    .filter(Boolean)
+    .join(" · ");
+  row.append(meta);
+
+  const path = document.createElement("code");
+  path.textContent = variant.path;
+  row.append(path);
+
+  return row;
+}
+
+async function loadDetail(group) {
+  if (!state.detailCache.has(group.detailFile)) {
+    const response = await fetch(`./public/${group.detailFile}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Unable to load details: ${response.status}`);
+    state.detailCache.set(group.detailFile, await response.json());
+  }
+  return state.detailCache.get(group.detailFile)[group.key] || { descriptions: [], variants: [] };
+}
+
+async function fillDetail(group, variantList) {
+  variantList.replaceChildren();
+  variantList.append(Object.assign(document.createElement("p"), { className: "detail-loading", textContent: "Loading details..." }));
+  const detail = await loadDetail(group);
+  variantList.replaceChildren();
+
+  if (group.wiki || detail.descriptions.length) {
+    const info = document.createElement("div");
+    info.className = "game-info";
+    if (group.wiki) {
+      const link = document.createElement("a");
+      link.className = "external-link";
+      link.href = group.wiki.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = `Wikipedia: ${group.wiki.article}`;
+      info.append(link);
+    }
+    for (const description of detail.descriptions) {
+      info.append(renderDescription(description));
+    }
+    variantList.append(info);
+  }
+
+  for (const variant of detail.variants) {
+    variantList.append(renderVariant(variant));
   }
 }
 
@@ -317,7 +223,7 @@ function renderGroups() {
     const row = document.createElement("tr");
     const cell = document.createElement("td");
     cell.className = "empty";
-    cell.colSpan = 6;
+    cell.colSpan = 5;
     cell.textContent = "No games match the current filters.";
     row.append(cell);
     elements.games.append(row);
@@ -328,52 +234,39 @@ function renderGroups() {
   const fragment = document.createDocumentFragment();
   for (const group of visibleGroups) {
     const node = elements.gameTemplate.content.cloneNode(true);
-    node.querySelector("summary strong").textContent = group.title;
-    node.querySelector(".game-note").textContent = `${group.variants.length} variant${
-      group.variants.length === 1 ? "" : "s"
-    }`;
-
+    const details = node.querySelector("details");
     const variantList = node.querySelector(".variant-list");
-    if (group.wiki || group.descriptions.length) {
-      const info = document.createElement("div");
-      info.className = "game-info";
-      if (group.wiki) {
-        const link = document.createElement("a");
-        link.className = "external-link";
-        link.href = group.wiki.url;
-        link.target = "_blank";
-        link.rel = "noreferrer";
-        link.textContent = `Wikipedia: ${group.wiki.article}`;
-        info.append(link);
-      }
-      for (const description of group.descriptions.slice(0, 2)) {
-        info.append(renderDescription(description));
-      }
-      variantList.append(info);
-    }
-    for (const variant of group.variants) {
-      variantList.append(renderVariant(variant));
-    }
+    node.querySelector("summary strong").textContent = group.title;
+    node.querySelector(".game-note").textContent = `${group.variantCount} variant${group.variantCount === 1 ? "" : "s"}`;
+
+    details.addEventListener(
+      "toggle",
+      () => {
+        if (details.open && !details.dataset.loaded) {
+          details.dataset.loaded = "true";
+          fillDetail(group, variantList).catch((error) => {
+            variantList.replaceChildren(Object.assign(document.createElement("p"), { className: "empty", textContent: error.message }));
+          });
+        }
+      },
+      { once: true },
+    );
 
     renderBadgeList(node.querySelector(".library-cell"), group.libraries, sourceClass);
-    renderBadgeList(node.querySelector(".system-cell"), group.systems.slice(0, 4));
+    renderBadgeList(node.querySelector(".platform-format-cell"), [...group.platforms.slice(0, 3), ...group.formats.slice(0, 2)]);
     renderBadgeList(node.querySelector(".variant-cell"), [
-      ...group.formats.slice(0, 2),
+      `${group.variantCount} total`,
       ...group.languages,
       ...group.categories.slice(0, 2),
     ]);
 
-    const metadataCell = node.querySelector(".metadata-cell");
-    if (group.hasMetadata) {
-      renderBadgeList(metadataCell, group.metadataBits.length ? group.metadataBits : ["metadata"]);
-    } else {
-      metadataCell.textContent = "file names only";
-    }
-    if (group.wiki) {
-      metadataCell.append(badge("Wikipedia", "external"));
-    }
+    const infoCell = node.querySelector(".info-cell");
+    if (group.hasMetadata) infoCell.append(badge("metadata"));
+    if (group.hasDescription) infoCell.append(badge("description"));
+    if (group.wiki) infoCell.append(badge("Wikipedia", "external"));
+    for (const bit of group.metadataBits.slice(0, 2)) infoCell.append(badge(bit));
+    if (!infoCell.children.length) infoCell.textContent = "file names only";
 
-    node.querySelector(".popularity-cell").textContent = group.popularity ? String(group.popularity) : "-";
     fragment.append(node);
   }
   elements.games.append(fragment);
@@ -386,29 +279,18 @@ function bindEvents() {
     renderGroups();
   });
 
-  elements.source.addEventListener("change", (event) => {
-    state.source = event.target.value;
-    resetVisibleCount();
-    renderGroups();
-  });
-
-  elements.platform.addEventListener("change", (event) => {
-    state.platform = event.target.value;
-    resetVisibleCount();
-    renderGroups();
-  });
-
-  elements.format.addEventListener("change", (event) => {
-    state.format = event.target.value;
-    resetVisibleCount();
-    renderGroups();
-  });
-
-  elements.sort.addEventListener("change", (event) => {
-    state.sort = event.target.value;
-    resetVisibleCount();
-    renderGroups();
-  });
+  for (const [element, key] of [
+    [elements.source, "source"],
+    [elements.platform, "platform"],
+    [elements.format, "format"],
+    [elements.sort, "sort"],
+  ]) {
+    element.addEventListener("change", (event) => {
+      state[key] = event.target.value;
+      resetVisibleCount();
+      renderGroups();
+    });
+  }
 
   elements.both.addEventListener("change", (event) => {
     state.onlyBoth = event.target.checked;
@@ -454,18 +336,10 @@ function bindEvents() {
 }
 
 async function loadCatalog() {
-  const response = await fetch("./public/catalog.json", { cache: "no-store" });
+  const response = await fetch("./public/game-index.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`Unable to load catalog: ${response.status}`);
   state.catalog = await response.json();
-  try {
-    const linksResponse = await fetch("./public/wiki-links.json", { cache: "no-store" });
-    if (linksResponse.ok) {
-      state.wikiLinks = (await linksResponse.json()).links || {};
-    }
-  } catch {
-    state.wikiLinks = {};
-  }
-  state.groups = buildGroups(state.catalog.games);
+  state.groups = state.catalog.groups;
 }
 
 async function start() {

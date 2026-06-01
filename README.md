@@ -34,6 +34,19 @@ Some grouped games have curated Wikipedia links. Edit `data/wikipedia-title-map.
 
 This does not query Wikipedia; it only turns known article titles into links.
 
+## Browser Data
+
+The app loads a pre-grouped index for speed, then lazy-loads detail chunks only when a game is expanded:
+
+```bash
+./scripts/build_grouped_catalog.py
+```
+
+Generated files:
+
+- `public/game-index.json`
+- `public/details/*.json`
+
 ## Run Locally
 
 Use any static server:

@@ -7,3 +7,4 @@ services:
       - "192.168.87.41:8783:80"
     volumes:
       - /srv/data/retro-game-catalog:/usr/share/nginx/html:ro
+      - /srv/docker/woodstock/config/retro-game-catalog/nginx.conf:/etc/nginx/conf.d/default.conf:ro
