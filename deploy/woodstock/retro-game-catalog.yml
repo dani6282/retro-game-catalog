@@ -1,0 +1,9 @@
+services:
+  retro-game-catalog:
+    image: nginx:alpine
+    container_name: retro-game-catalog
+    restart: unless-stopped
+    ports:
+      - "192.168.87.41:8783:80"
+    volumes:
+      - /srv/data/retro-game-catalog:/usr/share/nginx/html:ro

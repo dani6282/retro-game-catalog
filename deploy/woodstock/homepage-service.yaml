@@ -1,0 +1,4 @@
+    - Retro-Spielkatalog:
+        icon: mdi-gamepad-variant-outline
+        href: http://192.168.87.41:8783
+        description: Batocera- und PiMiga-Spiele durchsuchen

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Game Catalog</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Woodstock inventory</p>
+          <h1>Retro Game Catalog</h1>
+        </div>
+        <div class="top-actions">
+          <a class="icon-link" href="./public/catalog.json" title="Open catalog JSON" aria-label="Open catalog JSON">
+            <span aria-hidden="true">{ }</span>
+          </a>
+          <button class="icon-button" id="resetButton" type="button" title="Reset filters" aria-label="Reset filters">
+            <span aria-hidden="true">↺</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="stats" id="stats" aria-label="Catalog summary"></section>
+
+      <section class="controls" aria-label="Catalog controls">
+        <label class="search-box">
+          <span>Search</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Ports of Call, Amiga, German..." />
+        </label>
+
+        <div class="control-grid">
+          <label>
+            <span>Library</span>
+            <select id="sourceSelect"></select>
+          </label>
+          <label>
+            <span>System</span>
+            <select id="platformSelect"></select>
+          </label>
+          <label>
+            <span>Format</span>
+            <select id="collectionSelect"></select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="popularity">Popularity guess</option>
+              <option value="title">Title</option>
+              <option value="libraries">Libraries</option>
+              <option value="platform">Platform</option>
+              <option value="variants">Variants</option>
+              <option value="metadata">Metadata</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="toggles">
+          <label class="toggle">
+            <input id="bothToggle" type="checkbox" />
+            <span>In both libraries</span>
+          </label>
+          <label class="toggle">
+            <input id="languageToggle" type="checkbox" />
+            <span>Localized variants</span>
+          </label>
+          <label class="toggle">
+            <input id="metadataToggle" type="checkbox" />
+            <span>Has metadata</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="result-head">
+        <div>
+          <h2 id="resultTitle">Games</h2>
+          <p id="resultMeta"></p>
+        </div>
+      </section>
+
+      <section class="games-table-wrap" aria-live="polite">
+        <table class="games-table">
+          <thead>
+            <tr>
+              <th>Game</th>
+              <th>Libraries</th>
+              <th>System</th>
+              <th>Variants</th>
+              <th>Info</th>
+              <th>Popularity</th>
+            </tr>
+          </thead>
+          <tbody id="games"></tbody>
+        </table>
+      </section>
+      <div class="load-row">
+        <button class="load-button" id="loadMoreButton" type="button">Show more</button>
+      </div>
+    </main>
+
+    <template id="statTemplate">
+      <article class="stat">
+        <span></span>
+        <strong></strong>
+      </article>
+    </template>
+
+    <template id="gameTemplate">
+      <tr class="game-row">
+        <td class="game-cell">
+          <details>
+            <summary>
+              <strong></strong>
+              <span class="game-note"></span>
+            </summary>
+            <div class="variant-list"></div>
+          </details>
+        </td>
+        <td class="library-cell"></td>
+        <td class="system-cell"></td>
+        <td class="variant-cell"></td>
+        <td class="metadata-cell"></td>
+        <td class="popularity-cell"></td>
+      </tr>
+    </template>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

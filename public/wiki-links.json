@@ -1,0 +1,211 @@
+{
+  "source": "Curated Wikipedia article map",
+  "sourceProject": "en.wikipedia.org",
+  "links": {
+    "anotherworld": {
+      "title": "Another World",
+      "article": "Another World (video game)",
+      "url": "https://en.wikipedia.org/wiki/Another_World_%28video_game%29"
+    },
+    "boulderdash": {
+      "title": "Boulder Dash",
+      "article": "Boulder Dash",
+      "url": "https://en.wikipedia.org/wiki/Boulder_Dash"
+    },
+    "bubblebobble": {
+      "title": "Bubble Bobble",
+      "article": "Bubble Bobble",
+      "url": "https://en.wikipedia.org/wiki/Bubble_Bobble"
+    },
+    "californiagames": {
+      "title": "California Games",
+      "article": "California Games",
+      "url": "https://en.wikipedia.org/wiki/California_Games"
+    },
+    "cannonfodder": {
+      "title": "Cannon Fodder",
+      "article": "Cannon Fodder (video game)",
+      "url": "https://en.wikipedia.org/wiki/Cannon_Fodder_%28video_game%29"
+    },
+    "civilization": {
+      "title": "Civilization",
+      "article": "Civilization (video game)",
+      "url": "https://en.wikipedia.org/wiki/Civilization_%28video_game%29"
+    },
+    "defenderofthecrown": {
+      "title": "Defender of the Crown",
+      "article": "Defender of the Crown",
+      "url": "https://en.wikipedia.org/wiki/Defender_of_the_Crown"
+    },
+    "doom": {
+      "title": "Doom",
+      "article": "Doom (1993 video game)",
+      "url": "https://en.wikipedia.org/wiki/Doom_%281993_video_game%29"
+    },
+    "dungeonmaster": {
+      "title": "Dungeon Master",
+      "article": "Dungeon Master (video game)",
+      "url": "https://en.wikipedia.org/wiki/Dungeon_Master_%28video_game%29"
+    },
+    "elite": {
+      "title": "Elite",
+      "article": "Elite (video game)",
+      "url": "https://en.wikipedia.org/wiki/Elite_%28video_game%29"
+    },
+    "flashback": {
+      "title": "Flashback",
+      "article": "Flashback (1992 video game)",
+      "url": "https://en.wikipedia.org/wiki/Flashback_%281992_video_game%29"
+    },
+    "gauntlet": {
+      "title": "Gauntlet",
+      "article": "Gauntlet (1985 video game)",
+      "url": "https://en.wikipedia.org/wiki/Gauntlet_%281985_video_game%29"
+    },
+    "gianasisters": {
+      "title": "Giana Sisters",
+      "article": "The Great Giana Sisters",
+      "url": "https://en.wikipedia.org/wiki/The_Great_Giana_Sisters"
+    },
+    "impossiblemission": {
+      "title": "Impossible Mission",
+      "article": "Impossible Mission",
+      "url": "https://en.wikipedia.org/wiki/Impossible_Mission"
+    },
+    "internationalkarate": {
+      "title": "International Karate",
+      "article": "International Karate",
+      "url": "https://en.wikipedia.org/wiki/International_Karate"
+    },
+    "jetsetwilly": {
+      "title": "Jet Set Willy",
+      "article": "Jet Set Willy",
+      "url": "https://en.wikipedia.org/wiki/Jet_Set_Willy"
+    },
+    "lemmings": {
+      "title": "Lemmings",
+      "article": "Lemmings (video game)",
+      "url": "https://en.wikipedia.org/wiki/Lemmings_%28video_game%29"
+    },
+    "lotusespritturbochallenge": {
+      "title": "Lotus Esprit Turbo Challenge",
+      "article": "Lotus Esprit Turbo Challenge",
+      "url": "https://en.wikipedia.org/wiki/Lotus_Esprit_Turbo_Challenge"
+    },
+    "maniacmansion": {
+      "title": "Maniac Mansion",
+      "article": "Maniac Mansion",
+      "url": "https://en.wikipedia.org/wiki/Maniac_Mansion"
+    },
+    "manicminer": {
+      "title": "Manic Miner",
+      "article": "Manic Miner",
+      "url": "https://en.wikipedia.org/wiki/Manic_Miner"
+    },
+    "monkeyisland2": {
+      "title": "Monkey Island 2",
+      "article": "Monkey Island 2: LeChuck's Revenge",
+      "url": "https://en.wikipedia.org/wiki/Monkey_Island_2%3A_LeChuck%27s_Revenge"
+    },
+    "northsouth": {
+      "title": "North & South",
+      "article": "North & South (video game)",
+      "url": "https://en.wikipedia.org/wiki/North_%26_South_%28video_game%29"
+    },
+    "pacman": {
+      "title": "Pac-Man",
+      "article": "Pac-Man",
+      "url": "https://en.wikipedia.org/wiki/Pac-Man"
+    },
+    "pacmania": {
+      "title": "Pac-Mania",
+      "article": "Pac-Mania",
+      "url": "https://en.wikipedia.org/wiki/Pac-Mania"
+    },
+    "paradroid": {
+      "title": "Paradroid",
+      "article": "Paradroid",
+      "url": "https://en.wikipedia.org/wiki/Paradroid"
+    },
+    "populous": {
+      "title": "Populous",
+      "article": "Populous (video game)",
+      "url": "https://en.wikipedia.org/wiki/Populous_%28video_game%29"
+    },
+    "portsofcall": {
+      "title": "Ports of Call",
+      "article": "Ports of Call (video game)",
+      "url": "https://en.wikipedia.org/wiki/Ports_of_Call_%28video_game%29"
+    },
+    "princeofpersia": {
+      "title": "Prince of Persia",
+      "article": "Prince of Persia (1989 video game)",
+      "url": "https://en.wikipedia.org/wiki/Prince_of_Persia_%281989_video_game%29"
+    },
+    "rtype": {
+      "title": "R-Type",
+      "article": "R-Type",
+      "url": "https://en.wikipedia.org/wiki/R-Type"
+    },
+    "secretofmonkeyisland": {
+      "title": "Secret of Monkey Island",
+      "article": "The Secret of Monkey Island",
+      "url": "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island"
+    },
+    "sensiblesoccer": {
+      "title": "Sensible Soccer",
+      "article": "Sensible Soccer",
+      "url": "https://en.wikipedia.org/wiki/Sensible_Soccer"
+    },
+    "simcity": {
+      "title": "SimCity",
+      "article": "SimCity (1989 video game)",
+      "url": "https://en.wikipedia.org/wiki/SimCity_%281989_video_game%29"
+    },
+    "skooldaze": {
+      "title": "Skool Daze",
+      "article": "Skool Daze",
+      "url": "https://en.wikipedia.org/wiki/Skool_Daze"
+    },
+    "speedball": {
+      "title": "Speedball",
+      "article": "Speedball (video game)",
+      "url": "https://en.wikipedia.org/wiki/Speedball_%28video_game%29"
+    },
+    "speedball2": {
+      "title": "Speedball 2",
+      "article": "Speedball 2: Brutal Deluxe",
+      "url": "https://en.wikipedia.org/wiki/Speedball_2%3A_Brutal_Deluxe"
+    },
+    "stuntcarracer": {
+      "title": "Stunt Car Racer",
+      "article": "Stunt Car Racer",
+      "url": "https://en.wikipedia.org/wiki/Stunt_Car_Racer"
+    },
+    "thelastninja": {
+      "title": "The Last Ninja",
+      "article": "The Last Ninja",
+      "url": "https://en.wikipedia.org/wiki/The_Last_Ninja"
+    },
+    "thesettlers": {
+      "title": "The Settlers",
+      "article": "The Settlers (1993 video game)",
+      "url": "https://en.wikipedia.org/wiki/The_Settlers_%281993_video_game%29"
+    },
+    "turrican": {
+      "title": "Turrican",
+      "article": "Turrican",
+      "url": "https://en.wikipedia.org/wiki/Turrican"
+    },
+    "worms": {
+      "title": "Worms",
+      "article": "Worms (1995 video game)",
+      "url": "https://en.wikipedia.org/wiki/Worms_%281995_video_game%29"
+    },
+    "zakmckracken": {
+      "title": "Zak McKracken",
+      "article": "Zak McKracken and the Alien Mindbenders",
+      "url": "https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders"
+    }
+  }
+}
