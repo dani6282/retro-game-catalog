@@ -16,6 +16,8 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from title_normalization import clean_title, is_non_game, title_key
+
 
 BATOCERA_ROMS = Path(os.environ.get("BATOCERA_ROMS", "/mnt/wd-WXF1A94HCEF5-share/roms"))
 PIMIGA_GAMES = Path(os.environ.get("PIMIGA_GAMES", "/mnt/pimiga-root/home/pi/pimiga/disks/Games"))
@@ -93,19 +95,12 @@ def title_from_path(path: Path) -> str:
     stem = path.name
     if path.suffix:
         stem = path.stem
-    stem = re.sub(r"[_]+", " ", stem)
-    stem = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", stem)
-    stem = re.sub(r"\s+", " ", stem).strip()
+    stem = clean_title(stem)
     return stem or path.name
 
 
 def normalize_title(title: str) -> str:
-    value = title.lower()
-    value = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", value)
-    value = re.sub(r"\b(disk|disc|side|part|cd)\s*\d+\b", " ", value)
-    value = re.sub(r"\b(de|ger|german|fr|french|en|english|ntsc|pal|aga|ocs|ecs|cd32)\b", " ", value)
-    value = re.sub(r"[^a-z0-9]+", "", value)
-    return value
+    return title_key(title)
 
 
 def file_size(path: Path) -> int | None:
@@ -155,6 +150,7 @@ def make_entry(
         "absolutePath": str(path),
         "sizeBytes": file_size(path),
         "sourceKind": source_kind,
+        "nonGame": is_non_game(title, rel),
     }
 
 

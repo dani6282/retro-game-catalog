@@ -45,7 +45,9 @@ Community ranking data is generated from reproducible source definitions in `dat
 The scraper currently imports:
 
 - C64-Wiki TOP100
+- C64-Wiki TOP1000 page, using however many rows the live page currently exposes
 - Lemon Amiga Top 100 with at least 50 votes
+- Lemon Amiga Top 100 with at least 25 votes, as a broader lower-priority source
 
 The script uses only Python standard-library modules. It falls back to `curl` if the local Python install cannot validate HTTPS certificates.
 
@@ -63,10 +65,18 @@ The app loads a pre-grouped index for speed, then lazy-loads detail chunks only 
 
 Run this after changing `public/catalog.json`, `public/wiki-links.json`, or `public/community-ranks.json`.
 
+Title matching is centralized in `scripts/title_normalization.py`. It preserves sequels and plus-editions, collapses multi-disk variants, and excludes explicit `ZZZ(notgame)` utility entries from the user-facing game counts.
+
 Generated files:
 
 - `public/game-index.json`
 - `public/details/*.json`
+
+To check that grouped counts, detail chunks, known tricky titles, and rank matches remain sane:
+
+```bash
+./scripts/audit_catalog_matching.py
+```
 
 ## Run Locally
 

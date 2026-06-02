@@ -8,7 +8,9 @@ out="${repo_dir}/public/catalog.json"
 tmp="$(mktemp)"
 trap 'rm -f "$tmp"' EXIT
 
-ssh "$host" 'python3 -' < "${repo_dir}/scripts/woodstock_inventory.py" > "$tmp"
+ssh "$host" 'cat > /tmp/title_normalization.py' < "${repo_dir}/scripts/title_normalization.py"
+ssh "$host" 'cat > /tmp/woodstock_inventory.py' < "${repo_dir}/scripts/woodstock_inventory.py"
+ssh "$host" 'PYTHONPATH=/tmp python3 /tmp/woodstock_inventory.py' > "$tmp"
 python3 -m json.tool "$tmp" > /dev/null
 mv "$tmp" "$out"
 

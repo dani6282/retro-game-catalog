@@ -5,8 +5,9 @@ from __future__ import annotations
 
 import json
 import math
-import re
 from pathlib import Path
+
+from title_normalization import display_title, is_non_game, title_key
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,33 +39,6 @@ POPULAR_TITLE_HINTS = {
     "turrican",
     "zak mckracken",
 }
-
-
-def clean_title(value: str) -> str:
-    value = re.sub(r"[_]+", " ", value or "")
-    value = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", value)
-    return re.sub(r"\s+", " ", value).strip()
-
-
-def base_title(title: str) -> str:
-    value = clean_title(title)
-    article_match = re.match(r"^(.+),\s+(The|A|An)$", value, flags=re.I)
-    if article_match:
-        value = f"{article_match.group(2)} {article_match.group(1)}"
-    return re.sub(
-        r"\s+(De|Ger|German|Deutsch|Fr|Fre|French|Francais|It|Ita|Italian|Es|Spa|Spanish)$",
-        "",
-        value,
-        flags=re.I,
-    ).strip()
-
-
-def group_key(title: str) -> str:
-    value = base_title(title).lower()
-    value = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", value)
-    value = re.sub(r"\b(disk|disc|side|part|cd)\s*\d+\b", " ", value)
-    value = re.sub(r"\b(ntsc|pal|aga|ocs|ecs|cd32|whdload)\b", " ", value)
-    return re.sub(r"[^a-z0-9]+", "", value)
 
 
 def unique(values: list[str | None]) -> list[str]:
@@ -117,11 +91,22 @@ def community_score(ranks: list[dict]) -> int:
     return 1000 + max(0, 101 - best_rank) * 8 + vote_bonus
 
 
+def title_weight(title: str | None) -> int:
+    return sum(1 for char in title or "" if char.isalnum())
+
+
+def best_local_title(entries: list[dict]) -> str:
+    titles = unique([display_title(entry.get("title", "")) for entry in entries])
+    return sorted(titles, key=lambda title: (-title_weight(title), title.casefold()))[0] if titles else ""
+
+
 def compact_rank(rank: dict) -> dict:
     return {
         "title": rank.get("title"),
         "sourceId": rank.get("sourceId"),
         "sourceName": rank.get("sourceName"),
+        "sourceFamily": rank.get("sourceFamily"),
+        "sourcePriority": rank.get("sourcePriority"),
         "platform": rank.get("platform"),
         "rank": rank.get("rank"),
         "score": rank.get("score"),
@@ -161,23 +146,26 @@ def main() -> int:
     rank_payload = json.loads(RANKS_PATH.read_text()) if RANKS_PATH.exists() else {"byKey": {}, "sources": []}
     community_ranks = rank_payload.get("byKey", {})
     groups_by_key: dict[str, dict] = {}
+    included_entries = [entry for entry in raw["games"] if not is_non_game(entry.get("title", ""), entry.get("path", ""))]
+    excluded_non_games = len(raw["games"]) - len(included_entries)
 
-    for entry in raw["games"]:
-        key = group_key(entry["title"]) or entry.get("normalizedTitle") or entry["id"]
-        groups_by_key.setdefault(key, {"key": key, "title": base_title(entry["title"]) or entry["title"], "_entries": []})
+    for entry in included_entries:
+        key = title_key(entry["title"]) or entry.get("normalizedTitle") or entry["id"]
+        groups_by_key.setdefault(key, {"key": key, "title": display_title(entry["title"]) or entry["title"], "_entries": []})
         groups_by_key[key]["_entries"].append(entry)
 
     groups = []
     details_by_bucket: dict[str, dict] = {}
     for group in groups_by_key.values():
         entries = group["_entries"]
+        group["title"] = best_local_title(entries) or group["title"]
         variants = sorted(entries, key=lambda item: (item.get("source") or "", variant_label(item), item.get("path") or ""))
         descriptions = unique([entry.get("description") for entry in entries])[:2]
         metadata_bits = unique(
             [value for entry in entries for value in [entry.get("genre"), entry.get("developer"), entry.get("publisher")] if value]
         )[:4]
         ranks = [compact_rank(rank) for rank in community_ranks.get(group["key"], [])]
-        if ranks:
+        if ranks and title_weight(ranks[0]["title"]) >= title_weight(group["title"]):
             group["title"] = ranks[0]["title"]
         bucket = detail_bucket(group["key"])
         details_by_bucket.setdefault(bucket, {})[group["key"]] = {
@@ -233,14 +221,20 @@ def main() -> int:
         groups.append(group)
 
     groups.sort(key=lambda group: (-group["popularity"], group["title"].casefold()))
+    by_source: dict[str, int] = {}
+    for entry in included_entries:
+        by_source[entry["source"]] = by_source.get(entry["source"], 0) + 1
     payload = {
         "generatedAt": raw.get("generatedAt"),
         "sourceRoots": raw.get("sourceRoots", {}),
             "summary": {
                 "games": len(groups),
-                "variants": raw["summary"]["total"],
-                "bySource": raw["summary"]["bySource"],
+                "variants": len(included_entries),
+                "rawVariants": raw["summary"]["total"],
+                "excludedNonGames": excluded_non_games,
+                "bySource": dict(sorted(by_source.items())),
                 "inBothLibraries": sum(1 for group in groups if len(group["libraries"]) > 1),
+                "variantsInBothLibraries": sum(group["variantCount"] for group in groups if len(group["libraries"]) > 1),
                 "withMetadata": sum(1 for group in groups if group["hasMetadata"]),
                 "withWiki": sum(1 for group in groups if group["wiki"]),
                 "withCommunityRank": sum(1 for group in groups if group["communityRanks"]),

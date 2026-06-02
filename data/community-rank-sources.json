@@ -3,16 +3,42 @@
     {
       "id": "c64-wiki-top100",
       "name": "C64-Wiki TOP100",
+      "parser": "c64-wiki",
+      "family": "c64-wiki",
+      "priority": 10,
       "platform": "c64",
       "url": "https://www.c64-wiki.com/wiki/C64-Wiki%3ATOP100",
       "notes": "Top 100 C64-Wiki scores. The page states that only games with at least 4 votes are included and that it is updated every 24 hours."
     },
     {
+      "id": "c64-wiki-top1000",
+      "name": "C64-Wiki TOP1000",
+      "parser": "c64-wiki",
+      "family": "c64-wiki",
+      "priority": 20,
+      "platform": "c64",
+      "url": "https://www.c64-wiki.com/wiki/C64-Wiki:TOP1000_of_C64-Wiki",
+      "notes": "Broader C64-Wiki score list. The page is named TOP1000 but currently exposes the ranked rows present in the live page, which may be fewer than 1000."
+    },
+    {
       "id": "lemon-amiga-top100",
       "name": "Lemon Amiga Top 100",
+      "parser": "lemon-amiga",
+      "family": "lemon-amiga",
+      "priority": 10,
       "platform": "amiga",
       "url": "https://www.lemonamiga.com/games/votes_list.php?votes_needed=50",
       "notes": "Top 100 Lemon Amiga vote list with a minimum of 50 votes."
+    },
+    {
+      "id": "lemon-amiga-top100-votes25",
+      "name": "Lemon Amiga Top 100 (25+ votes)",
+      "parser": "lemon-amiga",
+      "family": "lemon-amiga",
+      "priority": 20,
+      "platform": "amiga",
+      "url": "https://www.lemonamiga.com/games/votes_list.php?votes_needed=25",
+      "notes": "Broader Lemon Amiga vote list with a minimum of 25 votes. Lower priority than the 50-vote source when both point to the same game page."
     }
   ]
 }

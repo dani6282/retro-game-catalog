@@ -210,7 +210,7 @@ function renderVariant(variant) {
 }
 
 function rankLabel(rank) {
-  const source = rank.sourceId === "c64-wiki-top100" ? "C64-Wiki" : "Lemon Amiga";
+  const source = rank.sourceFamily === "c64-wiki" ? "C64-Wiki" : rank.sourceFamily === "lemon-amiga" ? "Lemon Amiga" : rank.sourceName;
   const score = rank.score ? ` ${rank.score.toFixed(2)}` : "";
   return `${source} #${rank.rank}${score}`;
 }

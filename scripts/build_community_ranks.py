@@ -14,40 +14,12 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from title_normalization import clean_title, display_title, title_key
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES_PATH = ROOT / "data" / "community-rank-sources.json"
 OUT_PATH = ROOT / "public" / "community-ranks.json"
-
-
-def clean_title(value: str) -> str:
-    value = html.unescape(value or "")
-    value = re.sub(r"<[^>]+>", "", value)
-    value = re.sub(r"[_]+", " ", value)
-    value = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", value)
-    return re.sub(r"\s+", " ", value).strip()
-
-
-def title_for_key(title: str) -> str:
-    value = clean_title(title)
-    article_match = re.match(r"^(.+),\s+(The|A|An)$", value, flags=re.I)
-    if article_match:
-        value = f"{article_match.group(2)} {article_match.group(1)}"
-    value = re.sub(
-        r"\s+(De|Ger|German|Deutsch|Fr|Fre|French|Francais|It|Ita|Italian|Es|Spa|Spanish)$",
-        "",
-        value,
-        flags=re.I,
-    ).strip()
-    return value
-
-
-def title_key(title: str) -> str:
-    value = title_for_key(title).lower()
-    value = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", value)
-    value = re.sub(r"\b(disk|disc|side|part|cd|v|version)\s*\d+(\.\d+)?\b", " ", value)
-    value = re.sub(r"\b(ntsc|pal|aga|ocs|ecs|cd32|whdload)\b", " ", value)
-    return re.sub(r"[^a-z0-9]+", "", value)
 
 
 def fetch(url: str) -> str:
@@ -88,9 +60,11 @@ def parse_c64_wiki(source: dict, markup: str) -> list[dict]:
         items.append(
             {
                 "key": title_key(title),
-                "title": title_for_key(title),
+                "title": display_title(title),
                 "sourceId": source["id"],
                 "sourceName": source["name"],
+                "sourceFamily": source.get("family", source["id"]),
+                "sourcePriority": source.get("priority", 100),
                 "platform": source["platform"],
                 "rank": int(match.group("rank")),
                 "score": float(match.group("score")),
@@ -118,9 +92,11 @@ def parse_lemon_amiga(source: dict, markup: str) -> list[dict]:
         items.append(
             {
                 "key": title_key(title),
-                "title": title_for_key(title),
+                "title": display_title(title),
                 "sourceId": source["id"],
                 "sourceName": source["name"],
+                "sourceFamily": source.get("family", source["id"]),
+                "sourcePriority": source.get("priority", 100),
                 "platform": source["platform"],
                 "rank": position,
                 "score": float(score_match.group("score")),
@@ -132,16 +108,38 @@ def parse_lemon_amiga(source: dict, markup: str) -> list[dict]:
 
 
 PARSERS = {
+    "c64-wiki": parse_c64_wiki,
     "c64-wiki-top100": parse_c64_wiki,
+    "c64-wiki-top1000": parse_c64_wiki,
+    "lemon-amiga": parse_lemon_amiga,
     "lemon-amiga-top100": parse_lemon_amiga,
+    "lemon-amiga-top100-votes25": parse_lemon_amiga,
 }
+
+
+def dedupe_for_matching(entries: list[dict]) -> list[dict]:
+    best_by_source_page: dict[tuple[str, str], dict] = {}
+    for entry in entries:
+        signature = (entry.get("sourceFamily") or entry["sourceId"], entry.get("url") or entry["title"])
+        current = best_by_source_page.get(signature)
+        if current is None or (
+            entry.get("sourcePriority", 100),
+            entry.get("rank", 999999),
+            entry.get("sourceName", ""),
+        ) < (
+            current.get("sourcePriority", 100),
+            current.get("rank", 999999),
+            current.get("sourceName", ""),
+        ):
+            best_by_source_page[signature] = entry
+    return sorted(best_by_source_page.values(), key=lambda item: (item.get("sourcePriority", 100), item["rank"], item["sourceName"]))
 
 
 def build_payload(markups: dict[str, str]) -> dict:
     config = json.loads(SOURCES_PATH.read_text())
     rankings = []
     for source in config["sources"]:
-        parser = PARSERS[source["id"]]
+        parser = PARSERS[source.get("parser", source["id"])]
         entries = parser(source, markups[source["id"]])
         rankings.extend(entries)
         print(f"{source['name']}: {len(entries)} entries", file=sys.stderr)
@@ -154,7 +152,7 @@ def build_payload(markups: dict[str, str]) -> dict:
         "generatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "sources": config["sources"],
         "rankings": sorted(rankings, key=lambda item: (item["sourceId"], item["rank"], item["title"].casefold())),
-        "byKey": {key: sorted(values, key=lambda item: (item["rank"], item["sourceName"])) for key, values in sorted(by_key.items())},
+        "byKey": {key: dedupe_for_matching(values) for key, values in sorted(by_key.items())},
     }
 
 
