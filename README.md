@@ -84,9 +84,9 @@ http://localhost:4173
 
 ## Deploy
 
-The repository is ready for GitHub Pages. Push it to a GitHub repo named `retro-game-catalog`; the workflow in `.github/workflows/pages.yml` publishes the static site from the repository root.
+The primary deployment is Woodstock using the files in `deploy/woodstock`.
 
-It is also deployable on Woodstock using the files in `deploy/woodstock`.
+The repository also includes a manual GitHub Pages workflow in `.github/workflows/pages.yml`. GitHub Pages must be enabled for the repository before that workflow can succeed.
 
 Current Woodstock deployment:
 
