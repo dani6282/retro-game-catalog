@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW_PATH = ROOT / "public" / "catalog.json"
 WIKI_PATH = ROOT / "public" / "wiki-links.json"
+RANKS_PATH = ROOT / "public" / "community-ranks.json"
 INDEX_PATH = ROOT / "public" / "game-index.json"
 DETAILS_DIR = ROOT / "public" / "details"
 
@@ -46,10 +47,14 @@ def clean_title(value: str) -> str:
 
 
 def base_title(title: str) -> str:
+    value = clean_title(title)
+    article_match = re.match(r"^(.+),\s+(The|A|An)$", value, flags=re.I)
+    if article_match:
+        value = f"{article_match.group(2)} {article_match.group(1)}"
     return re.sub(
         r"\s+(De|Ger|German|Deutsch|Fr|Fre|French|Francais|It|Ita|Italian|Es|Spa|Spanish)$",
         "",
-        clean_title(title),
+        value,
         flags=re.I,
     ).strip()
 
@@ -86,7 +91,7 @@ def variant_label(entry: dict) -> str:
     return " / ".join([value for value in [entry.get("language"), entry.get("category"), format_label(entry)] if value])
 
 
-def popularity_score(group: dict) -> int:
+def heuristic_score(group: dict) -> int:
     title = group["title"].lower()
     hint_score = 100 if any(hint in title for hint in POPULAR_TITLE_HINTS) else 0
     both_score = 35 if len(group["libraries"]) > 1 else 0
@@ -101,6 +106,28 @@ def popularity_score(group: dict) -> int:
     ratings = [rating for rating in ratings if math.isfinite(rating)]
     rating_score = (sum(ratings) / len(ratings) * 20) if ratings else 0
     return round(hint_score + both_score + metadata_score + variant_score + rating_score)
+
+
+def community_score(ranks: list[dict]) -> int:
+    if not ranks:
+        return 0
+    best_rank = min(rank["rank"] for rank in ranks)
+    best_votes = max((rank.get("votes") or 0) for rank in ranks)
+    vote_bonus = min(best_votes // 50, 15)
+    return 1000 + max(0, 101 - best_rank) * 8 + vote_bonus
+
+
+def compact_rank(rank: dict) -> dict:
+    return {
+        "title": rank.get("title"),
+        "sourceId": rank.get("sourceId"),
+        "sourceName": rank.get("sourceName"),
+        "platform": rank.get("platform"),
+        "rank": rank.get("rank"),
+        "score": rank.get("score"),
+        "votes": rank.get("votes"),
+        "url": rank.get("url"),
+    }
 
 
 def compact_variant(entry: dict) -> dict:
@@ -131,6 +158,8 @@ def detail_bucket(key: str) -> str:
 def main() -> int:
     raw = json.loads(RAW_PATH.read_text())
     wiki = json.loads(WIKI_PATH.read_text()).get("links", {}) if WIKI_PATH.exists() else {}
+    rank_payload = json.loads(RANKS_PATH.read_text()) if RANKS_PATH.exists() else {"byKey": {}, "sources": []}
+    community_ranks = rank_payload.get("byKey", {})
     groups_by_key: dict[str, dict] = {}
 
     for entry in raw["games"]:
@@ -147,6 +176,9 @@ def main() -> int:
         metadata_bits = unique(
             [value for entry in entries for value in [entry.get("genre"), entry.get("developer"), entry.get("publisher")] if value]
         )[:4]
+        ranks = [compact_rank(rank) for rank in community_ranks.get(group["key"], [])]
+        if ranks:
+            group["title"] = ranks[0]["title"]
         bucket = detail_bucket(group["key"])
         details_by_bucket.setdefault(bucket, {})[group["key"]] = {
             "descriptions": descriptions,
@@ -163,11 +195,14 @@ def main() -> int:
                 "hasMetadata": any(has_metadata(entry) for entry in entries),
                 "hasDescription": bool(descriptions),
                 "metadataBits": metadata_bits,
+                "communityRanks": ranks,
+                "communityScore": community_score(ranks),
                 "wiki": wiki.get(group["key"]),
                 "detailFile": f"details/{bucket}.json",
             }
         )
-        group["popularity"] = popularity_score(group)
+        group["heuristicScore"] = heuristic_score(group)
+        group["popularity"] = group["communityScore"] + group["heuristicScore"]
         group["searchText"] = " ".join(
             [
                 group["title"],
@@ -177,6 +212,7 @@ def main() -> int:
                 " ".join(group["languages"]),
                 " ".join(group["categories"]),
                 " ".join(group["metadataBits"]),
+                " ".join(rank["sourceName"] for rank in group["communityRanks"]),
                 group["wiki"]["article"] if group["wiki"] else "",
                 *[
                     " ".join(
@@ -200,14 +236,16 @@ def main() -> int:
     payload = {
         "generatedAt": raw.get("generatedAt"),
         "sourceRoots": raw.get("sourceRoots", {}),
-        "summary": {
-            "games": len(groups),
-            "variants": raw["summary"]["total"],
-            "bySource": raw["summary"]["bySource"],
-            "inBothLibraries": sum(1 for group in groups if len(group["libraries"]) > 1),
-            "withMetadata": sum(1 for group in groups if group["hasMetadata"]),
-            "withWiki": sum(1 for group in groups if group["wiki"]),
-        },
+            "summary": {
+                "games": len(groups),
+                "variants": raw["summary"]["total"],
+                "bySource": raw["summary"]["bySource"],
+                "inBothLibraries": sum(1 for group in groups if len(group["libraries"]) > 1),
+                "withMetadata": sum(1 for group in groups if group["hasMetadata"]),
+                "withWiki": sum(1 for group in groups if group["wiki"]),
+                "withCommunityRank": sum(1 for group in groups if group["communityRanks"]),
+            },
+            "communityRankSources": rank_payload.get("sources", []),
         "groups": groups,
     }
     INDEX_PATH.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n")

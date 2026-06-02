@@ -55,6 +55,19 @@ function fillSelect(select, values, current, allLabel = "All") {
   }
 }
 
+function displayPlatform(value) {
+  const labels = {
+    amiga500: "Amiga 500",
+    amstradcpc: "Amstrad CPC",
+    c64: "C64",
+    mame: "Arcade",
+    scummvm: "ScummVM",
+    zxspectrum: "ZX Spectrum",
+    zx81: "ZX81",
+  };
+  return labels[value] || value;
+}
+
 function renderStats() {
   const summary = state.catalog.summary;
   const stats = [
@@ -62,7 +75,7 @@ function renderStats() {
     ["Variants", summary.variants],
     ["Batocera entries", summary.bySource.Batocera || 0],
     ["PiMiga entries", summary.bySource.PiMiga || 0],
-    ["With info", summary.withMetadata],
+    ["Ranked games", summary.withCommunityRank || 0],
   ];
 
   elements.stats.replaceChildren();
@@ -75,15 +88,24 @@ function renderStats() {
 }
 
 function initControls() {
-  fillSelect(elements.source, ["Batocera", "PiMiga", "Both"], state.source);
-  fillSelect(elements.platform, uniqueSorted(state.groups.flatMap((group) => group.platforms)), state.platform);
+  fillSelect(elements.source, ["Batocera", "PiMiga", "Both", "Batocera only", "PiMiga only"], state.source);
+  fillSelect(elements.platform, uniqueSorted(state.groups.flatMap((group) => group.platforms)).map(displayPlatform), state.platform);
   fillSelect(elements.format, uniqueSorted(state.groups.flatMap((group) => group.formats)), state.format);
 }
 
 function matchesFilters(group) {
   if (state.source === "Both" && group.libraries.length < 2) return false;
-  if (state.source !== "All" && state.source !== "Both" && !group.libraries.includes(state.source)) return false;
-  if (state.platform !== "All" && !group.platforms.includes(state.platform)) return false;
+  if (state.source === "Batocera only" && (group.libraries.length !== 1 || !group.libraries.includes("Batocera"))) return false;
+  if (state.source === "PiMiga only" && (group.libraries.length !== 1 || !group.libraries.includes("PiMiga"))) return false;
+  if (
+    state.source !== "All" &&
+    state.source !== "Both" &&
+    !state.source.endsWith(" only") &&
+    !group.libraries.includes(state.source)
+  ) {
+    return false;
+  }
+  if (state.platform !== "All" && !group.platforms.map(displayPlatform).includes(state.platform)) return false;
   if (state.format !== "All" && !group.formats.includes(state.format)) return false;
   if (state.onlyBoth && group.libraries.length < 2) return false;
   if (state.onlyLanguage && !group.languages.length) return false;
@@ -117,6 +139,16 @@ function badge(text, className = "") {
   return span;
 }
 
+function linkBadge(text, href, className = "") {
+  const anchor = document.createElement("a");
+  anchor.className = `badge ${className}`.trim();
+  anchor.href = href;
+  anchor.target = "_blank";
+  anchor.rel = "noreferrer";
+  anchor.textContent = text;
+  return anchor;
+}
+
 function sourceClass(source) {
   return source === "Batocera" ? "source-batocera" : "source-pimiga";
 }
@@ -126,6 +158,13 @@ function renderBadgeList(target, values, classForValue = () => "") {
   for (const value of values) {
     target.append(badge(value, classForValue(value)));
   }
+}
+
+function previewValues(values, limit) {
+  const preview = values.slice(0, limit);
+  const remaining = values.length - preview.length;
+  if (remaining > 0) preview.push(`+${remaining} more`);
+  return preview;
 }
 
 function paragraphsFromDescription(description) {
@@ -168,6 +207,12 @@ function renderVariant(variant) {
   row.append(path);
 
   return row;
+}
+
+function rankLabel(rank) {
+  const source = rank.sourceId === "c64-wiki-top100" ? "C64-Wiki" : "Lemon Amiga";
+  const score = rank.score ? ` ${rank.score.toFixed(2)}` : "";
+  return `${source} #${rank.rank}${score}`;
 }
 
 async function loadDetail(group) {
@@ -235,6 +280,7 @@ function renderGroups() {
   for (const group of visibleGroups) {
     const node = elements.gameTemplate.content.cloneNode(true);
     const details = node.querySelector("details");
+    const detailRow = node.querySelector(".detail-row");
     const variantList = node.querySelector(".variant-list");
     node.querySelector("summary strong").textContent = group.title;
     node.querySelector(".game-note").textContent = `${group.variantCount} variant${group.variantCount === 1 ? "" : "s"}`;
@@ -242,6 +288,7 @@ function renderGroups() {
     details.addEventListener(
       "toggle",
       () => {
+        detailRow.hidden = !details.open;
         if (details.open && !details.dataset.loaded) {
           details.dataset.loaded = "true";
           fillDetail(group, variantList).catch((error) => {
@@ -249,23 +296,29 @@ function renderGroups() {
           });
         }
       },
-      { once: true },
     );
 
-    renderBadgeList(node.querySelector(".library-cell"), group.libraries, sourceClass);
-    renderBadgeList(node.querySelector(".platform-format-cell"), [...group.platforms.slice(0, 3), ...group.formats.slice(0, 2)]);
-    renderBadgeList(node.querySelector(".variant-cell"), [
+    const libraryValues = group.libraries.length > 1 ? ["Both", ...group.libraries] : group.libraries;
+    renderBadgeList(node.querySelector(".library-cell"), libraryValues, (value) => {
+      if (value === "Both") return "both";
+      return sourceClass(value);
+    });
+    renderBadgeList(node.querySelector(".systems-cell"), previewValues(group.platforms.map(displayPlatform), 4));
+    renderBadgeList(node.querySelector(".editions-cell"), [
       `${group.variantCount} total`,
-      ...group.languages,
-      ...group.categories.slice(0, 2),
+      ...previewValues(group.formats, 2),
+      ...previewValues(group.languages, 2),
+      ...previewValues(group.categories, 2),
     ]);
 
-    const infoCell = node.querySelector(".info-cell");
-    if (group.hasMetadata) infoCell.append(badge("metadata"));
-    if (group.hasDescription) infoCell.append(badge("description"));
-    if (group.wiki) infoCell.append(badge("Wikipedia", "external"));
-    for (const bit of group.metadataBits.slice(0, 2)) infoCell.append(badge(bit));
-    if (!infoCell.children.length) infoCell.textContent = "file names only";
+    const rankCell = node.querySelector(".rank-cell");
+    for (const rank of group.communityRanks.slice(0, 2)) {
+      rankCell.append(linkBadge(rankLabel(rank), rank.url, "ranked"));
+    }
+    if (group.wiki) rankCell.append(linkBadge("Wikipedia", group.wiki.url, "external"));
+    if (group.hasDescription) rankCell.append(badge("description", "info"));
+    if (group.hasMetadata && !group.hasDescription) rankCell.append(badge("metadata", "info"));
+    if (!rankCell.children.length) rankCell.textContent = "file names only";
 
     fragment.append(node);
   }

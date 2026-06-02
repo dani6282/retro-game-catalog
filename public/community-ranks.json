@@ -1,0 +1,4787 @@
+{
+  "generatedAt": "2026-06-02T05:27:39+00:00",
+  "sources": [
+    {
+      "id": "c64-wiki-top100",
+      "name": "C64-Wiki TOP100",
+      "platform": "c64",
+      "url": "https://www.c64-wiki.com/wiki/C64-Wiki%3ATOP100",
+      "notes": "Top 100 C64-Wiki scores. The page states that only games with at least 4 votes are included and that it is updated every 24 hours."
+    },
+    {
+      "id": "lemon-amiga-top100",
+      "name": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "url": "https://www.lemonamiga.com/games/votes_list.php?votes_needed=50",
+      "notes": "Top 100 Lemon Amiga vote list with a minimum of 50 votes."
+    }
+  ],
+  "rankings": [
+    {
+      "key": "pirates",
+      "title": "Pirates!",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 1,
+      "score": 9.18,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Pirates!"
+    },
+    {
+      "key": "zakmckrackenandthealienmindbenders",
+      "title": "Zak Mc Kracken and the Alien Mindbenders",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 2,
+      "score": 9.12,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Zak_McKracken_and_the_Alien_Mindbenders"
+    },
+    {
+      "key": "maniacmansion",
+      "title": "Maniac Mansion",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 3,
+      "score": 9.11,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Maniac_Mansion"
+    },
+    {
+      "key": "turricanii",
+      "title": "Turrican II",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 4,
+      "score": 8.88,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Turrican_II"
+    },
+    {
+      "key": "thegreatgianasisters",
+      "title": "The Great Giana Sisters",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 5,
+      "score": 8.86,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Great_Giana_Sisters"
+    },
+    {
+      "key": "goldquestvi",
+      "title": "Gold Quest VI",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 6,
+      "score": 8.81,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Gold_Quest_VI"
+    },
+    {
+      "key": "archon",
+      "title": "Archon",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 7,
+      "score": 8.81,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Archon"
+    },
+    {
+      "key": "boulderdash",
+      "title": "Boulder Dash",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 8,
+      "score": 8.79,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Boulder_Dash"
+    },
+    {
+      "key": "bubblebobble",
+      "title": "Bubble Bobble",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 9,
+      "score": 8.79,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Bubble_Bobble"
+    },
+    {
+      "key": "wintergames",
+      "title": "Winter Games",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 10,
+      "score": 8.75,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Winter_Games"
+    },
+    {
+      "key": "turrican",
+      "title": "Turrican",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 11,
+      "score": 8.72,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Turrican"
+    },
+    {
+      "key": "internationalkarate",
+      "title": "International Karate",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 12,
+      "score": 8.7,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/International_Karate"
+    },
+    {
+      "key": "summergames",
+      "title": "Summer Games",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 13,
+      "score": 8.7,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Summer_Games"
+    },
+    {
+      "key": "lastninja2",
+      "title": "Last Ninja 2",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 14,
+      "score": 8.69,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Last_Ninja_2"
+    },
+    {
+      "key": "defenderofthecrown",
+      "title": "Defender of the Crown",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 15,
+      "score": 8.67,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Defender_of_the_Crown"
+    },
+    {
+      "key": "ik",
+      "title": "IK+",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 16,
+      "score": 8.63,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/IK%2B"
+    },
+    {
+      "key": "katakis",
+      "title": "Katakis",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 17,
+      "score": 8.61,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Katakis"
+    },
+    {
+      "key": "princeofpersia",
+      "title": "Prince of Persia",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 18,
+      "score": 8.61,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Prince_of_Persia"
+    },
+    {
+      "key": "elite",
+      "title": "Elite",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 19,
+      "score": 8.61,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Elite"
+    },
+    {
+      "key": "summergamesii",
+      "title": "Summer Games II",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 20,
+      "score": 8.6,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Summer_Games_II"
+    },
+    {
+      "key": "impossiblemission",
+      "title": "Impossible Mission",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 21,
+      "score": 8.59,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Impossible_Mission"
+    },
+    {
+      "key": "armalyte",
+      "title": "Armalyte",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 22,
+      "score": 8.57,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Armalyte"
+    },
+    {
+      "key": "thelastninja",
+      "title": "The Last Ninja",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 23,
+      "score": 8.56,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Last_Ninja"
+    },
+    {
+      "key": "worldgames",
+      "title": "World Games",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 24,
+      "score": 8.53,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/World_Games"
+    },
+    {
+      "key": "wizardofwor",
+      "title": "Wizard of Wor",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 25,
+      "score": 8.51,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Wizard_of_Wor"
+    },
+    {
+      "key": "xout",
+      "title": "X-Out",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 26,
+      "score": 8.5,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/X-Out"
+    },
+    {
+      "key": "neuromancer",
+      "title": "Neuromancer",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 27,
+      "score": 8.49,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Neuromancer"
+    },
+    {
+      "key": "wizball",
+      "title": "Wizball",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 28,
+      "score": 8.46,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Wizball"
+    },
+    {
+      "key": "lemmings",
+      "title": "Lemmings",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 29,
+      "score": 8.46,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Lemmings"
+    },
+    {
+      "key": "microprosesoccer",
+      "title": "Microprose Soccer",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 30,
+      "score": 8.45,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Microprose_Soccer"
+    },
+    {
+      "key": "rainbowislands",
+      "title": "Rainbow Islands",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 31,
+      "score": 8.42,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Rainbow_Islands"
+    },
+    {
+      "key": "mule",
+      "title": "M.U.L.E.",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 32,
+      "score": 8.4,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/M.U.L.E."
+    },
+    {
+      "key": "fortapocalypse",
+      "title": "Fort Apocalypse",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 33,
+      "score": 8.4,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Fort_Apocalypse"
+    },
+    {
+      "key": "spacetaxi",
+      "title": "Space Taxi",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 34,
+      "score": 8.39,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Space_Taxi"
+    },
+    {
+      "key": "littlecomputerpeople",
+      "title": "Little Computer People",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 35,
+      "score": 8.37,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Little_Computer_People"
+    },
+    {
+      "key": "californiagames",
+      "title": "California Games",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 36,
+      "score": 8.37,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/California_Games"
+    },
+    {
+      "key": "sevencitiesofgold",
+      "title": "Seven Cities of Gold",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 37,
+      "score": 8.36,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Seven_Cities_of_Gold"
+    },
+    {
+      "key": "dragonwars",
+      "title": "Dragon Wars",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 38,
+      "score": 8.35,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Dragon_Wars"
+    },
+    {
+      "key": "wasteland",
+      "title": "Wasteland",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 39,
+      "score": 8.33,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Wasteland"
+    },
+    {
+      "key": "paradroid",
+      "title": "Paradroid",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 40,
+      "score": 8.32,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Paradroid"
+    },
+    {
+      "key": "projectfirestart",
+      "title": "Project Firestart",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 41,
+      "score": 8.31,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Project_Firestart"
+    },
+    {
+      "key": "rtype",
+      "title": "R-Type",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 42,
+      "score": 8.3,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/R-Type"
+    },
+    {
+      "key": "thebardstale",
+      "title": "The Bard's Tale",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 43,
+      "score": 8.3,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Bard%27s_Tale"
+    },
+    {
+      "key": "wizard",
+      "title": "Wizard",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 44,
+      "score": 8.3,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Wizard"
+    },
+    {
+      "key": "hawkeye",
+      "title": "Hawkeye",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 45,
+      "score": 8.3,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Hawkeye"
+    },
+    {
+      "key": "grandprixcircuit",
+      "title": "Grand Prix Circuit",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 46,
+      "score": 8.29,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Grand_Prix_Circuit"
+    },
+    {
+      "key": "hardnheavy",
+      "title": "Hard'n'Heavy",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 47,
+      "score": 8.29,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Hard%27n%27Heavy"
+    },
+    {
+      "key": "redstormrising",
+      "title": "Red Storm Rising",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 48,
+      "score": 8.29,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Red_Storm_Rising"
+    },
+    {
+      "key": "nebulus",
+      "title": "Nebulus",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 49,
+      "score": 8.27,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Nebulus"
+    },
+    {
+      "key": "leaderboard",
+      "title": "Leaderboard",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 50,
+      "score": 8.26,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Leaderboard"
+    },
+    {
+      "key": "creatures",
+      "title": "Creatures",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 51,
+      "score": 8.24,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Creatures"
+    },
+    {
+      "key": "midnightresistance",
+      "title": "Midnight Resistance",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 52,
+      "score": 8.24,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Midnight_Resistance"
+    },
+    {
+      "key": "crillion",
+      "title": "Crillion",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 53,
+      "score": 8.22,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Crillion"
+    },
+    {
+      "key": "loderunner",
+      "title": "Lode Runner",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 54,
+      "score": 8.21,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Lode_Runner"
+    },
+    {
+      "key": "ultimavwarriorsofdestiny",
+      "title": "Ultima V – Warriors of Destiny",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 55,
+      "score": 8.2,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Ultima_V_%E2%80%93_Warriors_of_Destiny"
+    },
+    {
+      "key": "krakout",
+      "title": "Krakout",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 56,
+      "score": 8.17,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Krakout"
+    },
+    {
+      "key": "poolofradiance",
+      "title": "Pool of Radiance",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 57,
+      "score": 8.17,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Pool_of_Radiance"
+    },
+    {
+      "key": "alterego",
+      "title": "Alter Ego",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 58,
+      "score": 8.17,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Alter_Ego"
+    },
+    {
+      "key": "newcomer",
+      "title": "Newcomer",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 59,
+      "score": 8.17,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Newcomer"
+    },
+    {
+      "key": "arkanoid",
+      "title": "Arkanoid",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 60,
+      "score": 8.15,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Arkanoid"
+    },
+    {
+      "key": "carenandthetangledtentacles",
+      "title": "Caren and the Tangled Tentacles",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 61,
+      "score": 8.14,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Caren_and_the_Tangled_Tentacles"
+    },
+    {
+      "key": "brucelee",
+      "title": "Bruce Lee",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 62,
+      "score": 8.14,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Bruce_Lee"
+    },
+    {
+      "key": "barbariantheultimatewarrior",
+      "title": "Barbarian - The Ultimate Warrior",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 63,
+      "score": 8.11,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Barbarian_-_The_Ultimate_Warrior"
+    },
+    {
+      "key": "knightngrail",
+      "title": "Knight 'n' Grail",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 64,
+      "score": 8.11,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Knight_%27n%27_Grail"
+    },
+    {
+      "key": "lawofthewest",
+      "title": "Law of the West",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 65,
+      "score": 8.1,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Law_of_the_West"
+    },
+    {
+      "key": "frogs",
+      "title": "Frogs",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 66,
+      "score": 8.09,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Frogs"
+    },
+    {
+      "key": "bruceleereturnoffury",
+      "title": "Bruce Lee - Return of Fury",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 67,
+      "score": 8.08,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Bruce_Lee_-_Return_of_Fury"
+    },
+    {
+      "key": "thetrainescapetonormandy",
+      "title": "The Train – Escape to Normandy",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 68,
+      "score": 8.08,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Train_%E2%80%93_Escape_to_Normandy"
+    },
+    {
+      "key": "mafia",
+      "title": "Mafia",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 69,
+      "score": 8.08,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Mafia"
+    },
+    {
+      "key": "brileywitchchronicles",
+      "title": "Briley Witch Chronicles",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 70,
+      "score": 8.08,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Briley_Witch_Chronicles"
+    },
+    {
+      "key": "enforcer",
+      "title": "Enforcer",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 71,
+      "score": 8.07,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Enforcer"
+    },
+    {
+      "key": "davidsmidnightmagic",
+      "title": "David's Midnight Magic",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 72,
+      "score": 8.07,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/David%27s_Midnight_Magic"
+    },
+    {
+      "key": "rodland",
+      "title": "Rodland",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 73,
+      "score": 8.07,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Rodland"
+    },
+    {
+      "key": "turricaniii",
+      "title": "Turrican III",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 74,
+      "score": 8.06,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Turrican_III"
+    },
+    {
+      "key": "thewayoftheexplodingfist",
+      "title": "The Way of the Exploding Fist",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 75,
+      "score": 8.06,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Way_of_the_Exploding_Fist"
+    },
+    {
+      "key": "itsmagic",
+      "title": "It's Magic",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 76,
+      "score": 8.05,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/It%27s_Magic"
+    },
+    {
+      "key": "timesoflore",
+      "title": "Times of Lore",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 77,
+      "score": 8.05,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Times_of_Lore"
+    },
+    {
+      "key": "spherical",
+      "title": "Spherical",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 78,
+      "score": 8.04,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Spherical"
+    },
+    {
+      "key": "buggyboy",
+      "title": "Buggy Boy",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 79,
+      "score": 8.02,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Buggy_Boy"
+    },
+    {
+      "key": "herohelicopteremergencyrescueoperation",
+      "title": "H.E.R.O. Helicopter Emergency Rescue Operation",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 80,
+      "score": 8.01,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/H.E.R.O._Helicopter_Emergency_Rescue_Operation"
+    },
+    {
+      "key": "impossiblemissionii",
+      "title": "Impossible Mission II",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 81,
+      "score": 8.0,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Impossible_Mission_II"
+    },
+    {
+      "key": "ultimaivquestoftheavatar",
+      "title": "Ultima IV – Quest of the Avatar",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 82,
+      "score": 8.0,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Ultima_IV_%E2%80%93_Quest_of_the_Avatar"
+    },
+    {
+      "key": "polarbearinspace",
+      "title": "POLAR BEAR IN SPACE!",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 83,
+      "score": 8.0,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/POLAR_BEAR_IN_SPACE!"
+    },
+    {
+      "key": "thecastlesofdoctorcreep",
+      "title": "The Castles of Doctor Creep",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 84,
+      "score": 7.98,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Castles_of_Doctor_Creep"
+    },
+    {
+      "key": "skateordie",
+      "title": "Skate or Die!",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 85,
+      "score": 7.98,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Skate_or_Die!"
+    },
+    {
+      "key": "thesentinel",
+      "title": "The Sentinel",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 86,
+      "score": 7.96,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/The_Sentinel"
+    },
+    {
+      "key": "bluemax",
+      "title": "Blue Max",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 87,
+      "score": 7.95,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Blue_Max"
+    },
+    {
+      "key": "joegunngoldedition",
+      "title": "Joe Gunn - Gold Edition",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 88,
+      "score": 7.95,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Joe_Gunn_-_Gold_Edition"
+    },
+    {
+      "key": "montezumasrevenge",
+      "title": "Montezuma's Revenge",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 89,
+      "score": 7.95,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Montezuma%27s_Revenge"
+    },
+    {
+      "key": "pitstopii",
+      "title": "Pitstop II",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 90,
+      "score": 7.94,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Pitstop_II"
+    },
+    {
+      "key": "scarabus",
+      "title": "Scarabæus",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 91,
+      "score": 7.94,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Scarab%C3%A6us"
+    },
+    {
+      "key": "rickdangerous",
+      "title": "Rick Dangerous",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 92,
+      "score": 7.93,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Rick_Dangerous"
+    },
+    {
+      "key": "atomino",
+      "title": "Atomino",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 93,
+      "score": 7.93,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Atomino"
+    },
+    {
+      "key": "steelthunder",
+      "title": "Steel Thunder",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 94,
+      "score": 7.92,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Steel_Thunder"
+    },
+    {
+      "key": "ultimaiiiexodus",
+      "title": "Ultima III – Exodus",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 95,
+      "score": 7.92,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Ultima_III_%E2%80%93_Exodus"
+    },
+    {
+      "key": "spelunker",
+      "title": "Spelunker",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 96,
+      "score": 7.92,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Spelunker"
+    },
+    {
+      "key": "internationalsoccer",
+      "title": "International Soccer",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 97,
+      "score": 7.91,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/International_Soccer"
+    },
+    {
+      "key": "puzzlebobble",
+      "title": "Puzzle Bobble",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 98,
+      "score": 7.91,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Puzzle_Bobble"
+    },
+    {
+      "key": "bombuzal",
+      "title": "Bombuzal",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 99,
+      "score": 7.89,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Bombuzal"
+    },
+    {
+      "key": "salamander",
+      "title": "Salamander",
+      "sourceId": "c64-wiki-top100",
+      "sourceName": "C64-Wiki TOP100",
+      "platform": "c64",
+      "rank": 100,
+      "score": 7.89,
+      "votes": null,
+      "url": "https://www.c64-wiki.com/wiki/Salamander"
+    },
+    {
+      "key": "thesecretofmonkeyisland",
+      "title": "The Secret of Monkey Island",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 1,
+      "score": 9.19,
+      "votes": 676,
+      "url": "https://www.lemonamiga.com/game/secret-of-monkey-island"
+    },
+    {
+      "key": "monkeyisland2lechucksrevenge",
+      "title": "Monkey Island 2: Le Chuck's Revenge",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 2,
+      "score": 8.96,
+      "votes": 506,
+      "url": "https://www.lemonamiga.com/game/monkey-island-2-lechucks-revenge"
+    },
+    {
+      "key": "sensibleworldofsoccer9697",
+      "title": "Sensible World of Soccer '96/'97",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 3,
+      "score": 8.91,
+      "votes": 314,
+      "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer-96-97"
+    },
+    {
+      "key": "thesettlers",
+      "title": "The Settlers",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 4,
+      "score": 8.88,
+      "votes": 396,
+      "url": "https://www.lemonamiga.com/game/settlers"
+    },
+    {
+      "key": "turricaniithefinalfight",
+      "title": "Turrican II: The Final Fight",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 5,
+      "score": 8.87,
+      "votes": 513,
+      "url": "https://www.lemonamiga.com/game/turrican-2-the-final-fight"
+    },
+    {
+      "key": "duneiithebattleforarrakis",
+      "title": "Dune II: The Battle for Arrakis",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 6,
+      "score": 8.86,
+      "votes": 335,
+      "url": "https://www.lemonamiga.com/game/dune-2-the-battle-for-arrakis"
+    },
+    {
+      "key": "lemmings",
+      "title": "Lemmings",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 7,
+      "score": 8.86,
+      "votes": 606,
+      "url": "https://www.lemonamiga.com/game/lemmings"
+    },
+    {
+      "key": "civilization",
+      "title": "Civilization",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 8,
+      "score": 8.85,
+      "votes": 278,
+      "url": "https://www.lemonamiga.com/game/civilization"
+    },
+    {
+      "key": "slamtilt",
+      "title": "Slam Tilt",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 9,
+      "score": 8.83,
+      "votes": 253,
+      "url": "https://www.lemonamiga.com/game/slamtilt"
+    },
+    {
+      "key": "formulaonegrandprix",
+      "title": "Formula One Grand Prix",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 10,
+      "score": 8.82,
+      "votes": 290,
+      "url": "https://www.lemonamiga.com/game/formula-one-grand-prix"
+    },
+    {
+      "key": "sensibleworldofsoccer9596",
+      "title": "Sensible World of Soccer '95/'96",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 11,
+      "score": 8.81,
+      "votes": 138,
+      "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer-95-96"
+    },
+    {
+      "key": "ufoenemyunknown",
+      "title": "UFO: Enemy Unknown",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 12,
+      "score": 8.81,
+      "votes": 107,
+      "url": "https://www.lemonamiga.com/game/ufo-enemy-unknown-aga"
+    },
+    {
+      "key": "sensibleworldofsoccer",
+      "title": "Sensible World of Soccer",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 13,
+      "score": 8.8,
+      "votes": 189,
+      "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer"
+    },
+    {
+      "key": "ambermoon",
+      "title": "Ambermoon",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 14,
+      "score": 8.79,
+      "votes": 86,
+      "url": "https://www.lemonamiga.com/game/ambermoon"
+    },
+    {
+      "key": "cannonfodder",
+      "title": "Cannon Fodder",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 15,
+      "score": 8.79,
+      "votes": 559,
+      "url": "https://www.lemonamiga.com/game/cannon-fodder"
+    },
+    {
+      "key": "wings",
+      "title": "Wings",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 16,
+      "score": 8.79,
+      "votes": 452,
+      "url": "https://www.lemonamiga.com/game/wings"
+    },
+    {
+      "key": "speedball2brutaldeluxe",
+      "title": "Speedball 2: Brutal Deluxe",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 17,
+      "score": 8.78,
+      "votes": 538,
+      "url": "https://www.lemonamiga.com/game/speedball-2-brutal-deluxe"
+    },
+    {
+      "key": "indianajonesandthefateofatlantis",
+      "title": "Indiana Jones and the Fate of Atlantis",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 18,
+      "score": 8.77,
+      "votes": 296,
+      "url": "https://www.lemonamiga.com/game/indiana-jones-and-the-fate-of-atlantis-adventure"
+    },
+    {
+      "key": "ufoenemyunknown",
+      "title": "UFO: Enemy Unknown",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 19,
+      "score": 8.77,
+      "votes": 220,
+      "url": "https://www.lemonamiga.com/game/ufo-enemy-unknown"
+    },
+    {
+      "key": "flashback",
+      "title": "Flashback",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 20,
+      "score": 8.76,
+      "votes": 493,
+      "url": "https://www.lemonamiga.com/game/flashback"
+    },
+    {
+      "key": "anotherworld",
+      "title": "Another World",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 21,
+      "score": 8.75,
+      "votes": 556,
+      "url": "https://www.lemonamiga.com/game/another-world"
+    },
+    {
+      "key": "pirates",
+      "title": "Pirates!",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 22,
+      "score": 8.75,
+      "votes": 297,
+      "url": "https://www.lemonamiga.com/game/pirates"
+    },
+    {
+      "key": "syndicate",
+      "title": "Syndicate",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 23,
+      "score": 8.74,
+      "votes": 371,
+      "url": "https://www.lemonamiga.com/game/syndicate"
+    },
+    {
+      "key": "pinballfantasies",
+      "title": "Pinball Fantasies",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 24,
+      "score": 8.73,
+      "votes": 347,
+      "url": "https://www.lemonamiga.com/game/pinball-fantasies"
+    },
+    {
+      "key": "wormsthedirectorscut",
+      "title": "Worms: The Director's Cut",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 25,
+      "score": 8.73,
+      "votes": 196,
+      "url": "https://www.lemonamiga.com/game/worms-the-directors-cut"
+    },
+    {
+      "key": "pinballdreams",
+      "title": "Pinball Dreams",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 26,
+      "score": 8.7,
+      "votes": 434,
+      "url": "https://www.lemonamiga.com/game/pinball-dreams"
+    },
+    {
+      "key": "simonthesorcerer",
+      "title": "Simon the Sorcerer",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 27,
+      "score": 8.7,
+      "votes": 161,
+      "url": "https://www.lemonamiga.com/game/simon-the-sorcerer-aga"
+    },
+    {
+      "key": "moonstoneaharddaysknight",
+      "title": "Moonstone: A Hard Days Knight",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 28,
+      "score": 8.68,
+      "votes": 388,
+      "url": "https://www.lemonamiga.com/game/moonstone-a-hard-days-knight"
+    },
+    {
+      "key": "lotusturbochallenge2",
+      "title": "Lotus Turbo Challenge 2",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 29,
+      "score": 8.67,
+      "votes": 478,
+      "url": "https://www.lemonamiga.com/game/lotus-turbo-challenge-2"
+    },
+    {
+      "key": "cannonfodder",
+      "title": "Cannon Fodder",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 30,
+      "score": 8.66,
+      "votes": 95,
+      "url": "https://www.lemonamiga.com/game/cannon-fodder-cd32"
+    },
+    {
+      "key": "colonization",
+      "title": "Colonization",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 31,
+      "score": 8.64,
+      "votes": 162,
+      "url": "https://www.lemonamiga.com/game/colonization"
+    },
+    {
+      "key": "eyeofthebeholderiithelegendofdarkmoon",
+      "title": "Eye of the Beholder II: The Legend of Darkmoon",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 32,
+      "score": 8.64,
+      "votes": 201,
+      "url": "https://www.lemonamiga.com/game/eye-of-the-beholder-2-the-legend-of-darkmoon"
+    },
+    {
+      "key": "ruffntumble",
+      "title": "Ruff 'n' Tumble",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 33,
+      "score": 8.64,
+      "votes": 258,
+      "url": "https://www.lemonamiga.com/game/ruff-n-tumble"
+    },
+    {
+      "key": "thechaosengine",
+      "title": "The Chaos Engine",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 34,
+      "score": 8.63,
+      "votes": 405,
+      "url": "https://www.lemonamiga.com/game/chaos-engine"
+    },
+    {
+      "key": "pinballfantasies",
+      "title": "Pinball Fantasies",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 35,
+      "score": 8.62,
+      "votes": 87,
+      "url": "https://www.lemonamiga.com/game/pinball-fantasies-cd32"
+    },
+    {
+      "key": "simonthesorcerer",
+      "title": "Simon the Sorcerer",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 36,
+      "score": 8.62,
+      "votes": 123,
+      "url": "https://www.lemonamiga.com/game/simon-the-sorcerer-cd32"
+    },
+    {
+      "key": "civilization",
+      "title": "Civilization",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 37,
+      "score": 8.61,
+      "votes": 154,
+      "url": "https://www.lemonamiga.com/game/civilization-aga"
+    },
+    {
+      "key": "itcamefromthedesert",
+      "title": "It Came from the Desert",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 38,
+      "score": 8.61,
+      "votes": 309,
+      "url": "https://www.lemonamiga.com/game/it-came-from-the-desert"
+    },
+    {
+      "key": "worms",
+      "title": "Worms",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 39,
+      "score": 8.61,
+      "votes": 255,
+      "url": "https://www.lemonamiga.com/game/worms"
+    },
+    {
+      "key": "pinballfantasies",
+      "title": "Pinball Fantasies",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 40,
+      "score": 8.58,
+      "votes": 133,
+      "url": "https://www.lemonamiga.com/game/pinball-fantasies-aga"
+    },
+    {
+      "key": "battlesquadronthedestructionofthebarraxempire",
+      "title": "Battle Squadron: The Destruction of the Barrax Empire",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 41,
+      "score": 8.57,
+      "votes": 255,
+      "url": "https://www.lemonamiga.com/game/battle-squadron-the-destruction-of-the-barrax-empire"
+    },
+    {
+      "key": "dungeonmaster",
+      "title": "Dungeon Master",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 42,
+      "score": 8.57,
+      "votes": 224,
+      "url": "https://www.lemonamiga.com/game/dungeon-master"
+    },
+    {
+      "key": "worldcircuit",
+      "title": "World Circuit",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 43,
+      "score": 8.57,
+      "votes": 53,
+      "url": "https://www.lemonamiga.com/game/world-circuit"
+    },
+    {
+      "key": "lemmings2thetribes",
+      "title": "Lemmings 2: The Tribes",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 44,
+      "score": 8.56,
+      "votes": 261,
+      "url": "https://www.lemonamiga.com/game/lemmings-2-the-tribes"
+    },
+    {
+      "key": "thechaosengine",
+      "title": "The Chaos Engine",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 45,
+      "score": 8.55,
+      "votes": 145,
+      "url": "https://www.lemonamiga.com/game/chaos-engine-aga"
+    },
+    {
+      "key": "outofthisworld",
+      "title": "Out of this World",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 46,
+      "score": 8.55,
+      "votes": 105,
+      "url": "https://www.lemonamiga.com/game/out-of-this-world"
+    },
+    {
+      "key": "ik",
+      "title": "IK+",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 47,
+      "score": 8.53,
+      "votes": 405,
+      "url": "https://www.lemonamiga.com/game/ik-plus"
+    },
+    {
+      "key": "indianajonesandthelastcrusade",
+      "title": "Indiana Jones and the Last Crusade",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 48,
+      "score": 8.53,
+      "votes": 248,
+      "url": "https://www.lemonamiga.com/game/indiana-jones-and-the-last-crusade-adventure"
+    },
+    {
+      "key": "stuntcarracer",
+      "title": "Stunt Car Racer",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 49,
+      "score": 8.53,
+      "votes": 424,
+      "url": "https://www.lemonamiga.com/game/stunt-car-racer"
+    },
+    {
+      "key": "dynablaster",
+      "title": "Dyna Blaster",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 50,
+      "score": 8.52,
+      "votes": 226,
+      "url": "https://www.lemonamiga.com/game/dyna-blaster"
+    },
+    {
+      "key": "megalomania",
+      "title": "Mega lo Mania",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 51,
+      "score": 8.52,
+      "votes": 231,
+      "url": "https://www.lemonamiga.com/game/mega-lo-mania"
+    },
+    {
+      "key": "northsouth",
+      "title": "North & South",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 52,
+      "score": 8.52,
+      "votes": 426,
+      "url": "https://www.lemonamiga.com/game/north-and-south"
+    },
+    {
+      "key": "thechaosengine",
+      "title": "The Chaos Engine",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 53,
+      "score": 8.5,
+      "votes": 114,
+      "url": "https://www.lemonamiga.com/game/chaos-engine-cd32"
+    },
+    {
+      "key": "dune",
+      "title": "Dune",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 54,
+      "score": 8.5,
+      "votes": 202,
+      "url": "https://www.lemonamiga.com/game/dune"
+    },
+    {
+      "key": "f19stealthfighter",
+      "title": "F-19 Stealth Fighter",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 55,
+      "score": 8.5,
+      "votes": 70,
+      "url": "https://www.lemonamiga.com/game/f-19-stealth-fighter"
+    },
+    {
+      "key": "maniacmansion",
+      "title": "Maniac Mansion",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 56,
+      "score": 8.5,
+      "votes": 230,
+      "url": "https://www.lemonamiga.com/game/maniac-mansion"
+    },
+    {
+      "key": "rodland",
+      "title": "Rodland",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 57,
+      "score": 8.5,
+      "votes": 268,
+      "url": "https://www.lemonamiga.com/game/rodland"
+    },
+    {
+      "key": "banshee",
+      "title": "Banshee",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 58,
+      "score": 8.49,
+      "votes": 227,
+      "url": "https://www.lemonamiga.com/game/banshee"
+    },
+    {
+      "key": "beneathasteelsky",
+      "title": "Beneath A Steel Sky",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 59,
+      "score": 8.49,
+      "votes": 209,
+      "url": "https://www.lemonamiga.com/game/beneath-a-steel-sky"
+    },
+    {
+      "key": "eyeofthebeholder",
+      "title": "Eye of the Beholder",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 60,
+      "score": 8.49,
+      "votes": 216,
+      "url": "https://www.lemonamiga.com/game/eye-of-the-beholder"
+    },
+    {
+      "key": "beneathasteelsky",
+      "title": "Beneath A Steel Sky",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 61,
+      "score": 8.48,
+      "votes": 139,
+      "url": "https://www.lemonamiga.com/game/beneath-a-steel-sky-cd32"
+    },
+    {
+      "key": "frontiereliteii",
+      "title": "Frontier: Elite II",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 62,
+      "score": 8.48,
+      "votes": 211,
+      "url": "https://www.lemonamiga.com/game/frontier-elite-2"
+    },
+    {
+      "key": "turrican",
+      "title": "Turrican",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 63,
+      "score": 8.48,
+      "votes": 328,
+      "url": "https://www.lemonamiga.com/game/turrican"
+    },
+    {
+      "key": "supercarsii",
+      "title": "Super Cars II",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 64,
+      "score": 8.47,
+      "votes": 311,
+      "url": "https://www.lemonamiga.com/game/super-cars-2"
+    },
+    {
+      "key": "bubblebobble",
+      "title": "Bubble Bobble",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 65,
+      "score": 8.46,
+      "votes": 335,
+      "url": "https://www.lemonamiga.com/game/bubble-bobble"
+    },
+    {
+      "key": "lotusespritturbochallenge",
+      "title": "Lotus Esprit Turbo Challenge",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 66,
+      "score": 8.46,
+      "votes": 350,
+      "url": "https://www.lemonamiga.com/game/lotus-esprit-turbo-challenge"
+    },
+    {
+      "key": "populousiitrialsoftheolympiangods",
+      "title": "Populous II: Trials of the Olympian Gods",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 67,
+      "score": 8.46,
+      "votes": 179,
+      "url": "https://www.lemonamiga.com/game/populous-2-trials-of-the-olympian-gods"
+    },
+    {
+      "key": "pinballillusions",
+      "title": "Pinball Illusions",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 68,
+      "score": 8.45,
+      "votes": 144,
+      "url": "https://www.lemonamiga.com/game/pinball-illusions"
+    },
+    {
+      "key": "superfrog",
+      "title": "Superfrog",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 69,
+      "score": 8.44,
+      "votes": 457,
+      "url": "https://www.lemonamiga.com/game/superfrog"
+    },
+    {
+      "key": "zakmckrackenandthealienmindbenders",
+      "title": "Zak Mc Kracken and the Alien Mindbenders",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 70,
+      "score": 8.44,
+      "votes": 244,
+      "url": "https://www.lemonamiga.com/game/zak-mckracken-and-the-alien-mindbenders"
+    },
+    {
+      "key": "gunship2000",
+      "title": "Gunship 2000",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 71,
+      "score": 8.43,
+      "votes": 96,
+      "url": "https://www.lemonamiga.com/game/gunship-2000"
+    },
+    {
+      "key": "lasersquad",
+      "title": "Laser Squad",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 72,
+      "score": 8.42,
+      "votes": 90,
+      "url": "https://www.lemonamiga.com/game/laser-squad"
+    },
+    {
+      "key": "deluxegalaga",
+      "title": "Deluxe Galaga",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 73,
+      "score": 8.4,
+      "votes": 175,
+      "url": "https://www.lemonamiga.com/game/deluxe-galaga-aga"
+    },
+    {
+      "key": "lionheart",
+      "title": "Lionheart",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 74,
+      "score": 8.4,
+      "votes": 229,
+      "url": "https://www.lemonamiga.com/game/lionheart"
+    },
+    {
+      "key": "geneticspecies",
+      "title": "Genetic Species",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 75,
+      "score": 8.39,
+      "votes": 51,
+      "url": "https://www.lemonamiga.com/game/genetic-species-aga-rtg-cd-rom"
+    },
+    {
+      "key": "railroadtycoon",
+      "title": "Railroad Tycoon",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 76,
+      "score": 8.39,
+      "votes": 94,
+      "url": "https://www.lemonamiga.com/game/railroad-tycoon"
+    },
+    {
+      "key": "alienbreedtowerassault",
+      "title": "Alien Breed: Tower Assault",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 77,
+      "score": 8.38,
+      "votes": 140,
+      "url": "https://www.lemonamiga.com/game/alien-breed-tower-assault"
+    },
+    {
+      "key": "millennium22",
+      "title": "Millennium 2.2",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 78,
+      "score": 8.38,
+      "votes": 90,
+      "url": "https://www.lemonamiga.com/game/millennium-2-2"
+    },
+    {
+      "key": "championshipmanager93",
+      "title": "Championship Manager '93",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 79,
+      "score": 8.37,
+      "votes": 57,
+      "url": "https://www.lemonamiga.com/game/championship-manager-93"
+    },
+    {
+      "key": "lordsoftherisingsun",
+      "title": "Lords of the Rising Sun",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 80,
+      "score": 8.37,
+      "votes": 70,
+      "url": "https://www.lemonamiga.com/game/lords-of-the-rising-sun"
+    },
+    {
+      "key": "utopiathecreationofanation",
+      "title": "Utopia: The Creation of a Nation",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 81,
+      "score": 8.37,
+      "votes": 87,
+      "url": "https://www.lemonamiga.com/game/utopia-the-creation-of-a-nation"
+    },
+    {
+      "key": "historyline19141918",
+      "title": "Historyline 1914-1918",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 82,
+      "score": 8.36,
+      "votes": 67,
+      "url": "https://www.lemonamiga.com/game/historyline-1914-1918"
+    },
+    {
+      "key": "hybris",
+      "title": "Hybris",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 83,
+      "score": 8.36,
+      "votes": 192,
+      "url": "https://www.lemonamiga.com/game/hybris"
+    },
+    {
+      "key": "themisadventuresofflink",
+      "title": "The Misadventures of Flink",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 84,
+      "score": 8.36,
+      "votes": 53,
+      "url": "https://www.lemonamiga.com/game/misadventures-of-flink-cd32"
+    },
+    {
+      "key": "ohnomorelemmings",
+      "title": "Oh No! More Lemmings",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 85,
+      "score": 8.36,
+      "votes": 128,
+      "url": "https://www.lemonamiga.com/game/oh-no-more-lemmings"
+    },
+    {
+      "key": "ishar2messengersofdoom",
+      "title": "Ishar 2: Messengers of Doom",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 86,
+      "score": 8.35,
+      "votes": 62,
+      "url": "https://www.lemonamiga.com/game/ishar-2-messengers-of-doom"
+    },
+    {
+      "key": "trapsntreasures",
+      "title": "Traps 'n' Treasures",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 87,
+      "score": 8.35,
+      "votes": 113,
+      "url": "https://www.lemonamiga.com/game/traps-n-treasures"
+    },
+    {
+      "key": "dreamweb",
+      "title": "Dream Web",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 88,
+      "score": 8.34,
+      "votes": 87,
+      "url": "https://www.lemonamiga.com/game/dreamweb-aga"
+    },
+    {
+      "key": "tvsportsbasketball",
+      "title": "TV Sports Basketball",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 89,
+      "score": 8.34,
+      "votes": 116,
+      "url": "https://www.lemonamiga.com/game/tv-sports-basketball"
+    },
+    {
+      "key": "archermacleanspool",
+      "title": "Archer Maclean's Pool",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 90,
+      "score": 8.33,
+      "votes": 72,
+      "url": "https://www.lemonamiga.com/game/archer-macleans-pool"
+    },
+    {
+      "key": "elite",
+      "title": "Elite",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 91,
+      "score": 8.33,
+      "votes": 150,
+      "url": "https://www.lemonamiga.com/game/elite"
+    },
+    {
+      "key": "jimmywhiteswhirlwindsnooker",
+      "title": "Jimmy White's Whirlwind Snooker",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 92,
+      "score": 8.33,
+      "votes": 153,
+      "url": "https://www.lemonamiga.com/game/jimmy-whites-whirlwind-snooker"
+    },
+    {
+      "key": "playermanager",
+      "title": "Player Manager",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 93,
+      "score": 8.33,
+      "votes": 83,
+      "url": "https://www.lemonamiga.com/game/player-manager"
+    },
+    {
+      "key": "blackcrypt",
+      "title": "Black Crypt",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 94,
+      "score": 8.32,
+      "votes": 105,
+      "url": "https://www.lemonamiga.com/game/black-crypt"
+    },
+    {
+      "key": "chaosstrikesback",
+      "title": "Chaos Strikes Back",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 95,
+      "score": 8.32,
+      "votes": 62,
+      "url": "https://www.lemonamiga.com/game/chaos-strikes-back"
+    },
+    {
+      "key": "furyofthefurries",
+      "title": "Fury of the Furries",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 96,
+      "score": 8.32,
+      "votes": 96,
+      "url": "https://www.lemonamiga.com/game/fury-of-the-furries"
+    },
+    {
+      "key": "holidaylemmings1994",
+      "title": "Holiday Lemmings 1994",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 97,
+      "score": 8.32,
+      "votes": 50,
+      "url": "https://www.lemonamiga.com/game/holiday-lemmings-1994"
+    },
+    {
+      "key": "loom",
+      "title": "Loom",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 98,
+      "score": 8.32,
+      "votes": 177,
+      "url": "https://www.lemonamiga.com/game/loom"
+    },
+    {
+      "key": "pang",
+      "title": "Pang",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 99,
+      "score": 8.31,
+      "votes": 299,
+      "url": "https://www.lemonamiga.com/game/pang"
+    },
+    {
+      "key": "sensiblesoccerinternationaledition",
+      "title": "Sensible Soccer v1.2 - International Edition",
+      "sourceId": "lemon-amiga-top100",
+      "sourceName": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "rank": 100,
+      "score": 8.31,
+      "votes": 78,
+      "url": "https://www.lemonamiga.com/game/sensible-soccer-v1-2-international-edition"
+    }
+  ],
+  "byKey": {
+    "alienbreedtowerassault": [
+      {
+        "key": "alienbreedtowerassault",
+        "title": "Alien Breed: Tower Assault",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 77,
+        "score": 8.38,
+        "votes": 140,
+        "url": "https://www.lemonamiga.com/game/alien-breed-tower-assault"
+      }
+    ],
+    "alterego": [
+      {
+        "key": "alterego",
+        "title": "Alter Ego",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 58,
+        "score": 8.17,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Alter_Ego"
+      }
+    ],
+    "ambermoon": [
+      {
+        "key": "ambermoon",
+        "title": "Ambermoon",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 14,
+        "score": 8.79,
+        "votes": 86,
+        "url": "https://www.lemonamiga.com/game/ambermoon"
+      }
+    ],
+    "anotherworld": [
+      {
+        "key": "anotherworld",
+        "title": "Another World",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 21,
+        "score": 8.75,
+        "votes": 556,
+        "url": "https://www.lemonamiga.com/game/another-world"
+      }
+    ],
+    "archermacleanspool": [
+      {
+        "key": "archermacleanspool",
+        "title": "Archer Maclean's Pool",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 90,
+        "score": 8.33,
+        "votes": 72,
+        "url": "https://www.lemonamiga.com/game/archer-macleans-pool"
+      }
+    ],
+    "archon": [
+      {
+        "key": "archon",
+        "title": "Archon",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 7,
+        "score": 8.81,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Archon"
+      }
+    ],
+    "arkanoid": [
+      {
+        "key": "arkanoid",
+        "title": "Arkanoid",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 60,
+        "score": 8.15,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Arkanoid"
+      }
+    ],
+    "armalyte": [
+      {
+        "key": "armalyte",
+        "title": "Armalyte",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 22,
+        "score": 8.57,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Armalyte"
+      }
+    ],
+    "atomino": [
+      {
+        "key": "atomino",
+        "title": "Atomino",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 93,
+        "score": 7.93,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Atomino"
+      }
+    ],
+    "banshee": [
+      {
+        "key": "banshee",
+        "title": "Banshee",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 58,
+        "score": 8.49,
+        "votes": 227,
+        "url": "https://www.lemonamiga.com/game/banshee"
+      }
+    ],
+    "barbariantheultimatewarrior": [
+      {
+        "key": "barbariantheultimatewarrior",
+        "title": "Barbarian - The Ultimate Warrior",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 63,
+        "score": 8.11,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Barbarian_-_The_Ultimate_Warrior"
+      }
+    ],
+    "battlesquadronthedestructionofthebarraxempire": [
+      {
+        "key": "battlesquadronthedestructionofthebarraxempire",
+        "title": "Battle Squadron: The Destruction of the Barrax Empire",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 41,
+        "score": 8.57,
+        "votes": 255,
+        "url": "https://www.lemonamiga.com/game/battle-squadron-the-destruction-of-the-barrax-empire"
+      }
+    ],
+    "beneathasteelsky": [
+      {
+        "key": "beneathasteelsky",
+        "title": "Beneath A Steel Sky",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 59,
+        "score": 8.49,
+        "votes": 209,
+        "url": "https://www.lemonamiga.com/game/beneath-a-steel-sky"
+      },
+      {
+        "key": "beneathasteelsky",
+        "title": "Beneath A Steel Sky",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 61,
+        "score": 8.48,
+        "votes": 139,
+        "url": "https://www.lemonamiga.com/game/beneath-a-steel-sky-cd32"
+      }
+    ],
+    "blackcrypt": [
+      {
+        "key": "blackcrypt",
+        "title": "Black Crypt",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 94,
+        "score": 8.32,
+        "votes": 105,
+        "url": "https://www.lemonamiga.com/game/black-crypt"
+      }
+    ],
+    "bluemax": [
+      {
+        "key": "bluemax",
+        "title": "Blue Max",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 87,
+        "score": 7.95,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Blue_Max"
+      }
+    ],
+    "bombuzal": [
+      {
+        "key": "bombuzal",
+        "title": "Bombuzal",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 99,
+        "score": 7.89,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Bombuzal"
+      }
+    ],
+    "boulderdash": [
+      {
+        "key": "boulderdash",
+        "title": "Boulder Dash",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 8,
+        "score": 8.79,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Boulder_Dash"
+      }
+    ],
+    "brileywitchchronicles": [
+      {
+        "key": "brileywitchchronicles",
+        "title": "Briley Witch Chronicles",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 70,
+        "score": 8.08,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Briley_Witch_Chronicles"
+      }
+    ],
+    "brucelee": [
+      {
+        "key": "brucelee",
+        "title": "Bruce Lee",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 62,
+        "score": 8.14,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Bruce_Lee"
+      }
+    ],
+    "bruceleereturnoffury": [
+      {
+        "key": "bruceleereturnoffury",
+        "title": "Bruce Lee - Return of Fury",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 67,
+        "score": 8.08,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Bruce_Lee_-_Return_of_Fury"
+      }
+    ],
+    "bubblebobble": [
+      {
+        "key": "bubblebobble",
+        "title": "Bubble Bobble",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 9,
+        "score": 8.79,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Bubble_Bobble"
+      },
+      {
+        "key": "bubblebobble",
+        "title": "Bubble Bobble",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 65,
+        "score": 8.46,
+        "votes": 335,
+        "url": "https://www.lemonamiga.com/game/bubble-bobble"
+      }
+    ],
+    "buggyboy": [
+      {
+        "key": "buggyboy",
+        "title": "Buggy Boy",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 79,
+        "score": 8.02,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Buggy_Boy"
+      }
+    ],
+    "californiagames": [
+      {
+        "key": "californiagames",
+        "title": "California Games",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 36,
+        "score": 8.37,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/California_Games"
+      }
+    ],
+    "cannonfodder": [
+      {
+        "key": "cannonfodder",
+        "title": "Cannon Fodder",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 15,
+        "score": 8.79,
+        "votes": 559,
+        "url": "https://www.lemonamiga.com/game/cannon-fodder"
+      },
+      {
+        "key": "cannonfodder",
+        "title": "Cannon Fodder",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 30,
+        "score": 8.66,
+        "votes": 95,
+        "url": "https://www.lemonamiga.com/game/cannon-fodder-cd32"
+      }
+    ],
+    "carenandthetangledtentacles": [
+      {
+        "key": "carenandthetangledtentacles",
+        "title": "Caren and the Tangled Tentacles",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 61,
+        "score": 8.14,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Caren_and_the_Tangled_Tentacles"
+      }
+    ],
+    "championshipmanager93": [
+      {
+        "key": "championshipmanager93",
+        "title": "Championship Manager '93",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 79,
+        "score": 8.37,
+        "votes": 57,
+        "url": "https://www.lemonamiga.com/game/championship-manager-93"
+      }
+    ],
+    "chaosstrikesback": [
+      {
+        "key": "chaosstrikesback",
+        "title": "Chaos Strikes Back",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 95,
+        "score": 8.32,
+        "votes": 62,
+        "url": "https://www.lemonamiga.com/game/chaos-strikes-back"
+      }
+    ],
+    "civilization": [
+      {
+        "key": "civilization",
+        "title": "Civilization",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 8,
+        "score": 8.85,
+        "votes": 278,
+        "url": "https://www.lemonamiga.com/game/civilization"
+      },
+      {
+        "key": "civilization",
+        "title": "Civilization",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 37,
+        "score": 8.61,
+        "votes": 154,
+        "url": "https://www.lemonamiga.com/game/civilization-aga"
+      }
+    ],
+    "colonization": [
+      {
+        "key": "colonization",
+        "title": "Colonization",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 31,
+        "score": 8.64,
+        "votes": 162,
+        "url": "https://www.lemonamiga.com/game/colonization"
+      }
+    ],
+    "creatures": [
+      {
+        "key": "creatures",
+        "title": "Creatures",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 51,
+        "score": 8.24,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Creatures"
+      }
+    ],
+    "crillion": [
+      {
+        "key": "crillion",
+        "title": "Crillion",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 53,
+        "score": 8.22,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Crillion"
+      }
+    ],
+    "davidsmidnightmagic": [
+      {
+        "key": "davidsmidnightmagic",
+        "title": "David's Midnight Magic",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 72,
+        "score": 8.07,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/David%27s_Midnight_Magic"
+      }
+    ],
+    "defenderofthecrown": [
+      {
+        "key": "defenderofthecrown",
+        "title": "Defender of the Crown",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 15,
+        "score": 8.67,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Defender_of_the_Crown"
+      }
+    ],
+    "deluxegalaga": [
+      {
+        "key": "deluxegalaga",
+        "title": "Deluxe Galaga",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 73,
+        "score": 8.4,
+        "votes": 175,
+        "url": "https://www.lemonamiga.com/game/deluxe-galaga-aga"
+      }
+    ],
+    "dragonwars": [
+      {
+        "key": "dragonwars",
+        "title": "Dragon Wars",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 38,
+        "score": 8.35,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Dragon_Wars"
+      }
+    ],
+    "dreamweb": [
+      {
+        "key": "dreamweb",
+        "title": "Dream Web",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 88,
+        "score": 8.34,
+        "votes": 87,
+        "url": "https://www.lemonamiga.com/game/dreamweb-aga"
+      }
+    ],
+    "dune": [
+      {
+        "key": "dune",
+        "title": "Dune",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 54,
+        "score": 8.5,
+        "votes": 202,
+        "url": "https://www.lemonamiga.com/game/dune"
+      }
+    ],
+    "duneiithebattleforarrakis": [
+      {
+        "key": "duneiithebattleforarrakis",
+        "title": "Dune II: The Battle for Arrakis",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 6,
+        "score": 8.86,
+        "votes": 335,
+        "url": "https://www.lemonamiga.com/game/dune-2-the-battle-for-arrakis"
+      }
+    ],
+    "dungeonmaster": [
+      {
+        "key": "dungeonmaster",
+        "title": "Dungeon Master",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 42,
+        "score": 8.57,
+        "votes": 224,
+        "url": "https://www.lemonamiga.com/game/dungeon-master"
+      }
+    ],
+    "dynablaster": [
+      {
+        "key": "dynablaster",
+        "title": "Dyna Blaster",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 50,
+        "score": 8.52,
+        "votes": 226,
+        "url": "https://www.lemonamiga.com/game/dyna-blaster"
+      }
+    ],
+    "elite": [
+      {
+        "key": "elite",
+        "title": "Elite",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 19,
+        "score": 8.61,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Elite"
+      },
+      {
+        "key": "elite",
+        "title": "Elite",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 91,
+        "score": 8.33,
+        "votes": 150,
+        "url": "https://www.lemonamiga.com/game/elite"
+      }
+    ],
+    "enforcer": [
+      {
+        "key": "enforcer",
+        "title": "Enforcer",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 71,
+        "score": 8.07,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Enforcer"
+      }
+    ],
+    "eyeofthebeholder": [
+      {
+        "key": "eyeofthebeholder",
+        "title": "Eye of the Beholder",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 60,
+        "score": 8.49,
+        "votes": 216,
+        "url": "https://www.lemonamiga.com/game/eye-of-the-beholder"
+      }
+    ],
+    "eyeofthebeholderiithelegendofdarkmoon": [
+      {
+        "key": "eyeofthebeholderiithelegendofdarkmoon",
+        "title": "Eye of the Beholder II: The Legend of Darkmoon",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 32,
+        "score": 8.64,
+        "votes": 201,
+        "url": "https://www.lemonamiga.com/game/eye-of-the-beholder-2-the-legend-of-darkmoon"
+      }
+    ],
+    "f19stealthfighter": [
+      {
+        "key": "f19stealthfighter",
+        "title": "F-19 Stealth Fighter",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 55,
+        "score": 8.5,
+        "votes": 70,
+        "url": "https://www.lemonamiga.com/game/f-19-stealth-fighter"
+      }
+    ],
+    "flashback": [
+      {
+        "key": "flashback",
+        "title": "Flashback",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 20,
+        "score": 8.76,
+        "votes": 493,
+        "url": "https://www.lemonamiga.com/game/flashback"
+      }
+    ],
+    "formulaonegrandprix": [
+      {
+        "key": "formulaonegrandprix",
+        "title": "Formula One Grand Prix",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 10,
+        "score": 8.82,
+        "votes": 290,
+        "url": "https://www.lemonamiga.com/game/formula-one-grand-prix"
+      }
+    ],
+    "fortapocalypse": [
+      {
+        "key": "fortapocalypse",
+        "title": "Fort Apocalypse",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 33,
+        "score": 8.4,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Fort_Apocalypse"
+      }
+    ],
+    "frogs": [
+      {
+        "key": "frogs",
+        "title": "Frogs",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 66,
+        "score": 8.09,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Frogs"
+      }
+    ],
+    "frontiereliteii": [
+      {
+        "key": "frontiereliteii",
+        "title": "Frontier: Elite II",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 62,
+        "score": 8.48,
+        "votes": 211,
+        "url": "https://www.lemonamiga.com/game/frontier-elite-2"
+      }
+    ],
+    "furyofthefurries": [
+      {
+        "key": "furyofthefurries",
+        "title": "Fury of the Furries",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 96,
+        "score": 8.32,
+        "votes": 96,
+        "url": "https://www.lemonamiga.com/game/fury-of-the-furries"
+      }
+    ],
+    "geneticspecies": [
+      {
+        "key": "geneticspecies",
+        "title": "Genetic Species",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 75,
+        "score": 8.39,
+        "votes": 51,
+        "url": "https://www.lemonamiga.com/game/genetic-species-aga-rtg-cd-rom"
+      }
+    ],
+    "goldquestvi": [
+      {
+        "key": "goldquestvi",
+        "title": "Gold Quest VI",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 6,
+        "score": 8.81,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Gold_Quest_VI"
+      }
+    ],
+    "grandprixcircuit": [
+      {
+        "key": "grandprixcircuit",
+        "title": "Grand Prix Circuit",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 46,
+        "score": 8.29,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Grand_Prix_Circuit"
+      }
+    ],
+    "gunship2000": [
+      {
+        "key": "gunship2000",
+        "title": "Gunship 2000",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 71,
+        "score": 8.43,
+        "votes": 96,
+        "url": "https://www.lemonamiga.com/game/gunship-2000"
+      }
+    ],
+    "hardnheavy": [
+      {
+        "key": "hardnheavy",
+        "title": "Hard'n'Heavy",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 47,
+        "score": 8.29,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Hard%27n%27Heavy"
+      }
+    ],
+    "hawkeye": [
+      {
+        "key": "hawkeye",
+        "title": "Hawkeye",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 45,
+        "score": 8.3,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Hawkeye"
+      }
+    ],
+    "herohelicopteremergencyrescueoperation": [
+      {
+        "key": "herohelicopteremergencyrescueoperation",
+        "title": "H.E.R.O. Helicopter Emergency Rescue Operation",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 80,
+        "score": 8.01,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/H.E.R.O._Helicopter_Emergency_Rescue_Operation"
+      }
+    ],
+    "historyline19141918": [
+      {
+        "key": "historyline19141918",
+        "title": "Historyline 1914-1918",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 82,
+        "score": 8.36,
+        "votes": 67,
+        "url": "https://www.lemonamiga.com/game/historyline-1914-1918"
+      }
+    ],
+    "holidaylemmings1994": [
+      {
+        "key": "holidaylemmings1994",
+        "title": "Holiday Lemmings 1994",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 97,
+        "score": 8.32,
+        "votes": 50,
+        "url": "https://www.lemonamiga.com/game/holiday-lemmings-1994"
+      }
+    ],
+    "hybris": [
+      {
+        "key": "hybris",
+        "title": "Hybris",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 83,
+        "score": 8.36,
+        "votes": 192,
+        "url": "https://www.lemonamiga.com/game/hybris"
+      }
+    ],
+    "ik": [
+      {
+        "key": "ik",
+        "title": "IK+",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 16,
+        "score": 8.63,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/IK%2B"
+      },
+      {
+        "key": "ik",
+        "title": "IK+",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 47,
+        "score": 8.53,
+        "votes": 405,
+        "url": "https://www.lemonamiga.com/game/ik-plus"
+      }
+    ],
+    "impossiblemission": [
+      {
+        "key": "impossiblemission",
+        "title": "Impossible Mission",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 21,
+        "score": 8.59,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Impossible_Mission"
+      }
+    ],
+    "impossiblemissionii": [
+      {
+        "key": "impossiblemissionii",
+        "title": "Impossible Mission II",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 81,
+        "score": 8.0,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Impossible_Mission_II"
+      }
+    ],
+    "indianajonesandthefateofatlantis": [
+      {
+        "key": "indianajonesandthefateofatlantis",
+        "title": "Indiana Jones and the Fate of Atlantis",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 18,
+        "score": 8.77,
+        "votes": 296,
+        "url": "https://www.lemonamiga.com/game/indiana-jones-and-the-fate-of-atlantis-adventure"
+      }
+    ],
+    "indianajonesandthelastcrusade": [
+      {
+        "key": "indianajonesandthelastcrusade",
+        "title": "Indiana Jones and the Last Crusade",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 48,
+        "score": 8.53,
+        "votes": 248,
+        "url": "https://www.lemonamiga.com/game/indiana-jones-and-the-last-crusade-adventure"
+      }
+    ],
+    "internationalkarate": [
+      {
+        "key": "internationalkarate",
+        "title": "International Karate",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 12,
+        "score": 8.7,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/International_Karate"
+      }
+    ],
+    "internationalsoccer": [
+      {
+        "key": "internationalsoccer",
+        "title": "International Soccer",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 97,
+        "score": 7.91,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/International_Soccer"
+      }
+    ],
+    "ishar2messengersofdoom": [
+      {
+        "key": "ishar2messengersofdoom",
+        "title": "Ishar 2: Messengers of Doom",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 86,
+        "score": 8.35,
+        "votes": 62,
+        "url": "https://www.lemonamiga.com/game/ishar-2-messengers-of-doom"
+      }
+    ],
+    "itcamefromthedesert": [
+      {
+        "key": "itcamefromthedesert",
+        "title": "It Came from the Desert",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 38,
+        "score": 8.61,
+        "votes": 309,
+        "url": "https://www.lemonamiga.com/game/it-came-from-the-desert"
+      }
+    ],
+    "itsmagic": [
+      {
+        "key": "itsmagic",
+        "title": "It's Magic",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 76,
+        "score": 8.05,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/It%27s_Magic"
+      }
+    ],
+    "jimmywhiteswhirlwindsnooker": [
+      {
+        "key": "jimmywhiteswhirlwindsnooker",
+        "title": "Jimmy White's Whirlwind Snooker",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 92,
+        "score": 8.33,
+        "votes": 153,
+        "url": "https://www.lemonamiga.com/game/jimmy-whites-whirlwind-snooker"
+      }
+    ],
+    "joegunngoldedition": [
+      {
+        "key": "joegunngoldedition",
+        "title": "Joe Gunn - Gold Edition",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 88,
+        "score": 7.95,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Joe_Gunn_-_Gold_Edition"
+      }
+    ],
+    "katakis": [
+      {
+        "key": "katakis",
+        "title": "Katakis",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 17,
+        "score": 8.61,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Katakis"
+      }
+    ],
+    "knightngrail": [
+      {
+        "key": "knightngrail",
+        "title": "Knight 'n' Grail",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 64,
+        "score": 8.11,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Knight_%27n%27_Grail"
+      }
+    ],
+    "krakout": [
+      {
+        "key": "krakout",
+        "title": "Krakout",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 56,
+        "score": 8.17,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Krakout"
+      }
+    ],
+    "lasersquad": [
+      {
+        "key": "lasersquad",
+        "title": "Laser Squad",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 72,
+        "score": 8.42,
+        "votes": 90,
+        "url": "https://www.lemonamiga.com/game/laser-squad"
+      }
+    ],
+    "lastninja2": [
+      {
+        "key": "lastninja2",
+        "title": "Last Ninja 2",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 14,
+        "score": 8.69,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Last_Ninja_2"
+      }
+    ],
+    "lawofthewest": [
+      {
+        "key": "lawofthewest",
+        "title": "Law of the West",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 65,
+        "score": 8.1,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Law_of_the_West"
+      }
+    ],
+    "leaderboard": [
+      {
+        "key": "leaderboard",
+        "title": "Leaderboard",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 50,
+        "score": 8.26,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Leaderboard"
+      }
+    ],
+    "lemmings": [
+      {
+        "key": "lemmings",
+        "title": "Lemmings",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 7,
+        "score": 8.86,
+        "votes": 606,
+        "url": "https://www.lemonamiga.com/game/lemmings"
+      },
+      {
+        "key": "lemmings",
+        "title": "Lemmings",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 29,
+        "score": 8.46,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Lemmings"
+      }
+    ],
+    "lemmings2thetribes": [
+      {
+        "key": "lemmings2thetribes",
+        "title": "Lemmings 2: The Tribes",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 44,
+        "score": 8.56,
+        "votes": 261,
+        "url": "https://www.lemonamiga.com/game/lemmings-2-the-tribes"
+      }
+    ],
+    "lionheart": [
+      {
+        "key": "lionheart",
+        "title": "Lionheart",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 74,
+        "score": 8.4,
+        "votes": 229,
+        "url": "https://www.lemonamiga.com/game/lionheart"
+      }
+    ],
+    "littlecomputerpeople": [
+      {
+        "key": "littlecomputerpeople",
+        "title": "Little Computer People",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 35,
+        "score": 8.37,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Little_Computer_People"
+      }
+    ],
+    "loderunner": [
+      {
+        "key": "loderunner",
+        "title": "Lode Runner",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 54,
+        "score": 8.21,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Lode_Runner"
+      }
+    ],
+    "loom": [
+      {
+        "key": "loom",
+        "title": "Loom",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 98,
+        "score": 8.32,
+        "votes": 177,
+        "url": "https://www.lemonamiga.com/game/loom"
+      }
+    ],
+    "lordsoftherisingsun": [
+      {
+        "key": "lordsoftherisingsun",
+        "title": "Lords of the Rising Sun",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 80,
+        "score": 8.37,
+        "votes": 70,
+        "url": "https://www.lemonamiga.com/game/lords-of-the-rising-sun"
+      }
+    ],
+    "lotusespritturbochallenge": [
+      {
+        "key": "lotusespritturbochallenge",
+        "title": "Lotus Esprit Turbo Challenge",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 66,
+        "score": 8.46,
+        "votes": 350,
+        "url": "https://www.lemonamiga.com/game/lotus-esprit-turbo-challenge"
+      }
+    ],
+    "lotusturbochallenge2": [
+      {
+        "key": "lotusturbochallenge2",
+        "title": "Lotus Turbo Challenge 2",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 29,
+        "score": 8.67,
+        "votes": 478,
+        "url": "https://www.lemonamiga.com/game/lotus-turbo-challenge-2"
+      }
+    ],
+    "mafia": [
+      {
+        "key": "mafia",
+        "title": "Mafia",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 69,
+        "score": 8.08,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Mafia"
+      }
+    ],
+    "maniacmansion": [
+      {
+        "key": "maniacmansion",
+        "title": "Maniac Mansion",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 3,
+        "score": 9.11,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Maniac_Mansion"
+      },
+      {
+        "key": "maniacmansion",
+        "title": "Maniac Mansion",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 56,
+        "score": 8.5,
+        "votes": 230,
+        "url": "https://www.lemonamiga.com/game/maniac-mansion"
+      }
+    ],
+    "megalomania": [
+      {
+        "key": "megalomania",
+        "title": "Mega lo Mania",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 51,
+        "score": 8.52,
+        "votes": 231,
+        "url": "https://www.lemonamiga.com/game/mega-lo-mania"
+      }
+    ],
+    "microprosesoccer": [
+      {
+        "key": "microprosesoccer",
+        "title": "Microprose Soccer",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 30,
+        "score": 8.45,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Microprose_Soccer"
+      }
+    ],
+    "midnightresistance": [
+      {
+        "key": "midnightresistance",
+        "title": "Midnight Resistance",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 52,
+        "score": 8.24,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Midnight_Resistance"
+      }
+    ],
+    "millennium22": [
+      {
+        "key": "millennium22",
+        "title": "Millennium 2.2",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 78,
+        "score": 8.38,
+        "votes": 90,
+        "url": "https://www.lemonamiga.com/game/millennium-2-2"
+      }
+    ],
+    "monkeyisland2lechucksrevenge": [
+      {
+        "key": "monkeyisland2lechucksrevenge",
+        "title": "Monkey Island 2: Le Chuck's Revenge",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 2,
+        "score": 8.96,
+        "votes": 506,
+        "url": "https://www.lemonamiga.com/game/monkey-island-2-lechucks-revenge"
+      }
+    ],
+    "montezumasrevenge": [
+      {
+        "key": "montezumasrevenge",
+        "title": "Montezuma's Revenge",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 89,
+        "score": 7.95,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Montezuma%27s_Revenge"
+      }
+    ],
+    "moonstoneaharddaysknight": [
+      {
+        "key": "moonstoneaharddaysknight",
+        "title": "Moonstone: A Hard Days Knight",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 28,
+        "score": 8.68,
+        "votes": 388,
+        "url": "https://www.lemonamiga.com/game/moonstone-a-hard-days-knight"
+      }
+    ],
+    "mule": [
+      {
+        "key": "mule",
+        "title": "M.U.L.E.",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 32,
+        "score": 8.4,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/M.U.L.E."
+      }
+    ],
+    "nebulus": [
+      {
+        "key": "nebulus",
+        "title": "Nebulus",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 49,
+        "score": 8.27,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Nebulus"
+      }
+    ],
+    "neuromancer": [
+      {
+        "key": "neuromancer",
+        "title": "Neuromancer",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 27,
+        "score": 8.49,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Neuromancer"
+      }
+    ],
+    "newcomer": [
+      {
+        "key": "newcomer",
+        "title": "Newcomer",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 59,
+        "score": 8.17,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Newcomer"
+      }
+    ],
+    "northsouth": [
+      {
+        "key": "northsouth",
+        "title": "North & South",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 52,
+        "score": 8.52,
+        "votes": 426,
+        "url": "https://www.lemonamiga.com/game/north-and-south"
+      }
+    ],
+    "ohnomorelemmings": [
+      {
+        "key": "ohnomorelemmings",
+        "title": "Oh No! More Lemmings",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 85,
+        "score": 8.36,
+        "votes": 128,
+        "url": "https://www.lemonamiga.com/game/oh-no-more-lemmings"
+      }
+    ],
+    "outofthisworld": [
+      {
+        "key": "outofthisworld",
+        "title": "Out of this World",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 46,
+        "score": 8.55,
+        "votes": 105,
+        "url": "https://www.lemonamiga.com/game/out-of-this-world"
+      }
+    ],
+    "pang": [
+      {
+        "key": "pang",
+        "title": "Pang",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 99,
+        "score": 8.31,
+        "votes": 299,
+        "url": "https://www.lemonamiga.com/game/pang"
+      }
+    ],
+    "paradroid": [
+      {
+        "key": "paradroid",
+        "title": "Paradroid",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 40,
+        "score": 8.32,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Paradroid"
+      }
+    ],
+    "pinballdreams": [
+      {
+        "key": "pinballdreams",
+        "title": "Pinball Dreams",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 26,
+        "score": 8.7,
+        "votes": 434,
+        "url": "https://www.lemonamiga.com/game/pinball-dreams"
+      }
+    ],
+    "pinballfantasies": [
+      {
+        "key": "pinballfantasies",
+        "title": "Pinball Fantasies",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 24,
+        "score": 8.73,
+        "votes": 347,
+        "url": "https://www.lemonamiga.com/game/pinball-fantasies"
+      },
+      {
+        "key": "pinballfantasies",
+        "title": "Pinball Fantasies",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 35,
+        "score": 8.62,
+        "votes": 87,
+        "url": "https://www.lemonamiga.com/game/pinball-fantasies-cd32"
+      },
+      {
+        "key": "pinballfantasies",
+        "title": "Pinball Fantasies",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 40,
+        "score": 8.58,
+        "votes": 133,
+        "url": "https://www.lemonamiga.com/game/pinball-fantasies-aga"
+      }
+    ],
+    "pinballillusions": [
+      {
+        "key": "pinballillusions",
+        "title": "Pinball Illusions",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 68,
+        "score": 8.45,
+        "votes": 144,
+        "url": "https://www.lemonamiga.com/game/pinball-illusions"
+      }
+    ],
+    "pirates": [
+      {
+        "key": "pirates",
+        "title": "Pirates!",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 1,
+        "score": 9.18,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Pirates!"
+      },
+      {
+        "key": "pirates",
+        "title": "Pirates!",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 22,
+        "score": 8.75,
+        "votes": 297,
+        "url": "https://www.lemonamiga.com/game/pirates"
+      }
+    ],
+    "pitstopii": [
+      {
+        "key": "pitstopii",
+        "title": "Pitstop II",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 90,
+        "score": 7.94,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Pitstop_II"
+      }
+    ],
+    "playermanager": [
+      {
+        "key": "playermanager",
+        "title": "Player Manager",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 93,
+        "score": 8.33,
+        "votes": 83,
+        "url": "https://www.lemonamiga.com/game/player-manager"
+      }
+    ],
+    "polarbearinspace": [
+      {
+        "key": "polarbearinspace",
+        "title": "POLAR BEAR IN SPACE!",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 83,
+        "score": 8.0,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/POLAR_BEAR_IN_SPACE!"
+      }
+    ],
+    "poolofradiance": [
+      {
+        "key": "poolofradiance",
+        "title": "Pool of Radiance",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 57,
+        "score": 8.17,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Pool_of_Radiance"
+      }
+    ],
+    "populousiitrialsoftheolympiangods": [
+      {
+        "key": "populousiitrialsoftheolympiangods",
+        "title": "Populous II: Trials of the Olympian Gods",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 67,
+        "score": 8.46,
+        "votes": 179,
+        "url": "https://www.lemonamiga.com/game/populous-2-trials-of-the-olympian-gods"
+      }
+    ],
+    "princeofpersia": [
+      {
+        "key": "princeofpersia",
+        "title": "Prince of Persia",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 18,
+        "score": 8.61,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Prince_of_Persia"
+      }
+    ],
+    "projectfirestart": [
+      {
+        "key": "projectfirestart",
+        "title": "Project Firestart",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 41,
+        "score": 8.31,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Project_Firestart"
+      }
+    ],
+    "puzzlebobble": [
+      {
+        "key": "puzzlebobble",
+        "title": "Puzzle Bobble",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 98,
+        "score": 7.91,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Puzzle_Bobble"
+      }
+    ],
+    "railroadtycoon": [
+      {
+        "key": "railroadtycoon",
+        "title": "Railroad Tycoon",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 76,
+        "score": 8.39,
+        "votes": 94,
+        "url": "https://www.lemonamiga.com/game/railroad-tycoon"
+      }
+    ],
+    "rainbowislands": [
+      {
+        "key": "rainbowislands",
+        "title": "Rainbow Islands",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 31,
+        "score": 8.42,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Rainbow_Islands"
+      }
+    ],
+    "redstormrising": [
+      {
+        "key": "redstormrising",
+        "title": "Red Storm Rising",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 48,
+        "score": 8.29,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Red_Storm_Rising"
+      }
+    ],
+    "rickdangerous": [
+      {
+        "key": "rickdangerous",
+        "title": "Rick Dangerous",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 92,
+        "score": 7.93,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Rick_Dangerous"
+      }
+    ],
+    "rodland": [
+      {
+        "key": "rodland",
+        "title": "Rodland",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 57,
+        "score": 8.5,
+        "votes": 268,
+        "url": "https://www.lemonamiga.com/game/rodland"
+      },
+      {
+        "key": "rodland",
+        "title": "Rodland",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 73,
+        "score": 8.07,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Rodland"
+      }
+    ],
+    "rtype": [
+      {
+        "key": "rtype",
+        "title": "R-Type",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 42,
+        "score": 8.3,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/R-Type"
+      }
+    ],
+    "ruffntumble": [
+      {
+        "key": "ruffntumble",
+        "title": "Ruff 'n' Tumble",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 33,
+        "score": 8.64,
+        "votes": 258,
+        "url": "https://www.lemonamiga.com/game/ruff-n-tumble"
+      }
+    ],
+    "salamander": [
+      {
+        "key": "salamander",
+        "title": "Salamander",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 100,
+        "score": 7.89,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Salamander"
+      }
+    ],
+    "scarabus": [
+      {
+        "key": "scarabus",
+        "title": "Scarabæus",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 91,
+        "score": 7.94,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Scarab%C3%A6us"
+      }
+    ],
+    "sensiblesoccerinternationaledition": [
+      {
+        "key": "sensiblesoccerinternationaledition",
+        "title": "Sensible Soccer v1.2 - International Edition",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 100,
+        "score": 8.31,
+        "votes": 78,
+        "url": "https://www.lemonamiga.com/game/sensible-soccer-v1-2-international-edition"
+      }
+    ],
+    "sensibleworldofsoccer": [
+      {
+        "key": "sensibleworldofsoccer",
+        "title": "Sensible World of Soccer",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 13,
+        "score": 8.8,
+        "votes": 189,
+        "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer"
+      }
+    ],
+    "sensibleworldofsoccer9596": [
+      {
+        "key": "sensibleworldofsoccer9596",
+        "title": "Sensible World of Soccer '95/'96",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 11,
+        "score": 8.81,
+        "votes": 138,
+        "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer-95-96"
+      }
+    ],
+    "sensibleworldofsoccer9697": [
+      {
+        "key": "sensibleworldofsoccer9697",
+        "title": "Sensible World of Soccer '96/'97",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 3,
+        "score": 8.91,
+        "votes": 314,
+        "url": "https://www.lemonamiga.com/game/sensible-world-of-soccer-96-97"
+      }
+    ],
+    "sevencitiesofgold": [
+      {
+        "key": "sevencitiesofgold",
+        "title": "Seven Cities of Gold",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 37,
+        "score": 8.36,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Seven_Cities_of_Gold"
+      }
+    ],
+    "simonthesorcerer": [
+      {
+        "key": "simonthesorcerer",
+        "title": "Simon the Sorcerer",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 27,
+        "score": 8.7,
+        "votes": 161,
+        "url": "https://www.lemonamiga.com/game/simon-the-sorcerer-aga"
+      },
+      {
+        "key": "simonthesorcerer",
+        "title": "Simon the Sorcerer",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 36,
+        "score": 8.62,
+        "votes": 123,
+        "url": "https://www.lemonamiga.com/game/simon-the-sorcerer-cd32"
+      }
+    ],
+    "skateordie": [
+      {
+        "key": "skateordie",
+        "title": "Skate or Die!",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 85,
+        "score": 7.98,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Skate_or_Die!"
+      }
+    ],
+    "slamtilt": [
+      {
+        "key": "slamtilt",
+        "title": "Slam Tilt",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 9,
+        "score": 8.83,
+        "votes": 253,
+        "url": "https://www.lemonamiga.com/game/slamtilt"
+      }
+    ],
+    "spacetaxi": [
+      {
+        "key": "spacetaxi",
+        "title": "Space Taxi",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 34,
+        "score": 8.39,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Space_Taxi"
+      }
+    ],
+    "speedball2brutaldeluxe": [
+      {
+        "key": "speedball2brutaldeluxe",
+        "title": "Speedball 2: Brutal Deluxe",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 17,
+        "score": 8.78,
+        "votes": 538,
+        "url": "https://www.lemonamiga.com/game/speedball-2-brutal-deluxe"
+      }
+    ],
+    "spelunker": [
+      {
+        "key": "spelunker",
+        "title": "Spelunker",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 96,
+        "score": 7.92,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Spelunker"
+      }
+    ],
+    "spherical": [
+      {
+        "key": "spherical",
+        "title": "Spherical",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 78,
+        "score": 8.04,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Spherical"
+      }
+    ],
+    "steelthunder": [
+      {
+        "key": "steelthunder",
+        "title": "Steel Thunder",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 94,
+        "score": 7.92,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Steel_Thunder"
+      }
+    ],
+    "stuntcarracer": [
+      {
+        "key": "stuntcarracer",
+        "title": "Stunt Car Racer",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 49,
+        "score": 8.53,
+        "votes": 424,
+        "url": "https://www.lemonamiga.com/game/stunt-car-racer"
+      }
+    ],
+    "summergames": [
+      {
+        "key": "summergames",
+        "title": "Summer Games",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 13,
+        "score": 8.7,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Summer_Games"
+      }
+    ],
+    "summergamesii": [
+      {
+        "key": "summergamesii",
+        "title": "Summer Games II",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 20,
+        "score": 8.6,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Summer_Games_II"
+      }
+    ],
+    "supercarsii": [
+      {
+        "key": "supercarsii",
+        "title": "Super Cars II",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 64,
+        "score": 8.47,
+        "votes": 311,
+        "url": "https://www.lemonamiga.com/game/super-cars-2"
+      }
+    ],
+    "superfrog": [
+      {
+        "key": "superfrog",
+        "title": "Superfrog",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 69,
+        "score": 8.44,
+        "votes": 457,
+        "url": "https://www.lemonamiga.com/game/superfrog"
+      }
+    ],
+    "syndicate": [
+      {
+        "key": "syndicate",
+        "title": "Syndicate",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 23,
+        "score": 8.74,
+        "votes": 371,
+        "url": "https://www.lemonamiga.com/game/syndicate"
+      }
+    ],
+    "thebardstale": [
+      {
+        "key": "thebardstale",
+        "title": "The Bard's Tale",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 43,
+        "score": 8.3,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Bard%27s_Tale"
+      }
+    ],
+    "thecastlesofdoctorcreep": [
+      {
+        "key": "thecastlesofdoctorcreep",
+        "title": "The Castles of Doctor Creep",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 84,
+        "score": 7.98,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Castles_of_Doctor_Creep"
+      }
+    ],
+    "thechaosengine": [
+      {
+        "key": "thechaosengine",
+        "title": "The Chaos Engine",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 34,
+        "score": 8.63,
+        "votes": 405,
+        "url": "https://www.lemonamiga.com/game/chaos-engine"
+      },
+      {
+        "key": "thechaosengine",
+        "title": "The Chaos Engine",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 45,
+        "score": 8.55,
+        "votes": 145,
+        "url": "https://www.lemonamiga.com/game/chaos-engine-aga"
+      },
+      {
+        "key": "thechaosengine",
+        "title": "The Chaos Engine",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 53,
+        "score": 8.5,
+        "votes": 114,
+        "url": "https://www.lemonamiga.com/game/chaos-engine-cd32"
+      }
+    ],
+    "thegreatgianasisters": [
+      {
+        "key": "thegreatgianasisters",
+        "title": "The Great Giana Sisters",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 5,
+        "score": 8.86,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Great_Giana_Sisters"
+      }
+    ],
+    "thelastninja": [
+      {
+        "key": "thelastninja",
+        "title": "The Last Ninja",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 23,
+        "score": 8.56,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Last_Ninja"
+      }
+    ],
+    "themisadventuresofflink": [
+      {
+        "key": "themisadventuresofflink",
+        "title": "The Misadventures of Flink",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 84,
+        "score": 8.36,
+        "votes": 53,
+        "url": "https://www.lemonamiga.com/game/misadventures-of-flink-cd32"
+      }
+    ],
+    "thesecretofmonkeyisland": [
+      {
+        "key": "thesecretofmonkeyisland",
+        "title": "The Secret of Monkey Island",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 1,
+        "score": 9.19,
+        "votes": 676,
+        "url": "https://www.lemonamiga.com/game/secret-of-monkey-island"
+      }
+    ],
+    "thesentinel": [
+      {
+        "key": "thesentinel",
+        "title": "The Sentinel",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 86,
+        "score": 7.96,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Sentinel"
+      }
+    ],
+    "thesettlers": [
+      {
+        "key": "thesettlers",
+        "title": "The Settlers",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 4,
+        "score": 8.88,
+        "votes": 396,
+        "url": "https://www.lemonamiga.com/game/settlers"
+      }
+    ],
+    "thetrainescapetonormandy": [
+      {
+        "key": "thetrainescapetonormandy",
+        "title": "The Train – Escape to Normandy",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 68,
+        "score": 8.08,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Train_%E2%80%93_Escape_to_Normandy"
+      }
+    ],
+    "thewayoftheexplodingfist": [
+      {
+        "key": "thewayoftheexplodingfist",
+        "title": "The Way of the Exploding Fist",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 75,
+        "score": 8.06,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/The_Way_of_the_Exploding_Fist"
+      }
+    ],
+    "timesoflore": [
+      {
+        "key": "timesoflore",
+        "title": "Times of Lore",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 77,
+        "score": 8.05,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Times_of_Lore"
+      }
+    ],
+    "trapsntreasures": [
+      {
+        "key": "trapsntreasures",
+        "title": "Traps 'n' Treasures",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 87,
+        "score": 8.35,
+        "votes": 113,
+        "url": "https://www.lemonamiga.com/game/traps-n-treasures"
+      }
+    ],
+    "turrican": [
+      {
+        "key": "turrican",
+        "title": "Turrican",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 11,
+        "score": 8.72,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Turrican"
+      },
+      {
+        "key": "turrican",
+        "title": "Turrican",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 63,
+        "score": 8.48,
+        "votes": 328,
+        "url": "https://www.lemonamiga.com/game/turrican"
+      }
+    ],
+    "turricanii": [
+      {
+        "key": "turricanii",
+        "title": "Turrican II",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 4,
+        "score": 8.88,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Turrican_II"
+      }
+    ],
+    "turricaniii": [
+      {
+        "key": "turricaniii",
+        "title": "Turrican III",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 74,
+        "score": 8.06,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Turrican_III"
+      }
+    ],
+    "turricaniithefinalfight": [
+      {
+        "key": "turricaniithefinalfight",
+        "title": "Turrican II: The Final Fight",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 5,
+        "score": 8.87,
+        "votes": 513,
+        "url": "https://www.lemonamiga.com/game/turrican-2-the-final-fight"
+      }
+    ],
+    "tvsportsbasketball": [
+      {
+        "key": "tvsportsbasketball",
+        "title": "TV Sports Basketball",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 89,
+        "score": 8.34,
+        "votes": 116,
+        "url": "https://www.lemonamiga.com/game/tv-sports-basketball"
+      }
+    ],
+    "ufoenemyunknown": [
+      {
+        "key": "ufoenemyunknown",
+        "title": "UFO: Enemy Unknown",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 12,
+        "score": 8.81,
+        "votes": 107,
+        "url": "https://www.lemonamiga.com/game/ufo-enemy-unknown-aga"
+      },
+      {
+        "key": "ufoenemyunknown",
+        "title": "UFO: Enemy Unknown",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 19,
+        "score": 8.77,
+        "votes": 220,
+        "url": "https://www.lemonamiga.com/game/ufo-enemy-unknown"
+      }
+    ],
+    "ultimaiiiexodus": [
+      {
+        "key": "ultimaiiiexodus",
+        "title": "Ultima III – Exodus",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 95,
+        "score": 7.92,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Ultima_III_%E2%80%93_Exodus"
+      }
+    ],
+    "ultimaivquestoftheavatar": [
+      {
+        "key": "ultimaivquestoftheavatar",
+        "title": "Ultima IV – Quest of the Avatar",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 82,
+        "score": 8.0,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Ultima_IV_%E2%80%93_Quest_of_the_Avatar"
+      }
+    ],
+    "ultimavwarriorsofdestiny": [
+      {
+        "key": "ultimavwarriorsofdestiny",
+        "title": "Ultima V – Warriors of Destiny",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 55,
+        "score": 8.2,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Ultima_V_%E2%80%93_Warriors_of_Destiny"
+      }
+    ],
+    "utopiathecreationofanation": [
+      {
+        "key": "utopiathecreationofanation",
+        "title": "Utopia: The Creation of a Nation",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 81,
+        "score": 8.37,
+        "votes": 87,
+        "url": "https://www.lemonamiga.com/game/utopia-the-creation-of-a-nation"
+      }
+    ],
+    "wasteland": [
+      {
+        "key": "wasteland",
+        "title": "Wasteland",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 39,
+        "score": 8.33,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Wasteland"
+      }
+    ],
+    "wings": [
+      {
+        "key": "wings",
+        "title": "Wings",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 16,
+        "score": 8.79,
+        "votes": 452,
+        "url": "https://www.lemonamiga.com/game/wings"
+      }
+    ],
+    "wintergames": [
+      {
+        "key": "wintergames",
+        "title": "Winter Games",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 10,
+        "score": 8.75,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Winter_Games"
+      }
+    ],
+    "wizard": [
+      {
+        "key": "wizard",
+        "title": "Wizard",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 44,
+        "score": 8.3,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Wizard"
+      }
+    ],
+    "wizardofwor": [
+      {
+        "key": "wizardofwor",
+        "title": "Wizard of Wor",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 25,
+        "score": 8.51,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Wizard_of_Wor"
+      }
+    ],
+    "wizball": [
+      {
+        "key": "wizball",
+        "title": "Wizball",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 28,
+        "score": 8.46,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Wizball"
+      }
+    ],
+    "worldcircuit": [
+      {
+        "key": "worldcircuit",
+        "title": "World Circuit",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 43,
+        "score": 8.57,
+        "votes": 53,
+        "url": "https://www.lemonamiga.com/game/world-circuit"
+      }
+    ],
+    "worldgames": [
+      {
+        "key": "worldgames",
+        "title": "World Games",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 24,
+        "score": 8.53,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/World_Games"
+      }
+    ],
+    "worms": [
+      {
+        "key": "worms",
+        "title": "Worms",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 39,
+        "score": 8.61,
+        "votes": 255,
+        "url": "https://www.lemonamiga.com/game/worms"
+      }
+    ],
+    "wormsthedirectorscut": [
+      {
+        "key": "wormsthedirectorscut",
+        "title": "Worms: The Director's Cut",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 25,
+        "score": 8.73,
+        "votes": 196,
+        "url": "https://www.lemonamiga.com/game/worms-the-directors-cut"
+      }
+    ],
+    "xout": [
+      {
+        "key": "xout",
+        "title": "X-Out",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 26,
+        "score": 8.5,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/X-Out"
+      }
+    ],
+    "zakmckrackenandthealienmindbenders": [
+      {
+        "key": "zakmckrackenandthealienmindbenders",
+        "title": "Zak Mc Kracken and the Alien Mindbenders",
+        "sourceId": "c64-wiki-top100",
+        "sourceName": "C64-Wiki TOP100",
+        "platform": "c64",
+        "rank": 2,
+        "score": 9.12,
+        "votes": null,
+        "url": "https://www.c64-wiki.com/wiki/Zak_McKracken_and_the_Alien_Mindbenders"
+      },
+      {
+        "key": "zakmckrackenandthealienmindbenders",
+        "title": "Zak Mc Kracken and the Alien Mindbenders",
+        "sourceId": "lemon-amiga-top100",
+        "sourceName": "Lemon Amiga Top 100",
+        "platform": "amiga",
+        "rank": 70,
+        "score": 8.44,
+        "votes": 244,
+        "url": "https://www.lemonamiga.com/game/zak-mckracken-and-the-alien-mindbenders"
+      }
+    ]
+  }
+}

@@ -10,7 +10,7 @@
     <main class="shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Woodstock inventory</p>
+          <p class="eyebrow">Woodstock retro desk</p>
           <h1>Retro Game Catalog</h1>
         </div>
         <div class="top-actions">
@@ -47,7 +47,7 @@
           <label>
             <span>Sort</span>
             <select id="sortSelect">
-              <option value="popularity">Popularity guess</option>
+              <option value="popularity">Community rank</option>
               <option value="title">Title</option>
               <option value="libraries">Libraries</option>
               <option value="platform">Platform</option>
@@ -85,10 +85,10 @@
           <thead>
             <tr>
               <th>Game</th>
-              <th>Where</th>
-              <th>Platform / format</th>
-              <th>Variant notes</th>
-              <th>Info</th>
+              <th>Library</th>
+              <th>Systems</th>
+              <th>Editions</th>
+              <th>Rank / Info</th>
             </tr>
           </thead>
           <tbody id="games"></tbody>
@@ -114,13 +114,17 @@
               <strong></strong>
               <span class="game-note"></span>
             </summary>
-            <div class="variant-list"></div>
           </details>
         </td>
-        <td class="library-cell"></td>
-        <td class="platform-format-cell"></td>
-        <td class="variant-cell"></td>
-        <td class="info-cell"></td>
+        <td class="library-cell chip-cell"></td>
+        <td class="systems-cell chip-cell"></td>
+        <td class="editions-cell chip-cell"></td>
+        <td class="rank-cell chip-cell"></td>
+      </tr>
+      <tr class="detail-row" hidden>
+        <td colspan="5">
+          <div class="variant-list"></div>
+        </td>
       </tr>
     </template>
 

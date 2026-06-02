@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "id": "c64-wiki-top100",
+      "name": "C64-Wiki TOP100",
+      "platform": "c64",
+      "url": "https://www.c64-wiki.com/wiki/C64-Wiki%3ATOP100",
+      "notes": "Top 100 C64-Wiki scores. The page states that only games with at least 4 votes are included and that it is updated every 24 hours."
+    },
+    {
+      "id": "lemon-amiga-top100",
+      "name": "Lemon Amiga Top 100",
+      "platform": "amiga",
+      "url": "https://www.lemonamiga.com/games/votes_list.php?votes_needed=50",
+      "notes": "Top 100 Lemon Amiga vote list with a minimum of 50 votes."
+    }
+  ]
+}

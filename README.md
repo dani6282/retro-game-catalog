@@ -34,6 +34,25 @@ Some grouped games have curated Wikipedia links. Edit `data/wikipedia-title-map.
 
 This does not query Wikipedia; it only turns known article titles into links.
 
+## Community Ranks
+
+Community ranking data is generated from reproducible source definitions in `data/community-rank-sources.json`.
+
+```bash
+./scripts/build_community_ranks.py
+```
+
+The scraper currently imports:
+
+- C64-Wiki TOP100
+- Lemon Amiga Top 100 with at least 50 votes
+
+The script uses only Python standard-library modules. It falls back to `curl` if the local Python install cannot validate HTTPS certificates.
+
+Generated file:
+
+- `public/community-ranks.json`
+
 ## Browser Data
 
 The app loads a pre-grouped index for speed, then lazy-loads detail chunks only when a game is expanded:
@@ -41,6 +60,8 @@ The app loads a pre-grouped index for speed, then lazy-loads detail chunks only 
 ```bash
 ./scripts/build_grouped_catalog.py
 ```
+
+Run this after changing `public/catalog.json`, `public/wiki-links.json`, or `public/community-ranks.json`.
 
 Generated files:
 
