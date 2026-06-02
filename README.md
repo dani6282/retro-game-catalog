@@ -24,6 +24,33 @@ Expected Woodstock mounts:
 
 The script only reads from those paths.
 
+## What The App Searches
+
+The deployed web app is static. Normal browsing and searching use only generated local JSON files:
+
+- `public/game-index.json`
+- `public/details/*.json`
+- `public/community-ranks.json`
+
+That means the app does not need the PiMiga SSD plugged in once the catalog has been generated.
+
+The current generated catalog includes PiMiga entries captured when the PiMiga SSD was mounted at:
+
+```text
+/mnt/pimiga-root/home/pi/pimiga/disks/Games
+```
+
+Woodstock also has a full-disk PiMiga image backup on the WDC storage partition:
+
+```text
+/mnt/wd-WXF1A94HCEF5-storage/Retro_Games/PiMiga_Backup/PiMiga5_SAMSUNG_MZNLF128HCHP_20260601-083644_full-disk.img
+```
+
+However, `scripts/collect_catalog.sh` does not automatically mount or inspect that image. A fresh PiMiga rescan currently needs either:
+
+- the original PiMiga SSD mounted at `/mnt/pimiga-root`, or
+- the saved full-disk image mounted read-only with its root filesystem exposed at `/mnt/pimiga-root`.
+
 ## Wikipedia Links
 
 Some grouped games have curated Wikipedia links. Edit `data/wikipedia-title-map.json`, then rebuild the static browser data:
