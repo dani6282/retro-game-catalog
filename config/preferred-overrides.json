@@ -30,6 +30,95 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:defenderofthecrown": {
+      "selector": {
+        "releaseIdentity": "defenderofthecrowncdtv",
+        "category": "CDTV"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CDTV edition preserves the original game while adding narration and a higher-fidelity medieval soundtrack.",
+      "evidence": [
+        "https://www.amigareviews.leveluphost.com/defendcr.htm",
+        "https://www.whdload.de/games/DefenderOfTheCrown.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:deluxegalaga": {
+      "selector": {
+        "releaseIdentity": "deluxegalagaaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The AGA edition is the most complete Deluxe Galaga release and improves presentation without changing the core game.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/deluxe-galaga-aga",
+        "https://www.lemonamiga.com/review/deluxe-galaga-aga/382",
+        "https://www.whdload.de/games/DeluxeGalaga.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:fightinspirit": {
+      "selector": {
+        "releaseIdentity": "fightinspiritaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "AGA and CD32 share the enhanced 256-color presentation, while the extracted AGA package also contains the per-stage sound files absent from the CD32 package.",
+      "evidence": [
+        "https://www.giantbomb.com/fightin-spirit/3030-17387/",
+        "https://www.whdload.de/games/FightinSpirit.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:finalfight": {
+      "selector": {
+        "releaseIdentity": "finalfight",
+        "category": "OCS"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The current package supersedes the separate 1 MB package, includes the enhanced 1 MB slave, and has newer fixes.",
+      "evidence": [
+        "https://www.whdload.de/games/FinalFight.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:furyofthefurries": {
+      "selector": {
+        "releaseIdentity": "furyofthefurriescd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 edition adds AGA intro and inter-level graphics, more death animations, language selection, and direct save support.",
+      "evidence": [
+        "https://www.whdload.de/games/FuryOfTheFurries.html",
+        "https://www.lemonamiga.com/game/fury-of-the-furries-cd32"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:gods": {
+      "selector": {
+        "releaseIdentity": "gods",
+        "category": "OCS"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The current package removed the separate 1 MB chip-memory slave as unnecessary and contains newer fixes.",
+      "evidence": [
+        "https://www.whdload.de/games/Gods.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:gunship2000": {
       "selector": {
         "releaseIdentity": "gunship2000cd32",
@@ -60,6 +149,34 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:intact": {
+      "selector": {
+        "releaseIdentity": "intact15mb",
+        "category": "OCS"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The 1.5 MB package uses the full-preload slave with all extra music; the lower-memory package only partially preloads game data.",
+      "evidence": [
+        "https://www.whdload.de/games/Intact.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:mortalkombat2": {
+      "selector": {
+        "releaseIdentity": "mortalkombat2",
+        "category": "OCS"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The current package replaces the older separate memory builds, supports both 512 KB and 1 MB chip-memory configurations, and includes newer fixes.",
+      "evidence": [
+        "https://www.whdload.de/games/MortalKombat2.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:pinballillusions": {
       "selector": {
         "releaseIdentity": "pinballillusionsaga",
@@ -72,6 +189,20 @@
       "evidence": [
         "https://www.whdload.de/games/PinballIllusions.html",
         "https://whdload.de/mantis/view.php?id=5581"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:slamtilt": {
+      "selector": {
+        "releaseIdentity": "slamtiltaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The standard package is the normal fast-memory configuration; the 2 MB slave is a constrained fallback for machines with chip memory only.",
+      "evidence": [
+        "https://www.whdload.de/games/SlamTilt.html"
       ],
       "reviewedAt": "2026-06-05"
     },
@@ -130,6 +261,34 @@
       "evidence": [
         "https://www.lemonamiga.com/game/ufo-enemy-unknown-aga",
         "https://en.wikipedia.org/wiki/UFO%3A_Enemy_Unknown"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:uridium2": {
+      "selector": {
+        "releaseIdentity": "uridium22mb",
+        "category": "OCS"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "The 2 MB chip-memory build enables the extended samples; the 1 MB build is the compatibility option.",
+      "evidence": [
+        "https://www.whdload.de/games/Uridium2.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:worms": {
+      "selector": {
+        "releaseIdentity": "wormscd322mb",
+        "category": "CD32"
+      },
+      "resolves": [
+        "equal-priority-candidates"
+      ],
+      "rationale": "Within the CD release, the 2 MB slave includes all samples; the 1 MB slave is the lower-memory compatibility build.",
+      "evidence": [
+        "https://www.whdload.de/games/Worms.html"
       ],
       "reviewedAt": "2026-06-05"
     }
