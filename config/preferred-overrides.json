@@ -195,6 +195,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:guardian": {
+      "selector": {
+        "releaseIdentity": "guardiancd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "Guardian was developed for CD32 first and the computer release was stripped down. The extracted CD32 package retains the larger graphics set, full joypad controls, and NVRAM high-score saving.",
+      "evidence": [
+        "https://www.whdload.de/games/GuardianCD.html",
+        "https://cd32.amiga32.com/reviews/guardian.htm"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:internationalkarateplus": {
       "selector": {
         "releaseIdentity": "ikpluscd32",
@@ -268,6 +283,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:sabreteam": {
+      "selector": {
+        "releaseIdentity": "sabreteamcd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 release is based on the enhanced 256-color AGA edition and its extracted package adds title animations, speech samples, and substantially larger spoken briefing data.",
+      "evidence": [
+        "https://www.amigareviews.leveluphost.com/sabretea.htm",
+        "https://www.whdload.de/games/SabreTeam.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:simcity": {
       "selector": {
         "releaseIdentity": "simcitycdtv",
@@ -294,6 +324,21 @@
       "rationale": "The standard package is the normal fast-memory configuration; the 2 MB slave is a constrained fallback for machines with chip memory only.",
       "evidence": [
         "https://www.whdload.de/games/SlamTilt.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:sleepwalker": {
+      "selector": {
+        "releaseIdentity": "sleepwalkeraga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The four-disk AGA edition enhances the in-game graphics and full-motion sequences over the three-disk ECS release.",
+      "evidence": [
+        "https://www.mobygames.com/game/12765/sleepwalker/",
+        "https://www.lemonamiga.com/game/sleepwalker-aga"
       ],
       "reviewedAt": "2026-06-05"
     },
@@ -357,6 +402,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:superskidmarks": {
+      "selector": {
+        "releaseIdentity": "superskidmarkscd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 package is the complete supported edition, includes assets missing from the floppy release, and enables the full high-memory multi-car configuration.",
+      "evidence": [
+        "https://www.whdload.de/games/SkidMarks2.html",
+        "https://www.amigareviews.leveluphost.com/superskd.htm"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:turrican": {
       "selector": {
         "releaseIdentity": "turrican",
@@ -411,6 +471,21 @@
       "rationale": "The 2 MB chip-memory build enables the extended samples; the 1 MB build is the compatibility option.",
       "evidence": [
         "https://www.whdload.de/games/Uridium2.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:universe": {
+      "selector": {
+        "releaseIdentity": "universe",
+        "category": "OCS"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The extracted CD32 package predates the 2024 fix for broken CD32 saves and contains no CD-audio payload. The OCS package retains save-disk data and the native mouse interface.",
+      "evidence": [
+        "https://www.whdload.de/games/Universe.html",
+        "https://www.lemonamiga.com/games/details.php?id=1976"
       ],
       "reviewedAt": "2026-06-05"
     },
