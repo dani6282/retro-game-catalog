@@ -16,7 +16,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from title_normalization import clean_title, is_non_game, title_key
+from title_normalization import clean_title, detect_language, is_non_game, title_key
 
 
 BATOCERA_ROMS = Path(os.environ.get("BATOCERA_ROMS", "/mnt/wd-WXF1A94HCEF5-share/roms"))
@@ -110,19 +110,6 @@ def file_size(path: Path) -> int | None:
         return None
 
 
-def language_hint(text: str) -> str | None:
-    hay = text.lower()
-    if re.search(r"(^|[^a-z])(de|ger|german|deutsch)([^a-z]|$)", hay):
-        return "German"
-    if re.search(r"(^|[^a-z])(fr|fre|french|francais)([^a-z]|$)", hay):
-        return "French"
-    if re.search(r"(^|[^a-z])(it|ita|italian)([^a-z]|$)", hay):
-        return "Italian"
-    if re.search(r"(^|[^a-z])(es|spa|spanish)([^a-z]|$)", hay):
-        return "Spanish"
-    return None
-
-
 def make_entry(
     source: str,
     title: str,
@@ -145,7 +132,7 @@ def make_entry(
         "collection": collection or platform,
         "category": category,
         "format": fmt,
-        "language": language_hint(" ".join([title, rel, category or ""])),
+        "language": detect_language(title, rel, category),
         "path": rel,
         "absolutePath": str(path),
         "sizeBytes": file_size(path),

@@ -24,6 +24,45 @@ LANGUAGE_SUFFIXES = (
     "spanish",
 )
 
+LANGUAGE_TOKEN_MAP = {
+    "de": "German",
+    "ger": "German",
+    "german": "German",
+    "germany": "German",
+    "deutsch": "German",
+    "en": "English",
+    "eng": "English",
+    "english": "English",
+    "usa": "English",
+    "uk": "English",
+    "fr": "French",
+    "fre": "French",
+    "french": "French",
+    "france": "French",
+    "francais": "French",
+    "it": "Italian",
+    "ita": "Italian",
+    "italian": "Italian",
+    "italy": "Italian",
+    "es": "Spanish",
+    "spa": "Spanish",
+    "spanish": "Spanish",
+    "spain": "Spanish",
+}
+
+COMPACT_LANGUAGE_SUFFIXES = (
+    ("De", "German"),
+    ("Ger", "German"),
+    ("En", "English"),
+    ("Eng", "English"),
+    ("Fr", "French"),
+    ("Fre", "French"),
+    ("It", "Italian"),
+    ("Ita", "Italian"),
+    ("Es", "Spanish"),
+    ("Spa", "Spanish"),
+)
+
 EDITION_TOKENS = (
     "aga",
     "ocs",
@@ -76,6 +115,26 @@ def ascii_fold(value: str) -> str:
     return value
 
 
+def detect_language(*values: str | None) -> str | None:
+    """Return an explicit language hint without guessing from Europe/PAL."""
+
+    hardware = r"(?:AGA|OCS|ECS|CD32|CDTV|RTG)?"
+    for value in values:
+        for name in reversed(re.split(r"[/\\]", value or "")):
+            stem = re.sub(r"\.[A-Za-z0-9]{1,5}$", "", name)
+            for suffix, language in COMPACT_LANGUAGE_SUFFIXES:
+                if re.search(rf"{hardware}{suffix}$", stem):
+                    return language
+
+    text = " ".join(value or "" for value in values)
+    tokens = re.findall(r"[A-Za-z]+", text.lower())
+    for token in reversed(tokens):
+        language = LANGUAGE_TOKEN_MAP.get(token)
+        if language:
+            return language
+    return None
+
+
 def clean_title(value: str) -> str:
     value = html.unescape(value or "")
     value = re.sub(r"<[^>]+>", " ", value)
@@ -116,7 +175,9 @@ def _strip_edition_tokens(value: str) -> str:
 
 def _strip_language_suffix(value: str) -> str:
     suffixes = "|".join(map(re.escape, LANGUAGE_SUFFIXES))
-    return re.sub(rf"\s+(?:{suffixes})$", "", value, flags=re.I).strip()
+    value = re.sub(rf"\s+(?:{suffixes})$", "", value, flags=re.I).strip()
+    compact = "|".join(suffix for suffix, _language in COMPACT_LANGUAGE_SUFFIXES)
+    return re.sub(rf"(?:AGA|OCS|ECS|CD32|CDTV|RTG)?(?:{compact})$", "", value).strip()
 
 
 def display_title(title: str) -> str:

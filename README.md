@@ -105,6 +105,29 @@ To check that grouped counts, detail chunks, known tricky titles, and rank match
 ./scripts/audit_catalog_matching.py
 ```
 
+## Preferred Collection Manifest
+
+Generate the platform-aware C64 and Amiga curation manifest:
+
+```bash
+./scripts/build_preferred_manifest.py
+./scripts/audit_preferred_manifest.py
+```
+
+The manifest keeps C64 and Amiga releases separate, prefers German over
+English or language-neutral releases, preserves multidisk releases as one
+selection, and flags ambiguous Amiga hardware editions for manual review.
+
+Generated file:
+
+- `public/preferred-manifest.json`
+
+Run the regression tests with:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
 ## Run Locally
 
 Use any static server:
