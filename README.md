@@ -137,10 +137,19 @@ Profile a manual-review queue with:
 ```bash
 ./scripts/analyze_preferred_reviews.py
 ./scripts/analyze_preferred_reviews.py --platform c64
+./scripts/analyze_amiga_hardware_reviews.py
 ```
 
 The analyzer prints tied candidates and common variant markers without
-modifying the manifest.
+modifying the manifest. The Amiga hardware analyzer separates duplicate
+folder placements of one release from genuinely different AGA, OCS, CD32, and
+CDTV editions.
+
+Reviewed choices belong in `config/preferred-overrides.json`. Each override
+selects a candidate by stable fields such as `releaseIdentity` and `category`,
+records its rationale and evidence, and lists the review reasons it resolves.
+The manifest build fails when a selector no longer matches exactly one
+candidate, preventing stale decisions from silently selecting another release.
 
 ## Run Locally
 

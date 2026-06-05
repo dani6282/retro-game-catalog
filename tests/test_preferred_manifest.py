@@ -58,8 +58,11 @@ class LanguageTests(unittest.TestCase):
 
 
 class SelectionTests(unittest.TestCase):
-    def build(self, games: list[dict]) -> dict:
-        return build_manifest({"generatedAt": "fixture", "sourceRoots": {}, "games": games})
+    def build(self, games: list[dict], overrides: dict | None = None) -> dict:
+        return build_manifest(
+            {"generatedAt": "fixture", "sourceRoots": {}, "games": games},
+            overrides,
+        )
 
     def test_german_wins_and_platforms_remain_separate(self) -> None:
         manifest = self.build(
@@ -229,6 +232,87 @@ class SelectionTests(unittest.TestCase):
         selected = manifest["selected"][0]
         self.assertEqual(selected["candidate"]["assets"][0]["id"], "ocs-game")
         self.assertNotIn("competing-amiga-hardware-editions", selected["reviewReasons"])
+
+    def test_same_release_in_multiple_hardware_folders_is_not_a_conflict(self) -> None:
+        manifest = self.build(
+            [
+                entry(
+                    "aga",
+                    "Putty Squad AGA",
+                    "Amiga",
+                    "WHDLOAD/AGA/P/PuttySquadAGA",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="AGA",
+                    has_launchable_files=True,
+                ),
+                entry(
+                    "ocs-folder",
+                    "Putty Squad AGA",
+                    "Amiga",
+                    "WHDLOAD/OCS/P/PuttySquadAGA",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="OCS",
+                    has_launchable_files=True,
+                ),
+            ]
+        )
+        selected = manifest["selected"][0]
+        self.assertEqual(selected["candidate"]["assets"][0]["id"], "aga")
+        self.assertNotIn("competing-amiga-hardware-editions", selected["reviewReasons"])
+
+    def test_manual_override_selects_and_resolves_hardware_choice(self) -> None:
+        games = [
+            entry(
+                "aga",
+                "Example AGA",
+                "Amiga",
+                "WHDLOAD/AGA/E/ExampleAGA",
+                source="PiMiga",
+                collection="WHDLoad",
+                category="AGA",
+                has_launchable_files=True,
+            ),
+            entry(
+                "ocs",
+                "Example",
+                "Amiga",
+                "WHDLOAD/OCS/E/Example",
+                source="PiMiga",
+                collection="WHDLoad",
+                category="OCS",
+                has_launchable_files=True,
+            ),
+        ]
+        overrides = {
+            "amiga:example": {
+                "selector": {"releaseIdentity": "example", "category": "OCS"},
+                "resolves": ["competing-amiga-hardware-editions"],
+                "rationale": "Fixture chooses the OCS release.",
+                "evidence": ["https://example.invalid/review"],
+            }
+        }
+
+        manifest = self.build(games, overrides)
+
+        selected = manifest["selected"][0]
+        self.assertEqual(selected["candidate"]["assets"][0]["id"], "ocs")
+        self.assertFalse(selected["reviewRequired"])
+        self.assertEqual(selected["manualOverride"], overrides["amiga:example"])
+        self.assertEqual(manifest["rejected"][0]["reason"], "manual-override")
+
+    def test_stale_manual_override_fails_loudly(self) -> None:
+        games = [entry("one", "Example", "Amiga", "amiga500/Example.zip")]
+        overrides = {
+            "amiga:example": {
+                "selector": {"releaseIdentity": "missing"},
+                "resolves": [],
+            }
+        }
+
+        with self.assertRaisesRegex(ValueError, "matched 0 candidates"):
+            self.build(games, overrides)
 
     def test_pal_release_wins_over_ntsc(self) -> None:
         manifest = self.build(

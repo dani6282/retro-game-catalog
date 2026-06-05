@@ -11,8 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "public" / "preferred-manifest.json"
 
 
-def main() -> int:
-    manifest = json.loads(MANIFEST_PATH.read_text())
+def audit_manifest(manifest: dict) -> list[str]:
     selected = manifest["selected"]
     failures = []
 
@@ -30,12 +29,32 @@ def main() -> int:
         failures.append("a source asset appears in more than one selected release")
 
     selected_by_group = {record["groupKey"]: record for record in selected}
+    for record in selected:
+        override = record.get("manualOverride")
+        if not override:
+            continue
+        selector = override.get("selector", {})
+        if not selector or any(record["candidate"].get(field) != value for field, value in selector.items()):
+            failures.append(f"{record['groupKey']} manual override does not match selected candidate")
+        if not override.get("rationale"):
+            failures.append(f"{record['groupKey']} manual override has no rationale")
+        if not override.get("evidence"):
+            failures.append(f"{record['groupKey']} manual override has no evidence")
+
     for rejected in manifest["rejected"]:
         chosen = selected_by_group[rejected["groupKey"]]
-        if chosen["candidate"]["priority"] > rejected["candidate"]["priority"]:
+        if not chosen.get("manualOverride") and chosen["candidate"]["priority"] > rejected["candidate"]["priority"]:
             failures.append(f"{rejected['groupKey']} selected a lower-priority candidate")
         if rejected["candidate"]["language"] == "German" and chosen["language"] != "German":
             failures.append(f"{rejected['groupKey']} rejected German for {chosen['language'] or 'neutral'}")
+
+    return failures
+
+
+def main() -> int:
+    manifest = json.loads(MANIFEST_PATH.read_text())
+    selected = manifest["selected"]
+    failures = audit_manifest(manifest)
 
     german_groups = sum(record["language"] == "German" for record in selected)
     multidisk_groups = sum(len(record["candidate"]["assets"]) > 1 for record in selected)

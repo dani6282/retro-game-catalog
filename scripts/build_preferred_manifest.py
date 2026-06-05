@@ -14,6 +14,7 @@ from title_normalization import ascii_fold, clean_title, detect_language, is_non
 ROOT = Path(__file__).resolve().parents[1]
 RAW_PATH = ROOT / "public" / "catalog.json"
 OUT_PATH = ROOT / "public" / "preferred-manifest.json"
+OVERRIDES_PATH = ROOT / "config" / "preferred-overrides.json"
 
 PLATFORM_FAMILIES = {
     "c64": "c64",
@@ -211,8 +212,14 @@ def review_reasons(candidates: list[dict], selected: dict) -> list[str]:
         for candidate in candidates
         if candidate["language"] == selected["language"] and candidate.get("hasLaunchableFiles") is not False
     ]
-    categories = {candidate.get("category") for candidate in same_language if candidate.get("category")}
-    if selected["platform"] == "amiga" and len(categories & {"AGA", "OCS", "CD32", "CDTV"}) > 1:
+    hardware_candidates = [
+        candidate
+        for candidate in same_language
+        if candidate.get("category") in {"AGA", "OCS", "CD32", "CDTV"}
+    ]
+    categories = {candidate["category"] for candidate in hardware_candidates}
+    release_identities = {candidate["releaseIdentity"] for candidate in hardware_candidates}
+    if selected["platform"] == "amiga" and len(categories) > 1 and len(release_identities) > 1:
         reasons.append("competing-amiga-hardware-editions")
     if selected["collection"] == "Installed":
         reasons.append("installed-pimiga-title-needs-launch-review")
@@ -221,7 +228,22 @@ def review_reasons(candidates: list[dict], selected: dict) -> list[str]:
     return reasons
 
 
-def build_manifest(raw: dict) -> dict:
+def override_matches(candidate: dict, selector: dict) -> bool:
+    return all(candidate.get(field) == value for field, value in selector.items())
+
+
+def select_override(group_key: str, candidates: list[dict], override: dict) -> dict:
+    selector = override.get("selector")
+    if not isinstance(selector, dict) or not selector:
+        raise ValueError(f"{group_key}: override selector must be a non-empty object")
+    matches = [candidate for candidate in candidates if override_matches(candidate, selector)]
+    if len(matches) != 1:
+        raise ValueError(f"{group_key}: override selector matched {len(matches)} candidates")
+    return matches[0]
+
+
+def build_manifest(raw: dict, overrides: dict | None = None) -> dict:
+    overrides = overrides or {}
     grouped_entries: dict[tuple[str, str], list[dict]] = {}
     excluded = []
 
@@ -261,10 +283,15 @@ def build_manifest(raw: dict) -> dict:
         if not main_candidates:
             continue
 
-        selected = main_candidates[0]
+        group_key = f"{family}:{key}"
+        override = overrides.get(group_key)
+        selected = select_override(group_key, main_candidates, override) if override else main_candidates[0]
         reasons = review_reasons(main_candidates, selected)
+        if override:
+            resolved_reasons = set(override.get("resolves", []))
+            reasons = [reason for reason in reasons if reason not in resolved_reasons]
         selected_record = {
-            "groupKey": f"{family}:{key}",
+            "groupKey": group_key,
             "titleKey": key,
             "platform": family,
             "language": selected["language"],
@@ -273,16 +300,20 @@ def build_manifest(raw: dict) -> dict:
             "reviewReasons": reasons,
             "candidate": selected,
         }
+        if override:
+            selected_record["manualOverride"] = override
         selected_records.append(selected_record)
         if reasons:
             review_records.append(selected_record)
 
-        for candidate in main_candidates[1:]:
+        for candidate in main_candidates:
+            if candidate is selected:
+                continue
             rejected_records.append(
                 {
-                    "groupKey": f"{family}:{key}",
+                    "groupKey": group_key,
                     "candidate": candidate,
-                    "reason": "lower-preference-than-selected",
+                    "reason": "manual-override" if override else "lower-preference-than-selected",
                 }
             )
 
@@ -327,7 +358,9 @@ def entries_for(candidate: dict, grouped: dict[tuple, list[dict]]) -> list[dict]
 
 
 def main() -> int:
-    manifest = build_manifest(json.loads(RAW_PATH.read_text()))
+    override_config = json.loads(OVERRIDES_PATH.read_text()) if OVERRIDES_PATH.exists() else {}
+    overrides = override_config.get("overrides", {})
+    manifest = build_manifest(json.loads(RAW_PATH.read_text()), overrides)
     OUT_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     print(f"Wrote {OUT_PATH}")
     for key, value in manifest["summary"].items():

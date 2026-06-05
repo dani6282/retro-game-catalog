@@ -1,0 +1,47 @@
+{
+  "overrides": {
+    "amiga:turrican": {
+      "selector": {
+        "releaseIdentity": "turrican",
+        "category": "OCS"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CDTV release is the same game without enhancements and cannot save high scores; prefer the writable OCS WHDLoad release.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/turrican-cdtv"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:turrican2thefinalfight": {
+      "selector": {
+        "releaseIdentity": "turrican2",
+        "category": "OCS"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CDTV release has no gameplay enhancement and cannot save high scores; prefer the writable OCS WHDLoad release.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/turrican-2-the-final-fight-cdtv"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:ufoenemyunknown": {
+      "selector": {
+        "releaseIdentity": "ufoenemyunknownaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The AGA release has improved graphics and stronger review averages than OCS/ECS or CD32, while CD32 has a restrictive save limitation.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/ufo-enemy-unknown-aga",
+        "https://en.wikipedia.org/wiki/UFO%3A_Enemy_Unknown"
+      ],
+      "reviewedAt": "2026-06-05"
+    }
+  }
+}
