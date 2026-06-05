@@ -138,12 +138,14 @@ Profile a manual-review queue with:
 ./scripts/analyze_preferred_reviews.py
 ./scripts/analyze_preferred_reviews.py --platform c64
 ./scripts/analyze_amiga_hardware_reviews.py
+./scripts/analyze_amiga_hardware_reviews.py --ranked
 ```
 
 The analyzer prints tied candidates and common variant markers without
 modifying the manifest. The Amiga hardware analyzer separates duplicate
 folder placements of one release from genuinely different AGA, OCS, CD32, and
-CDTV editions.
+CDTV editions. Use `--ranked` to load browser popularity and community-list
+metadata and put the highest-priority review groups first.
 
 Reviewed choices belong in `config/preferred-overrides.json`. Each override
 selects a candidate by stable fields such as `releaseIdentity` and `category`,

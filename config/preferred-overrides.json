@@ -1,5 +1,20 @@
 {
   "overrides": {
+    "amiga:alienbreed2": {
+      "selector": {
+        "releaseIdentity": "alienbreed2aga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "Alien Breed 2 was designed first for AGA; that edition has more in-game colors, less-dithered loading screens, fuller sound effects, and voice absent from the reduced ECS release.",
+      "evidence": [
+        "https://www.mobygames.com/game/16108/alien-breed-ii-the-horror-continues/trivia/",
+        "https://www.whdload.de/games/AlienBreed2.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:banshee": {
       "selector": {
         "releaseIdentity": "bansheeaga",
@@ -73,6 +88,21 @@
       "evidence": [
         "https://www.giantbomb.com/fightin-spirit/3030-17387/",
         "https://www.whdload.de/games/FightinSpirit.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:fireandice": {
+      "selector": {
+        "releaseIdentity": "fireandicecd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 edition adds 256-color detailed parallax backgrounds, a different finale, extra music, and two-button jump support. The extracted WHDLoad package falls back to the local chip music but retains the visual and controller enhancements.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/fire-and-ice-cd32",
+        "https://www.whdload.de/games/FireAndIce.html"
       ],
       "reviewedAt": "2026-06-05"
     },
@@ -192,6 +222,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:simcity": {
+      "selector": {
+        "releaseIdentity": "simcitycdtv",
+        "category": "CDTV"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CDTV edition has a television-friendly closer city view, revised menu system, improved graphics, music data, and built-in German text; the WHDLoad patch supports hard-drive saves.",
+      "evidence": [
+        "https://www.lemonamiga.com/game/sim-city-cdtv",
+        "https://www.whdload.de/games/SimCity.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:slamtilt": {
       "selector": {
         "releaseIdentity": "slamtiltaga",
@@ -203,6 +248,21 @@
       "rationale": "The standard package is the normal fast-memory configuration; the 2 MB slave is a constrained fallback for machines with chip memory only.",
       "evidence": [
         "https://www.whdload.de/games/SlamTilt.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:speedball2": {
+      "selector": {
+        "releaseIdentity": "speedball2cd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 edition preserves the original game while making opposing players fully distinct in color and providing controller-oriented input; its extracted package includes the revised music data.",
+      "evidence": [
+        "https://www.amigareviews.leveluphost.com/speedba2.htm",
+        "https://www.whdload.de/games/SpeedBall2CD.html"
       ],
       "reviewedAt": "2026-06-05"
     },
