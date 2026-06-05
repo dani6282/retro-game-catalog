@@ -128,6 +128,16 @@ Run the regression tests with:
 python3 -m unittest discover -s tests -v
 ```
 
+Profile a manual-review queue with:
+
+```bash
+./scripts/analyze_preferred_reviews.py
+./scripts/analyze_preferred_reviews.py --platform c64
+```
+
+The analyzer prints tied candidates and common variant markers without
+modifying the manifest.
+
 ## Run Locally
 
 Use any static server:

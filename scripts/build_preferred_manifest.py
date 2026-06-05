@@ -30,6 +30,7 @@ EXTRA_MARKERS = (
     " coverdisk",
     " cover disk",
     " demo",
+    " magic disk",
     " preview",
     " prototype",
     " trainer",
@@ -74,10 +75,13 @@ def release_identity(entry: dict) -> str:
     """Keep release/region markers but collapse disk and side components."""
 
     value = clean_title(entry.get("title") or Path(entry.get("path") or "").stem)
-    value = re.sub(r"\((?:disk|disc|side)\b[^)]*\)", " ", value, flags=re.I)
-    value = re.sub(r"\b(?:disk|disc)\s*(?:of\s*)?[a-z0-9]+\b", " ", value, flags=re.I)
-    value = re.sub(r"\bside\s*[a-z0-9]+\b", " ", value, flags=re.I)
-    value = re.sub(r"\b[a-z0-9]+\s*(?:disk|disc|side)\b", " ", value, flags=re.I)
+    media = re.search(
+        r"\s*(?:\([^)]*\b(?:disk|disc|side)\b[^)]*\)|\b(?:disk|disc|side)\s*(?:of\s*)?[a-z0-9]+\b)",
+        value,
+        flags=re.I,
+    )
+    if media:
+        value = value[: media.start()]
     value = ascii_fold(value).lower()
     return re.sub(r"[^a-z0-9]+", "", value)
 
@@ -112,20 +116,58 @@ def candidate_key(entry: dict) -> tuple:
 
 
 def region_rank(candidate: dict) -> int:
-    haystack = " ".join(asset.get("title") or "" for asset in candidate["assets"]).lower()
+    haystack = candidate_text(candidate).lower()
     return min((rank for marker, rank in REGION_RANK.items() if marker in haystack), default=1)
+
+
+def candidate_text(candidate: dict) -> str:
+    return " ".join(asset.get("title") or "" for asset in candidate["assets"])
+
+
+def c64_quality_rank(candidate: dict) -> tuple[int, ...]:
+    text = candidate_text(candidate).lower()
+    unofficial_rank = 1 if "(unl)" in text or "unlicensed" in text else 0
+    explicit_region_rank = 0 if re.search(r"\((?:europe|world|uk|germany)\)", text) else 1
+    completeness_rank = -len(candidate["assets"])
+    return (unofficial_rank, explicit_region_rank, completeness_rank)
+
+
+def amiga_quality_rank(candidate: dict) -> tuple[int, ...]:
+    text = candidate_text(candidate).lower()
+    category = candidate.get("category")
+    ntsc_rank = 1 if "ntsc" in text else 0
+    incomplete_rank = 1 if any(marker in text for marker in ("no music", "nomusic", "demo")) else 0
+
+    if category in {"AGA", "Foreign"}:
+        if "aga" in text:
+            edition_rank = 0
+        elif "cd32" in text:
+            edition_rank = 2
+        elif "cdtv" in text:
+            edition_rank = 3
+        else:
+            edition_rank = 1
+    elif category == "CD32":
+        edition_rank = 0 if "cd32" in text else 1
+    elif category == "CDTV":
+        edition_rank = 0 if "cdtv" in text else 1
+    else:
+        edition_rank = 0
+
+    completeness_rank = -len(candidate["assets"])
+    return (ntsc_rank, incomplete_rank, edition_rank, completeness_rank)
 
 
 def candidate_priority(candidate: dict) -> tuple[int, ...]:
     language = candidate["language"]
     language_rank = LANGUAGE_RANK.get(language, 3)
     if candidate["platform"] == "c64":
-        return (language_rank, region_rank(candidate))
+        return (language_rank, region_rank(candidate), *c64_quality_rank(candidate))
 
     whdload_rank = 0 if candidate["collection"] == "WHDLoad" else 1
     category_rank = AMIGA_CATEGORY_RANK.get(candidate.get("category"), 3)
     source_rank = 0 if candidate["library"] == "PiMiga" else 1
-    return (language_rank, whdload_rank, category_rank, source_rank)
+    return (language_rank, whdload_rank, category_rank, source_rank, *amiga_quality_rank(candidate))
 
 
 def compact_asset(entry: dict) -> dict:

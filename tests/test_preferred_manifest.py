@@ -80,6 +80,48 @@ class SelectionTests(unittest.TestCase):
         self.assertEqual(len(manifest["selected"][0]["candidate"]["assets"]), 2)
         self.assertFalse(manifest["selected"][0]["reviewRequired"])
 
+    def test_described_media_disks_remain_one_release(self) -> None:
+        games = [
+            entry("d1", "221B Baker Street (USA) (Disk 1)", "c64", "c64/221B Disk 1.zip"),
+            entry(
+                "d2",
+                "221B Baker Street (USA) (Disk 2) (Case Disk 1)",
+                "c64",
+                "c64/221B Disk 2.zip",
+            ),
+            entry(
+                "d3",
+                "221B Baker Street (USA) (Disk 3) (Case Disk 2)",
+                "c64",
+                "c64/221B Disk 3.zip",
+            ),
+        ]
+        manifest = self.build(games)
+        self.assertEqual(manifest["summary"]["selected"], 1)
+        self.assertEqual(len(manifest["selected"][0]["candidate"]["assets"]), 3)
+
+    def test_official_complete_c64_set_wins_obvious_tie(self) -> None:
+        manifest = self.build(
+            [
+                entry("plain", "Another World", "c64", "c64/Another World.zip"),
+                entry(
+                    "eu1",
+                    "Another World (Europe) (Disk 1 Side A)",
+                    "c64",
+                    "c64/Another World (Europe) (Disk 1 Side A).zip",
+                ),
+                entry(
+                    "eu2",
+                    "Another World (Europe) (Disk 1 Side B)",
+                    "c64",
+                    "c64/Another World (Europe) (Disk 1 Side B).zip",
+                ),
+            ]
+        )
+        selected = manifest["selected"][0]
+        self.assertEqual(len(selected["candidate"]["assets"]), 2)
+        self.assertFalse(selected["reviewRequired"])
+
     def test_whdload_wins_over_floppy_in_same_language(self) -> None:
         manifest = self.build(
             [
@@ -128,6 +170,60 @@ class SelectionTests(unittest.TestCase):
             "competing-amiga-hardware-editions",
             manifest["needsReview"][0]["reviewReasons"],
         )
+
+    def test_explicit_aga_wins_within_aga_category(self) -> None:
+        manifest = self.build(
+            [
+                entry(
+                    "base",
+                    "Body Blows",
+                    "Amiga",
+                    "WHDLOAD/AGA/B/BodyBlows",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="AGA",
+                ),
+                entry(
+                    "aga",
+                    "Body Blows AGA",
+                    "Amiga",
+                    "WHDLOAD/AGA/B/BodyBlowsAGA",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="AGA",
+                ),
+            ]
+        )
+        selected = manifest["selected"][0]
+        self.assertEqual(selected["candidate"]["assets"][0]["id"], "aga")
+        self.assertNotIn("equal-priority-candidates", selected["reviewReasons"])
+
+    def test_pal_release_wins_over_ntsc(self) -> None:
+        manifest = self.build(
+            [
+                entry(
+                    "pal",
+                    "After Burner",
+                    "Amiga",
+                    "WHDLOAD/OCS/A/AfterBurner",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="OCS",
+                ),
+                entry(
+                    "ntsc",
+                    "After Burner NTSC",
+                    "Amiga",
+                    "WHDLOAD/OCS/A/AfterBurnerNTSC",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="OCS",
+                ),
+            ]
+        )
+        selected = manifest["selected"][0]
+        self.assertEqual(selected["candidate"]["assets"][0]["id"], "pal")
+        self.assertFalse(selected["reviewRequired"])
 
     def test_support_directories_are_excluded(self) -> None:
         manifest = self.build(
