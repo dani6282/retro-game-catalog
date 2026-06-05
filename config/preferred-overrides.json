@@ -45,6 +45,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:colonization": {
+      "selector": {
+        "releaseIdentity": "colonization",
+        "category": "OCS"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The ECS and AGA packages contain byte-identical game and German-language data, and contemporary catalog notes confirm that no graphically enhanced AGA edition was released. Prefer the lower-requirement ECS package.",
+      "evidence": [
+        "https://www.whdload.de/games/Colonization.html",
+        "https://www.lemonamiga.com/game/colonization"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:defenderofthecrown": {
       "selector": {
         "releaseIdentity": "defenderofthecrowncdtv",
@@ -73,6 +88,22 @@
         "https://www.lemonamiga.com/game/deluxe-galaga-aga",
         "https://www.lemonamiga.com/review/deluxe-galaga-aga/382",
         "https://www.whdload.de/games/DeluxeGalaga.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:deluxepacman": {
+      "selector": {
+        "releaseIdentity": "deluxepacmanaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The author's final full AGA release includes 128-color graphics, 50 levels, 15 bonus levels, and extra graphics and improvements; the ECS build uses 32-color graphics.",
+      "evidence": [
+        "https://aminet.net/package/game/misc/DeluxePacman_A",
+        "https://www.mobygames.com/game/64311/deluxe-pacman/",
+        "https://www.whdload.de/games/DeluxePacman.html"
       ],
       "reviewedAt": "2026-06-05"
     },
@@ -193,6 +224,21 @@
       ],
       "reviewedAt": "2026-06-05"
     },
+    "amiga:junglestrike": {
+      "selector": {
+        "releaseIdentity": "junglestrikecd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 package contains materially higher-detail graphics, sprites, maps, intro, and music data than the floppy editions while retaining second-button weapon switching through the WHDLoad patch.",
+      "evidence": [
+        "https://www.whdload.de/games/JungleStrike",
+        "https://amigareviews.leveluphost.com/junglest.htm"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:mortalkombat2": {
       "selector": {
         "releaseIdentity": "mortalkombat2",
@@ -248,6 +294,36 @@
       "rationale": "The standard package is the normal fast-memory configuration; the 2 MB slave is a constrained fallback for machines with chip memory only.",
       "evidence": [
         "https://www.whdload.de/games/SlamTilt.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:shadowfighter": {
+      "selector": {
+        "releaseIdentity": "shadowfighteraga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 release contains the same AGA disk images but its CD audio is disabled in the extracted WHDLoad package. The AGA installer adds fixes and hard-drive high-score saving without losing usable audio.",
+      "evidence": [
+        "https://www.whdload.de/games/ShadowFighter.html",
+        "https://www.whdload.de/games/ShadowFighterCD.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:soccerkid": {
+      "selector": {
+        "releaseIdentity": "soccerkidcd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The extracted CD32 package includes multilingual data, additional cutscene graphics and music modules, while the AGA disk edition has a documented absence of title and in-game music.",
+      "evidence": [
+        "https://www.whdload.de/games/SoccerKid.html",
+        "https://whdload.de/mantis/view.php?id=3437"
       ],
       "reviewedAt": "2026-06-05"
     },
@@ -344,11 +420,14 @@
         "category": "CD32"
       },
       "resolves": [
-        "equal-priority-candidates"
+        "equal-priority-candidates",
+        "competing-amiga-hardware-editions"
       ],
-      "rationale": "Within the CD release, the 2 MB slave includes all samples; the 1 MB slave is the lower-memory compatibility build.",
+      "rationale": "The 2 MB CD32 package is a superset of the byte-identical core game, includes all English, French, and German voice samples plus CD startup/title assets, and the PiMIGA source retains the separate CD32 AVI animation package.",
       "evidence": [
-        "https://www.whdload.de/games/Worms.html"
+        "https://www.whdload.de/games/Worms.html",
+        "https://www.whdload.de/games/WormsAVI.html",
+        "https://www.lemonamiga.com/game/worms-cd32"
       ],
       "reviewedAt": "2026-06-05"
     }
