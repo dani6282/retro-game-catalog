@@ -67,6 +67,25 @@ REGION_RANK = {
     "usa": 2,
 }
 
+REVIEW_ACTIONS = {
+    "competing-amiga-hardware-editions": {
+        "queue": "amiga-edition-launch-validation",
+        "targetPhase": 3,
+        "rationale": (
+            "Choose between runnable Amiga hardware editions while packaging "
+            "and launch-testing the actual source packages."
+        ),
+    },
+    "installed-pimiga-title-needs-launch-review": {
+        "queue": "pimiga-installed-title-integration",
+        "targetPhase": 3,
+        "rationale": (
+            "Classify and integrate the installed PiMIGA title using the "
+            "appropriate Batocera system or document why it is unsupported."
+        ),
+    },
+}
+
 
 def platform_family(entry: dict) -> str | None:
     return PLATFORM_FAMILIES.get(str(entry.get("platform") or "").lower())
@@ -228,6 +247,42 @@ def review_reasons(candidates: list[dict], selected: dict) -> list[str]:
     return reasons
 
 
+def review_action(platform: str, reason: str) -> dict:
+    if reason == "equal-priority-candidates":
+        if platform == "c64":
+            return {
+                "reason": reason,
+                "queue": "c64-release-validation",
+                "targetPhase": 2,
+                "rationale": (
+                    "Resolve tied C64 releases while building and launch-testing "
+                    "the C64 staging tree."
+                ),
+            }
+        return {
+            "reason": reason,
+            "queue": "amiga-release-validation",
+            "targetPhase": 3,
+            "rationale": (
+                "Resolve tied Amiga releases while packaging and launch-testing "
+                "the Amiga staging tree."
+            ),
+        }
+    if reason not in REVIEW_ACTIONS:
+        raise ValueError(f"no review disposition defined for {platform}:{reason}")
+    return {"reason": reason, **REVIEW_ACTIONS[reason]}
+
+
+def review_disposition(platform: str, reasons: list[str]) -> dict | None:
+    if not reasons:
+        return None
+    return {
+        "status": "deferred-to-build-validation",
+        "phase1Blocking": False,
+        "actions": [review_action(platform, reason) for reason in reasons],
+    }
+
+
 def override_matches(candidate: dict, selector: dict) -> bool:
     return all(candidate.get(field) == value for field, value in selector.items())
 
@@ -300,6 +355,9 @@ def build_manifest(raw: dict, overrides: dict | None = None) -> dict:
             "reviewReasons": reasons,
             "candidate": selected,
         }
+        disposition = review_disposition(family, reasons)
+        if disposition:
+            selected_record["reviewDisposition"] = disposition
         if override:
             selected_record["manualOverride"] = override
         selected_records.append(selected_record)
@@ -319,6 +377,11 @@ def build_manifest(raw: dict, overrides: dict | None = None) -> dict:
 
     language_counts = Counter(record["language"] or "Neutral" for record in selected_records)
     platform_counts = Counter(record["platform"] for record in selected_records)
+    disposition_counts = Counter(
+        action["queue"]
+        for record in review_records
+        for action in record["reviewDisposition"]["actions"]
+    )
     multidisk_count = sum(len(record["candidate"]["assets"]) > 1 for record in selected_records)
     return {
         "generatedAt": raw.get("generatedAt"),
@@ -333,6 +396,10 @@ def build_manifest(raw: dict, overrides: dict | None = None) -> dict:
             "rejected": len(rejected_records),
             "extras": len(extra_records),
             "needsReview": len(review_records),
+            "phase1BlockingReviews": sum(
+                record["reviewDisposition"]["phase1Blocking"] for record in review_records
+            ),
+            "reviewActionsByQueue": dict(sorted(disposition_counts.items())),
             "excluded": len(excluded),
             "multidiskOrMultiside": multidisk_count,
             "selectedByPlatform": dict(sorted(platform_counts.items())),

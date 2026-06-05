@@ -122,6 +122,12 @@ and whether the package contains a launchable file. Complete WHDLoad packages
 therefore outrank same-title artwork/index stubs, while genuinely runnable
 AGA, OCS, CD32, and CDTV alternatives remain in the review queue.
 
+Every review record also has a deterministic `reviewDisposition`. It maps each
+unresolved reason to a named Phase 2 or Phase 3 build-validation queue. The
+preferred candidate remains the reproducible default, but the later build must
+validate the actual package before treating that choice as final. The audit
+fails if a review reason has no disposition or remains Phase 1 blocking.
+
 Generated file:
 
 - `public/preferred-manifest.json`

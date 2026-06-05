@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from audit_preferred_manifest import audit_manifest
 from build_preferred_manifest import build_manifest, release_identity
 from title_normalization import detect_language, title_key
 
@@ -189,6 +190,12 @@ class SelectionTests(unittest.TestCase):
         self.assertIn(
             "competing-amiga-hardware-editions",
             manifest["needsReview"][0]["reviewReasons"],
+        )
+        disposition = manifest["needsReview"][0]["reviewDisposition"]
+        self.assertFalse(disposition["phase1Blocking"])
+        self.assertEqual(
+            disposition["actions"][0]["queue"],
+            "amiga-edition-launch-validation",
         )
 
     def test_explicit_aga_wins_within_aga_category(self) -> None:
@@ -371,6 +378,59 @@ class SelectionTests(unittest.TestCase):
         )
         self.assertEqual(manifest["summary"]["selected"], 0)
         self.assertEqual(manifest["summary"]["excluded"], 1)
+
+    def test_c64_tie_is_deferred_to_phase_2(self) -> None:
+        manifest = self.build(
+            [
+                entry("one", "Example", "c64", "c64/Example.zip"),
+                entry("two", "Example (Alt)", "c64", "c64/Example (Alt).zip"),
+            ]
+        )
+        disposition = manifest["needsReview"][0]["reviewDisposition"]
+        self.assertEqual(disposition["actions"][0]["queue"], "c64-release-validation")
+        self.assertEqual(disposition["actions"][0]["targetPhase"], 2)
+
+    def test_each_review_reason_gets_a_disposition(self) -> None:
+        manifest = self.build(
+            [
+                entry(
+                    "one",
+                    "Example",
+                    "Amiga",
+                    "Installed/Example",
+                    source="PiMiga",
+                    collection="Installed",
+                    category="Direct",
+                ),
+                entry(
+                    "two",
+                    "Example Alt",
+                    "Amiga",
+                    "Installed/ExampleAlt",
+                    source="PiMiga",
+                    collection="Installed",
+                    category="Direct",
+                ),
+            ]
+        )
+        record = manifest["needsReview"][0]
+        self.assertEqual(
+            [action["reason"] for action in record["reviewDisposition"]["actions"]],
+            record["reviewReasons"],
+        )
+        self.assertEqual(manifest["summary"]["phase1BlockingReviews"], 0)
+        self.assertEqual(audit_manifest(manifest), [])
+
+    def test_audit_rejects_missing_review_disposition(self) -> None:
+        manifest = self.build(
+            [
+                entry("one", "Example", "c64", "c64/Example.zip"),
+                entry("two", "Example (Alt)", "c64", "c64/Example (Alt).zip"),
+            ]
+        )
+        del manifest["selected"][0]["reviewDisposition"]
+        failures = audit_manifest(manifest)
+        self.assertTrue(any("has no review disposition" in failure for failure in failures))
 
 
 if __name__ == "__main__":
