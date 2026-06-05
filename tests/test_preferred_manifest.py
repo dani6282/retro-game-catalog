@@ -56,6 +56,20 @@ class LanguageTests(unittest.TestCase):
         self.assertIsNone(detect_language("Game (Europe)"))
         self.assertEqual(detect_language("Art De La Guerre Fr"), "French")
 
+    def test_compact_memory_suffix_preserves_title_number(self) -> None:
+        self.assertEqual(title_key("Lemmings21MB"), "lemmings2")
+        self.assertEqual(title_key("Lemmings 21 MB"), "lemmings2")
+        self.assertEqual(title_key("ChaosEngine21MB"), "chaosengine2")
+        self.assertEqual(title_key("Chaos Engine 21 MB"), "chaosengine2")
+        self.assertEqual(title_key("MortalKombat21MB"), "mortalkombat2")
+        self.assertEqual(title_key("Uridium22MB"), "uridium2")
+        self.assertEqual(title_key("K2401MB"), "k240")
+        self.assertEqual(title_key("Paradroid901MB"), "paradroid90")
+        self.assertEqual(title_key("SensibleSoccer92931MB"), "sensiblesoccer9293")
+        self.assertEqual(title_key("WormsCD321MB"), "worms")
+        self.assertEqual(title_key("WormsDCAGA12MB"), "wormsdcaga")
+        self.assertEqual(title_key("Intact15MB"), "intact")
+
 
 class SelectionTests(unittest.TestCase):
     def build(self, games: list[dict], overrides: dict | None = None) -> dict:

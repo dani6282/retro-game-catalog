@@ -1,5 +1,95 @@
 {
   "overrides": {
+    "amiga:banshee": {
+      "selector": {
+        "releaseIdentity": "bansheeaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The AGA and CD32 releases use the same WHDLoad slave, but the current CD32 path has a reported controller failure while the AGA release works correctly.",
+      "evidence": [
+        "https://whdload.de/games/Banshee.html",
+        "https://www.whdload.de/mantis/view.php?id=6753"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:chaosengine": {
+      "selector": {
+        "releaseIdentity": "chaosengineaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The AGA release keeps the original gameplay while adding 256-color enhanced graphics; unlike CD32 it retains the main theme, and the WHDLoad patch supplies full joypad controls.",
+      "evidence": [
+        "https://www.lemonamiga.com/review/chaos-engine-aga/491",
+        "https://whdload.de/games/ChaosEngine.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:gunship2000": {
+      "selector": {
+        "releaseIdentity": "gunship2000cd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 release adds enhanced graphics, introduction, and sound, and the WHDLoad installer provides a distinct supported CD32 slave.",
+      "evidence": [
+        "https://cd32.amiga32.com/reviews/gunship2000.htm",
+        "https://www.whdload.de/games/Gunship2000.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:internationalkarateplus": {
+      "selector": {
+        "releaseIdentity": "ikpluscd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD release is otherwise a straight port but maps the keyboard-only trouser-drop action to the joypad, making it the better controller-first Batocera version.",
+      "evidence": [
+        "https://amigareviews.leveluphost.com/ik.htm",
+        "https://www.whdload.de/games/IK%2B.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:pinballillusions": {
+      "selector": {
+        "releaseIdentity": "pinballillusionsaga",
+        "category": "AGA"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "AGA and CD32 use the same WHDLoad slave, but the CD32 game expects CD audio that is absent from the extracted PiMIGA package; AGA retains local in-game music data.",
+      "evidence": [
+        "https://www.whdload.de/games/PinballIllusions.html",
+        "https://whdload.de/mantis/view.php?id=5581"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
+    "amiga:superfrog": {
+      "selector": {
+        "releaseIdentity": "superfrogcd32",
+        "category": "CD32"
+      },
+      "resolves": [
+        "competing-amiga-hardware-editions"
+      ],
+      "rationale": "The CD32 release preserves the full game and intro while adding controller-oriented two-button support; the current WHDLoad patch also saves high scores.",
+      "evidence": [
+        "https://cd32.amiga32.com/reviews/superfrog.htm",
+        "https://www.whdload.de/games/Superfrog.html"
+      ],
+      "reviewedAt": "2026-06-05"
+    },
     "amiga:turrican": {
       "selector": {
         "releaseIdentity": "turrican",

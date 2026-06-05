@@ -108,6 +108,20 @@ KEY_ALIASES = {
     "wizardry1provinggroundsofthemadoverlord": "wizardryprovinggroundsofthemadoverlord",
 }
 
+COMPACT_MEMORY_TITLE_REWRITES = {
+    "chaosengine21mb": "Chaos Engine 2 1 MB",
+    "k2401mb": "K240 1 MB",
+    "lemmings21mb": "Lemmings 2 1 MB",
+    "mortalkombat21mb": "Mortal Kombat 2 1 MB",
+    "mortalkombat22mb": "Mortal Kombat 2 2 MB",
+    "paradroid901mb": "Paradroid 90 1 MB",
+    "sensiblesoccer92931mb": "Sensible Soccer 92 93 1 MB",
+    "uridium21mb": "Uridium 2 1 MB",
+    "uridium22mb": "Uridium 2 2 MB",
+    "wormscd321mb": "Worms CD32 1 MB",
+    "wormscd322mb": "Worms CD32 2 MB",
+}
+
 
 def ascii_fold(value: str) -> str:
     for source, target in CHAR_REPLACEMENTS.items():
@@ -140,6 +154,8 @@ def clean_title(value: str) -> str:
     value = re.sub(r"<[^>]+>", " ", value)
     value = value.replace("+", " plus ")
     value = re.sub(r"[_]+", " ", value)
+    compact = re.sub(r"\s+", "", value).lower()
+    value = COMPACT_MEMORY_TITLE_REWRITES.get(compact, value)
     value = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", value)
     value = re.sub(r"(?<=[A-Za-z])(?=\d)", " ", value)
     value = re.sub(r"(?<=\d)(?=[A-Za-z])", " ", value)

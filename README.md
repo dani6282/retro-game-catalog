@@ -92,7 +92,7 @@ The app loads a pre-grouped index for speed, then lazy-loads detail chunks only 
 
 Run this after changing `public/catalog.json`, `public/wiki-links.json`, or `public/community-ranks.json`.
 
-Title matching is centralized in `scripts/title_normalization.py`. It preserves sequels and plus-editions, collapses multi-disk variants, and excludes explicit `ZZZ(notgame)` utility entries from the user-facing game counts.
+Title matching is centralized in `scripts/title_normalization.py`. It preserves sequels and plus-editions, collapses multi-disk variants, and excludes explicit `ZZZ(notgame)` utility entries from the user-facing game counts. Known compact PiMIGA names such as `Lemmings21MB` are disambiguated as `Lemmings 2 (1 MB)` rather than being merged into the first game; genuine memory variants such as `WormsDCAGA12MB` remain attached to their base title.
 
 Generated files:
 
