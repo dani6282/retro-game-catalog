@@ -23,6 +23,7 @@ def entry(
     source: str = "Batocera",
     collection: str | None = None,
     category: str | None = None,
+    has_launchable_files: bool | None = None,
 ) -> dict:
     return {
         "id": entry_id,
@@ -37,6 +38,8 @@ def entry(
         "path": path,
         "absolutePath": f"/source/{path}",
         "sizeBytes": 100,
+        "fileCount": 1,
+        "hasLaunchableFiles": has_launchable_files,
     }
 
 
@@ -197,6 +200,35 @@ class SelectionTests(unittest.TestCase):
         selected = manifest["selected"][0]
         self.assertEqual(selected["candidate"]["assets"][0]["id"], "aga")
         self.assertNotIn("equal-priority-candidates", selected["reviewReasons"])
+
+    def test_complete_ocs_package_wins_over_aga_artwork_stub(self) -> None:
+        manifest = self.build(
+            [
+                entry(
+                    "aga-stub",
+                    "1000 Miglia",
+                    "Amiga",
+                    "WHDLOAD/AGA/0-9/1000Miglia",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="AGA",
+                    has_launchable_files=False,
+                ),
+                entry(
+                    "ocs-game",
+                    "1000 Miglia",
+                    "Amiga",
+                    "WHDLOAD/OCS/0-9/1000Miglia",
+                    source="PiMiga",
+                    collection="WHDLoad",
+                    category="OCS",
+                    has_launchable_files=True,
+                ),
+            ]
+        )
+        selected = manifest["selected"][0]
+        self.assertEqual(selected["candidate"]["assets"][0]["id"], "ocs-game")
+        self.assertNotIn("competing-amiga-hardware-editions", selected["reviewReasons"])
 
     def test_pal_release_wins_over_ntsc(self) -> None:
         manifest = self.build(

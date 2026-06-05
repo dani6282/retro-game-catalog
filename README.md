@@ -117,6 +117,10 @@ Generate the platform-aware C64 and Amiga curation manifest:
 The manifest keeps C64 and Amiga releases separate, prefers German over
 English or language-neutral releases, preserves multidisk releases as one
 selection, and flags ambiguous Amiga hardware editions for manual review.
+For PiMIGA directories, the inventory records recursive file counts, sizes,
+and whether the package contains a launchable file. Complete WHDLoad packages
+therefore outrank same-title artwork/index stubs, while genuinely runnable
+AGA, OCS, CD32, and CDTV alternatives remain in the review queue.
 
 Generated file:
 

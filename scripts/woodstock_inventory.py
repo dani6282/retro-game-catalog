@@ -110,6 +110,33 @@ def file_size(path: Path) -> int | None:
         return None
 
 
+def directory_stats(path: Path) -> tuple[int | None, int | None, bool | None]:
+    if not path.is_dir():
+        return None, None, None
+
+    total_size = 0
+    file_count = 0
+    has_launchable = False
+    try:
+        for root, _dirs, files in os.walk(path):
+            root_path = Path(root)
+            for filename in files:
+                child = root_path / filename
+                file_count += 1
+                try:
+                    total_size += child.stat().st_size
+                except OSError:
+                    pass
+                suffix = child.suffix.lower()
+                if suffix in {".slave", ".lha", ".adf", ".hdf", ".exe"}:
+                    has_launchable = True
+                elif not suffix and os.access(child, os.X_OK):
+                    has_launchable = True
+    except OSError:
+        return None, None, None
+    return total_size, file_count, has_launchable
+
+
 def make_entry(
     source: str,
     title: str,
@@ -123,6 +150,7 @@ def make_entry(
     rel = str(path.relative_to(root)) if path.is_relative_to(root) else str(path)
     fmt = "directory" if path.is_dir() else (path.suffix.lower().lstrip(".") or "file")
     normalized = normalize_title(title)
+    directory_size, directory_file_count, has_launchable_files = directory_stats(path)
     return {
         "id": stable_id(source, platform, rel),
         "title": title,
@@ -135,7 +163,9 @@ def make_entry(
         "language": detect_language(title, rel, category),
         "path": rel,
         "absolutePath": str(path),
-        "sizeBytes": file_size(path),
+        "sizeBytes": directory_size if path.is_dir() else file_size(path),
+        "fileCount": directory_file_count,
+        "hasLaunchableFiles": has_launchable_files,
         "sourceKind": source_kind,
         "nonGame": is_non_game(title, rel),
     }

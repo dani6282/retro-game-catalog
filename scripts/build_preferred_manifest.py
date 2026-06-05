@@ -135,6 +135,7 @@ def c64_quality_rank(candidate: dict) -> tuple[int, ...]:
 def amiga_quality_rank(candidate: dict) -> tuple[int, ...]:
     text = candidate_text(candidate).lower()
     category = candidate.get("category")
+    launchable_rank = 0 if candidate.get("hasLaunchableFiles") is not False else 1
     ntsc_rank = 1 if "ntsc" in text else 0
     incomplete_rank = 1 if any(marker in text for marker in ("no music", "nomusic", "demo")) else 0
 
@@ -155,7 +156,7 @@ def amiga_quality_rank(candidate: dict) -> tuple[int, ...]:
         edition_rank = 0
 
     completeness_rank = -len(candidate["assets"])
-    return (ntsc_rank, incomplete_rank, edition_rank, completeness_rank)
+    return (launchable_rank, ntsc_rank, incomplete_rank, edition_rank, completeness_rank)
 
 
 def candidate_priority(candidate: dict) -> tuple[int, ...]:
@@ -167,7 +168,8 @@ def candidate_priority(candidate: dict) -> tuple[int, ...]:
     whdload_rank = 0 if candidate["collection"] == "WHDLoad" else 1
     category_rank = AMIGA_CATEGORY_RANK.get(candidate.get("category"), 3)
     source_rank = 0 if candidate["library"] == "PiMiga" else 1
-    return (language_rank, whdload_rank, category_rank, source_rank, *amiga_quality_rank(candidate))
+    quality = amiga_quality_rank(candidate)
+    return (language_rank, whdload_rank, quality[0], category_rank, source_rank, *quality[1:])
 
 
 def compact_asset(entry: dict) -> dict:
@@ -178,6 +180,8 @@ def compact_asset(entry: dict) -> dict:
         "absolutePath": entry.get("absolutePath"),
         "format": entry.get("format"),
         "sizeBytes": entry.get("sizeBytes"),
+        "fileCount": entry.get("fileCount"),
+        "hasLaunchableFiles": entry.get("hasLaunchableFiles"),
     }
 
 
@@ -192,13 +196,21 @@ def make_candidate(family: str, entries: list[dict]) -> dict:
         "releaseIdentity": release_identity(first),
         "assets": [compact_asset(entry) for entry in sorted(entries, key=lambda item: item.get("path") or "")],
     }
+    launchability = {entry.get("hasLaunchableFiles") for entry in entries}
+    candidate["hasLaunchableFiles"] = (
+        True if True in launchability else False if launchability == {False} else None
+    )
     candidate["priority"] = list(candidate_priority(candidate))
     return candidate
 
 
 def review_reasons(candidates: list[dict], selected: dict) -> list[str]:
     reasons = []
-    same_language = [candidate for candidate in candidates if candidate["language"] == selected["language"]]
+    same_language = [
+        candidate
+        for candidate in candidates
+        if candidate["language"] == selected["language"] and candidate.get("hasLaunchableFiles") is not False
+    ]
     categories = {candidate.get("category") for candidate in same_language if candidate.get("category")}
     if selected["platform"] == "amiga" and len(categories & {"AGA", "OCS", "CD32", "CDTV"}) > 1:
         reasons.append("competing-amiga-hardware-editions")
